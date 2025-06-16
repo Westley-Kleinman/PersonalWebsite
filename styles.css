@@ -6,35 +6,35 @@
 }
 
 :root {
-    /* Modern Color Palette */
-    --primary: #6366f1;
-    --primary-dark: #4338ca;
-    --secondary: #06b6d4;
-    --accent: #f59e0b;
+    /* Professional Color Palette - White Base */
+    --primary: #2563eb;        /* Professional blue */
+    --primary-dark: #1d4ed8;
+    --secondary: #059669;      /* Success green */
+    --accent: #dc2626;         /* Attention red */
     --success: #10b981;
     
-    /* Neutrals */
+    /* White-based Neutrals */
     --white: #ffffff;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
+    --gray-50: #fafafa;        /* Very light gray */
+    --gray-100: #f5f5f5;      /* Light background */
+    --gray-200: #e5e5e5;      /* Subtle borders */
+    --gray-300: #d4d4d4;      /* Light borders */
+    --gray-400: #a3a3a3;      /* Muted text */
+    --gray-500: #737373;      /* Secondary text */
+    --gray-600: #525252;      /* Primary text */
+    --gray-700: #404040;      /* Dark text */
+    --gray-800: #262626;      /* Very dark text */
+    --gray-900: #171717;      /* Headings */
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-    --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    --gradient-secondary: linear-gradient(135deg, #059669 0%, #047857 100%);
+    --gradient-accent: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
     
-    /* Glass Effects */
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* Clean Glass Effects */
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
     
     /* Spacing & Layout */
     --sidebar-width: 280px;
@@ -54,13 +54,13 @@
 
 body {
     font-family: var(--font-primary);
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: var(--white);
     min-height: 100vh;
-    color: var(--gray-800);
+    color: var(--gray-700);
     overflow-x: hidden;
 }
 
-/* Background Animation */
+/* Background Animation - Subtle Professional */
 .bg-animation {
     position: fixed;
     top: 0;
@@ -69,12 +69,13 @@ body {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
 }
 
 .floating-shape {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.1;
+    opacity: 0.03;
     animation: float 20s infinite ease-in-out;
 }
 
@@ -127,9 +128,9 @@ body {
     left: 0;
     width: var(--sidebar-width);
     height: 100vh;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border-right: 1px solid var(--glass-border);
+    background: var(--white);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid var(--gray-200);
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
@@ -161,7 +162,7 @@ body {
     font-family: var(--font-secondary);
     font-size: 1.5rem;
     font-weight: 700;
-    color: white;
+    color: var(--gray-900);
 }
 
 .nav-links {
@@ -175,7 +176,7 @@ body {
     gap: 1rem;
     padding: 1rem;
     margin: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--gray-600);
     text-decoration: none;
     border-radius: var(--border-radius);
     transition: var(--transition);
@@ -184,8 +185,8 @@ body {
 
 .nav-item:hover,
 .nav-item.active {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: var(--gray-100);
+    color: var(--primary);
     transform: translateX(8px);
 }
 
@@ -197,7 +198,7 @@ body {
     transform: translateY(-50%);
     width: 4px;
     height: 30px;
-    background: var(--accent);
+    background: var(--primary);
     border-radius: 2px;
 }
 
@@ -237,9 +238,9 @@ body {
     left: 1rem;
     width: 50px;
     height: 50px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--gray-200);
     border-radius: var(--border-radius);
     flex-direction: column;
     align-items: center;
@@ -252,7 +253,7 @@ body {
 .mobile-menu-toggle span {
     width: 20px;
     height: 2px;
-    background: white;
+    background: var(--gray-700);
     transition: var(--transition);
 }
 
@@ -261,6 +262,7 @@ body {
     margin-left: var(--sidebar-width);
     min-height: 100vh;
     padding: 2rem;
+    background: var(--white);
     animation: fadeInContent 0.8s ease-out;
 }
 
@@ -322,9 +324,9 @@ body {
 }
 
 .hero-card.main-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--white);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--gray-200);
     border-radius: var(--border-radius-lg);
     padding: 3rem;
     position: relative;
@@ -384,7 +386,7 @@ body {
     font-family: var(--font-secondary);
     font-size: 2.2rem;
     font-weight: 600;
-    color: white;
+    color: var(--gray-900);
     margin: 0;
     letter-spacing: -0.01em;
 }
@@ -404,11 +406,11 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--gray-500);
 }
 
 .hero-description {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--gray-600);
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 2rem;
@@ -466,9 +468,9 @@ body {
 }
 
 .stat-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--gray-200);
     border-radius: var(--border-radius);
     padding: 1.5rem;
     text-align: center;
@@ -477,7 +479,7 @@ body {
 
 .stat-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .stat-icon {
@@ -494,22 +496,22 @@ body {
 }
 
 .stat-content h3 {
-    color: white;
+    color: var(--gray-900);
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .stat-content p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--gray-600);
     font-size: 0.9rem;
 }
 
 /* Quick Links Card */
 .quick-links-card {
     grid-column: span 2;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--gray-200);
     border-radius: var(--border-radius);
     padding: 2rem;
     text-align: center;
@@ -567,7 +569,7 @@ body {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--gray-300);
 }
 
 .timeline-item {
@@ -584,13 +586,14 @@ body {
     height: 20px;
     background: var(--gradient-primary);
     border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    border: 4px solid var(--white);
+    box-shadow: 0 0 0 3px var(--gray-200);
 }
 
 .timeline-content {
-    background: var(--glass-bg);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--gray-200);
     border-radius: var(--border-radius);
     padding: 1.5rem;
     position: relative;
@@ -605,11 +608,11 @@ body {
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-right: 10px solid var(--glass-border);
+    border-right: 10px solid var(--gray-200);
 }
 
 .timeline-year {
-    color: #fbbf24;
+    color: var(--primary);
     font-weight: 600;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
