@@ -1,0 +1,12 @@
+# Files to ignore
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.env
+.vscode/
+*.tmp
+*.bak
+README-new.md
+script-new.js
+resume.txt

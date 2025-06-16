@@ -70,21 +70,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    window.addEventListener('scroll', handleScroll);
-
-    // Hero section interactions
+    window.addEventListener('scroll', handleScroll);    // Hero section interactions
     const heroButtons = document.querySelectorAll('.hero-actions button');
     
     heroButtons.forEach((button, index) => {
         button.addEventListener('click', function() {
-            if (index === 0) { // View Projects button
+            if (index === 0) { // View Portfolio button
                 document.querySelector('#projects').scrollIntoView({
                     behavior: 'smooth'
                 });
-            } else { // Let's Talk button
-                document.querySelector('#contact').scrollIntoView({
-                    behavior: 'smooth'
-                });
+            } else { // Download Resume button
+                // This would trigger a resume download
+                window.open('resume.pdf', '_blank');
             }
         });
     });

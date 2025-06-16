@@ -54,7 +54,7 @@
 
 body {
     font-family: var(--font-primary);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     min-height: 100vh;
     color: var(--gray-800);
     overflow-x: hidden;
@@ -261,6 +261,18 @@ body {
     margin-left: var(--sidebar-width);
     min-height: 100vh;
     padding: 2rem;
+    animation: fadeInContent 0.8s ease-out;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Section Headers */
@@ -273,18 +285,19 @@ body {
 
 .section-number {
     font-family: var(--font-secondary);
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.08);
     line-height: 1;
 }
 
 .section-title {
     font-family: var(--font-secondary);
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.8rem;
+    font-weight: 600;
     color: white;
     margin: 0;
+    letter-spacing: -0.02em;
 }
 
 .section-subtitle {
@@ -310,8 +323,8 @@ body {
 
 .hero-card.main-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--border-radius-lg);
     padding: 3rem;
     position: relative;
@@ -359,19 +372,21 @@ body {
     position: absolute;
     bottom: 8px;
     right: 8px;
-    width: 20px;
-    height: 20px;
-    background: var(--success);
+    width: 16px;
+    height: 16px;
+    background: #10b981;
     border-radius: 50%;
     border: 3px solid white;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
 }
 
 .profile-info h1.name-title {
     font-family: var(--font-secondary);
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 600;
     color: white;
     margin: 0;
+    letter-spacing: -0.01em;
 }
 
 .role-badge {
@@ -452,8 +467,8 @@ body {
 
 .stat-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--border-radius);
     padding: 1.5rem;
     text-align: center;
@@ -574,8 +589,8 @@ body {
 
 .timeline-content {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--border-radius);
     padding: 1.5rem;
     position: relative;
@@ -594,7 +609,7 @@ body {
 }
 
 .timeline-year {
-    color: var(--accent);
+    color: #fbbf24;
     font-weight: 600;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
@@ -611,7 +626,8 @@ body {
 }
 
 .timeline-badge {
-    background: var(--gradient-accent);
+    background: linear-gradient(45deg, #10b981, #059669);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
@@ -628,8 +644,8 @@ body {
 .about-text-card,
 .skills-showcase {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--border-radius);
     padding: 2rem;
 }
@@ -682,7 +698,8 @@ body {
 
 .skill-fill {
     height: 100%;
-    background: var(--gradient-primary);
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
     border-radius: 4px;
     transition: width 1s ease-in-out;
 }
@@ -739,7 +756,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(139, 92, 246, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95) 0%, rgba(42, 82, 152, 0.95) 100%);
     opacity: 0;
     transition: var(--transition);
     display: flex;
@@ -803,8 +820,8 @@ body {
 
 .project-content-only {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     height: 100%;
     display: flex;
     align-items: center;
@@ -855,8 +872,8 @@ body {
 
 .contact-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--border-radius);
     padding: 2rem;
     height: fit-content;
@@ -918,10 +935,13 @@ body {
     gap: 0.75rem;
     padding: 1rem;
     background: rgba(16, 185, 129, 0.1);
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    border: 1px solid rgba(16, 185, 129, 0.2);
     border-radius: var(--border-radius);
     color: var(--success);
     font-weight: 600;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .status-indicator.active {
@@ -940,8 +960,8 @@ body {
 /* Contact Form */
 .form-container {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--border-radius);
     padding: 2rem;
 }
@@ -970,8 +990,9 @@ body {
 .form-field input,
 .form-field select,
 .form-field textarea {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
     border-radius: var(--border-radius-sm);
     padding: 1rem;
     color: white;
@@ -982,9 +1003,9 @@ body {
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
-    outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .form-field input::placeholder,
@@ -1207,3 +1228,91 @@ body {
 
     .profile-img {
         width: 250px;
+        height: 250px;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-details p {
+        font-size: 0.9rem;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+        padding: 0.75rem;
+    }
+
+    .submit-btn {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .nav-brand {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-brand .brand-text {
+        font-size: 1.2rem;
+    }
+
+    .nav-item {
+        padding: 0.75rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-number {
+        font-size: 2.5rem;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-split {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-masonry {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left {
+        margin-bottom: 1rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+}
