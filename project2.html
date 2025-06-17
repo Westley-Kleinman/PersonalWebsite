@@ -64,43 +64,42 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Problem Statement -->
+        </section>        <!-- Problem Identification -->
         <section class="about">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Market Opportunity</span>
-                    <h2 class="section-title">Identifying the Need</h2>
+                    <span class="section-tag">Problem Identification</span>
+                    <h2 class="section-title">The Challenge</h2>
                 </div>
                 
                 <div class="about-content">
                     <div class="about-text">
                         <div class="text-block">
-                            <h3>Trail Visualization Challenge</h3>
+                            <h3>Trail Visualization Gap</h3>
                             <p>
-                                Trail runners, cyclists, and race directors needed better ways to visualize and understand 
-                                terrain elevation changes. Traditional 2D maps couldn't effectively communicate the 
-                                physical challenge and beauty of trail routes, especially for race planning and participant 
-                                preparation.
+                                Race directors and trail enthusiasts struggled with the limitations of 2D maps for 
+                                understanding terrain complexity. Traditional maps couldn't effectively communicate 
+                                elevation changes, trail difficulty variations, or the true physical challenge of routes. 
+                                Event organizers needed meaningful, tangible representations of their race courses.
                             </p>
                         </div>
                         
                         <div class="text-block">
-                            <h3>Race Director Pain Points</h3>
+                            <h3>Existing Solution Limitations</h3>
                             <p>
-                                Event organizers struggled to create meaningful awards and course materials that truly 
-                                represented their race routes. Generic trophies didn't capture the unique character 
-                                of each course, and participants couldn't fully appreciate the terrain they'd conquered.
+                                Commercial 3D terrain models were expensive, generic, and didn't include trail-specific 
+                                information. Available options couldn't incorporate trail difficulty data, custom route 
+                                highlighting, or be produced at accessible price points for small race events. 
+                                The technology existed but wasn't accessible for the trail running community.
                             </p>
                         </div>
                         
                         <div class="text-block">
-                            <h3>Technology Gap</h3>
+                            <h3>Technical Requirements</h3>
                             <p>
-                                While elevation data was readily available, there was no accessible way for individuals 
-                                and small organizations to transform this data into physical, tangible representations. 
-                                The technology existed but wasn't packaged for consumer use.
+                                The solution needed to combine real topographic elevation data with trail route information, 
+                                incorporate difficulty classifications, maintain geographic accuracy, and be producible 
+                                using consumer-grade 3D printing technology while remaining cost-effective for small orders.
                             </p>
                         </div>
                     </div>
@@ -108,29 +107,29 @@
                     <div class="about-skills">
                         <div class="skills-grid">
                             <div class="skill-category">
-                                <h4>Target Market</h4>
+                                <h4>Key Problems</h4>
                                 <div class="skill-list">
-                                    <span class="skill-tag">Race Directors</span>
-                                    <span class="skill-tag">Trail Enthusiasts</span>
-                                    <span class="skill-tag">Event Organizers</span>
+                                    <span class="skill-tag">2D Limitation</span>
+                                    <span class="skill-tag">Cost Barrier</span>
+                                    <span class="skill-tag">Generic Products</span>
                                 </div>
                             </div>
                             
                             <div class="skill-category">
-                                <h4>Product Features</h4>
+                                <h4>User Needs</h4>
                                 <div class="skill-list">
-                                    <span class="skill-tag">Custom Terrain</span>
-                                    <span class="skill-tag">3D Printing</span>
+                                    <span class="skill-tag">Custom Routes</span>
+                                    <span class="skill-tag">Trail Difficulty</span>
+                                    <span class="skill-tag">Affordable Pricing</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>Technical Goals</h4>
+                                <div class="skill-list">
                                     <span class="skill-tag">Real Elevation Data</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Business Model</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Custom Orders</span>
-                                    <span class="skill-tag">Race Trophies</span>
-                                    <span class="skill-tag">Direct Sales</span>
+                                    <span class="skill-tag">Multi-Color Printing</span>
+                                    <span class="skill-tag">Scalable Process</span>
                                 </div>
                             </div>
                         </div>
@@ -139,40 +138,44 @@
             </div>
         </section>
 
-        <!-- Solution -->
+        <!-- Technical Solution Process -->
         <section class="about" style="background: var(--bg-secondary);">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Business Solution</span>
-                    <h2 class="section-title">Elevon Implementation</h2>
+                    <span class="section-tag">Technical Implementation</span>
+                    <h2 class="section-title">How I Built Elevon</h2>
                 </div>
                 
                 <div class="about-content">
                     <div class="about-text">
                         <div class="text-block">
-                            <h3>Product Development</h3>
+                            <h3>Step 1: Trail Data Collection & Processing</h3>
                             <p>
-                                Developed a streamlined process to convert real topographic elevation data into 3D printable 
-                                models. Created custom software workflows to process GPS coordinates, elevation data, and 
-                                route information into accurate, scaled terrain representations suitable for 3D printing.
+                                I start with trail maps provided by race directors or screenshot from Trailforks. 
+                                Using a custom web application I developed (<a href="https://elevon.onrender.com/" target="_blank">elevon.onrender.com</a>), 
+                                I create black and white images separating trail difficulties - each difficulty level 
+                                becomes a distinct black trail on white background image. This automated process ensures 
+                                consistent data formatting for downstream processing.
                             </p>
                         </div>
                         
                         <div class="text-block">
-                            <h3>Manufacturing Process</h3>
+                            <h3>Step 2: Vector Conversion & Preparation</h3>
                             <p>
-                                Established reliable 3D printing operations with quality control measures to ensure 
-                                consistent, high-quality output. Developed finishing techniques to enhance durability 
-                                and visual appeal. Optimized print settings for different map sizes and detail levels.
+                                Each difficulty-specific bitmap image is converted to SVG format using Inkscape, creating 
+                                precise vector paths that can be scaled and manipulated without quality loss. This 
+                                vectorization step is crucial for accurate 3D extrusion and ensures clean trail edges 
+                                in the final printed model.
                             </p>
                         </div>
                         
                         <div class="text-block">
-                            <h3>Customer Experience</h3>
+                            <h3>Step 3: Topographic Data Integration</h3>
                             <p>
-                                Built customer ordering system and established relationships with race directors for 
-                                custom trophy production. Created clear communication processes for custom orders, 
-                                timeline management, and quality assurance. Developed packaging and shipping procedures.
+                                Real elevation data is sourced from <a href="https://touchterrain.geol.iastate.edu/main" target="_blank">TouchTerrain</a>, 
+                                providing accurate geographic information for the specific region. This data forms the 
+                                foundation 3D terrain mesh that accurately represents the actual landscape topography 
+                                with proper elevation scaling and geographic precision.
                             </p>
                         </div>
                     </div>
@@ -180,24 +183,186 @@
                     <div class="about-skills">
                         <div class="skills-grid">
                             <div class="skill-category">
-                                <h4>Technical Skills</h4>
+                                <h4>Data Sources</h4>
                                 <div class="skill-list">
-                                    <span class="skill-tag">3D Modeling</span>
-                                    <span class="skill-tag">Data Processing</span>
-                                    <span class="skill-tag">3D Printing</span>
+                                    <span class="skill-tag">Race Director Maps</span>
+                                    <span class="skill-tag">Trailforks Screenshots</span>
+                                    <span class="skill-tag">TouchTerrain Data</span>
                                 </div>
                             </div>
                             
                             <div class="skill-category">
-                                <h4>Business Skills</h4>
+                                <h4>Processing Tools</h4>
                                 <div class="skill-list">
-                                    <span class="skill-tag">Customer Relations</span>
-                                    <span class="skill-tag">Product Development</span>
-                                    <span class="skill-tag">Operations</span>
+                                    <span class="skill-tag">Custom Web App</span>
+                                    <span class="skill-tag">Inkscape SVG</span>
+                                    <span class="skill-tag">Blender 3D</span>
                                 </div>
                             </div>
                             
                             <div class="skill-category">
+                                <h4>Output Formats</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Vector Paths</span>
+                                    <span class="skill-tag">3D Meshes</span>
+                                    <span class="skill-tag">Print Files</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Modeling Process -->
+        <section class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">3D Modeling Workflow</span>
+                    <h2 class="section-title">Blender Processing Pipeline</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="text-block">
+                            <h3>Step 4: 3D Trail Extrusion</h3>
+                            <p>
+                                In Blender, I import each SVG trail path and extrude them to create 3D trail representations. 
+                                Each difficulty level gets its own extrusion height and will eventually become a different 
+                                color in the final print. The trails are precisely positioned to align with the 
+                                corresponding locations on the topographic base mesh.
+                            </p>
+                        </div>
+                        
+                        <div class="text-block">
+                            <h3>Step 5: Terrain Integration & Boolean Operations</h3>
+                            <p>
+                                The topographic mesh undergoes Z-axis scaling to exaggerate landscape features for better 
+                                visual impact and printability. I perform boolean intersection operations between the 
+                                extruded trail paths and the scaled terrain mesh, ensuring trails follow the actual 
+                                ground contours while maintaining their distinct elevation characteristics.
+                            </p>
+                        </div>
+                        
+                        <div class="text-block">
+                            <h3>Step 6: Alignment & Final Assembly</h3>
+                            <p>
+                                All mesh components are carefully aligned to ensure proper registration between terrain 
+                                base and trail overlays. Each element is verified for printability, including overhang 
+                                angles, minimum feature sizes, and structural integrity. The final assembled model 
+                                maintains geographic accuracy while optimizing for 3D printing constraints.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-skills">
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Blender Operations</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">SVG Import</span>
+                                    <span class="skill-tag">Mesh Extrusion</span>
+                                    <span class="skill-tag">Boolean Intersection</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>Optimization</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Z-Axis Scaling</span>
+                                    <span class="skill-tag">Feature Enhancement</span>
+                                    <span class="skill-tag">Print Validation</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>Quality Control</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Alignment Check</span>
+                                    <span class="skill-tag">Structural Integrity</span>
+                                    <span class="skill-tag">Geographic Accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manufacturing Process -->
+        <section class="about" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Production Pipeline</span>
+                    <h2 class="section-title">3D Printing & Finishing</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="text-block">
+                            <h3>Step 7: Print Preparation</h3>
+                            <p>
+                                The final aligned models are imported into BambuStudio for print preparation. I configure 
+                                the slicer for 4-color printing on my BambuLab printer, assigning different colors to 
+                                the terrain base and each trail difficulty level. Print settings are optimized for 
+                                detail resolution while maintaining reasonable print times and material usage.
+                            </p>
+                        </div>
+                        
+                        <div class="text-block">
+                            <h3>Step 8: Multi-Color Production</h3>
+                            <p>
+                                The BambuLab printer handles automatic filament changes to produce maps with distinct 
+                                colors for different trail difficulties and terrain base. This eliminates post-processing 
+                                painting steps while ensuring consistent color separation and professional appearance. 
+                                Each map typically uses 4 colors: base terrain plus three difficulty levels.
+                            </p>
+                        </div>
+                        
+                        <div class="text-block">
+                            <h3>Step 9: Quality Assurance & Delivery</h3>
+                            <p>
+                                Each printed map undergoes quality inspection for dimensional accuracy, color consistency, 
+                                and structural integrity. Maps are carefully packaged to prevent damage during shipping 
+                                and include documentation explaining the trail difficulty color coding and any specific 
+                                route features highlighted in the model.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-skills">
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Print Technology</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">BambuLab Printer</span>
+                                    <span class="skill-tag">4-Color Capability</span>
+                                    <span class="skill-tag">Automatic Filament Change</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>Software Stack</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">BambuStudio Slicer</span>
+                                    <span class="skill-tag">Custom Web App</span>
+                                    <span class="skill-tag">Blender Pipeline</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>Quality Standards</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Dimensional Accuracy</span>
+                                    <span class="skill-tag">Color Consistency</span>
+                                    <span class="skill-tag">Professional Packaging</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
                                 <h4>Tools & Systems</h4>
                                 <div class="skill-list">
                                     <span class="skill-tag">CAD Software</span>
