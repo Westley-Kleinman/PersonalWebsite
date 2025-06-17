@@ -30,8 +30,10 @@ Sophomore Mechanical Engineering student at Duke University with hands-on indust
 
 ## Contact
 - **Email**: westley.kleinman@duke.edu
-- **LinkedIn**: [linkedin.com/in/westley-kleinman](https://linkedin.com/in/westley-kleinman)
-- **GitHub**: [github.com/westleykleinman](https://github.com/westleykleinman)
+- **Phone**: (501) 701-7973
+- **LinkedIn**: [linkedin.com/in/westley-kleinman-154048332](https://linkedin.com/in/westley-kleinman-154048332)
+- **GitHub**: [github.com/Westley-Kleinman](https://github.com/Westley-Kleinman)
+- **Website**: [westleykleinman.com](https://westleykleinman.com)
 
 ## Deployment
 This portfolio is optimized for professional presentation and can be deployed to any static hosting service.
