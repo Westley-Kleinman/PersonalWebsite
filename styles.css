@@ -386,41 +386,6 @@ section:nth-child(even):not(.hero) {
     line-height: 1.7;
 }
 
-.skills-grid {
-    margin-bottom: 3rem;
-}
-
-.skill-category {
-    margin-bottom: 2rem;
-}
-
-.skill-category h4 {
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-primary);
-}
-
-.skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.skill-tag {
-    background: var(--bg-primary);
-    color: var(--text-secondary);
-    padding: 0.375rem 0.75rem;
-    border-radius: var(--border-radius);
-    font-size: 0.875rem;
-    border: 1px solid var(--border-light);
-    transition: var(--transition);
-}
-
-.skill-tag:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-}
-
 /* Timeline */
 .timeline {
     position: relative;
