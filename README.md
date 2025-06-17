@@ -3,17 +3,23 @@
 A modern, responsive portfolio website showcasing mechanical engineering projects and professional experience.
 
 ## About
-Sophomore Mechanical Engineering student at Duke University seeking Summer 2025 internship opportunities in aerospace, robotics, and advanced manufacturing.
+Sophomore Mechanical Engineering student at Duke University with hands-on industry experience in product development and testing. Currently serving as Club Cycling President and gaining practical experience through internships.
+
+## Experience
+- **Boyd Cycling** - Engineering Intern (Summer 2024)
+- **Elevon** - Co-Founder (2024)
+- **Duke Club Cycling** - President (2024-present)
 
 ## Technical Skills
-- **CAD Software**: SolidWorks, AutoCAD, ANSYS
-- **Programming**: Python, MATLAB, C++
-- **Specializations**: Aerospace Systems, Robotics, Thermal Analysis
+- **CAD Software**: SolidWorks, 3D Printing, Product Design
+- **Testing**: Impact Testing Systems, Test Equipment Design
+- **Manufacturing**: Product Development, Quality Control
+- **Leadership**: Team Management, Project Coordination
 
 ## Featured Projects
-1. **Autonomous Drone Navigation** - Computer vision-based UAV control system
-2. **Satellite Attitude Control** - CubeSat orientation algorithms using MATLAB
-3. **Additive Manufacturing Research** - Optimized heat exchanger design for 3D printing
+1. **Bicycle Rim Impact Testing Machine** - Designed testing apparatus for Boyd Cycling internship
+2. **Elevon 3D Topographic Maps** - Co-founded company specializing in 3D printed topographic maps
+3. **Club Cycling Leadership** - Leading Duke University's competitive cycling team
 
 ## Website Features
 - Modern glass-morphism design
