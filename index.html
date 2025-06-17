@@ -1,329 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="description" content="Westley Kleinman - Mechanical Engineering Student at Duke University. Club Cycling President with industry experience at Boyd Cycling. Visit westleykleinman.com for portfolio and contact information.">
-    <meta name="keywords" content="Westley Kleinman, mechanical engineer, Duke University, internship, product development, testing, Boyd Cycling, club cycling, SolidWorks, leadership">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Westley Kleinman - Mechanical Engineering Student at Duke University pursuing Innovation & Entrepreneurship certificate. Founder of Elevon 3D maps, designed 200J+ carbon rim testing machine at Boyd Cycling internship.">
+    <meta name="keywords" content="Westley Kleinman, mechanical engineer, Duke University, Innovation Entrepreneurship, Boyd Cycling internship, Elevon 3D maps, carbon rim testing, SolidWorks, Fusion360, Linux Ubuntu, product development">
     <meta name="author" content="Westley Kleinman">
-    <title>Westley Kleinman | Mechanical Engineering Student | Duke University</title>
+    <title>Westley Kleinman | Mechanical Engineering & Innovation | Duke University</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Background Animation -->
-    <div class="bg-animation">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-        <div class="floating-shape shape-4"></div>
-    </div>
-
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar-nav">
-        <div class="nav-brand">
-            <div class="brand-icon">
-                <i class="fas fa-atom"></i>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">WK</span>
             </div>
-            <span class="brand-text">WK</span>
-        </div>
-        <div class="nav-links">
-            <a href="#home" class="nav-item active" data-section="home">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </a>
-            <a href="#about" class="nav-item" data-section="about">
-                <i class="fas fa-user"></i>
-                <span>About</span>
-            </a>
-            <a href="#projects" class="nav-item" data-section="projects">
-                <i class="fas fa-briefcase"></i>
-                <span>Projects</span>
-            </a>
-            <a href="#contact" class="nav-item" data-section="contact">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </a>
-        </div>
-        <div class="nav-footer">
-            <a href="resume.pdf" class="resume-link" target="_blank">
-                <i class="fas fa-download"></i>
-                <span>Resume</span>
-            </a>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu Toggle -->
-    <button class="mobile-menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>    <!-- Main Content -->
+    <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Section -->
-        <section id="home" class="hero-section">
-            <div class="hero-grid">
-                <div class="hero-card main-card">
-                    <div class="card-glow"></div>
-                    <div class="profile-section">
-                        <div class="profile-image-container">
-                            <img src="images/profile.jpg" alt="Westley Kleinman" class="profile-image">
-                            <div class="status-indicator"></div>
-                        </div>                        <div class="profile-info">
-                            <h1 class="name-title">Westley Kleinman</h1>
-                            <p class="role-badge">Mechanical Engineering Student & Club Cycling President</p>
-                            <div class="location">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>Duke University, Class of 2028</span>
-                            </div>
-                        </div>
-                    </div>                    <div class="hero-description">
-                        <p>Mechanical engineering student with hands-on experience in product development, testing, and leadership. Currently serving as Club Cycling President at Duke University and gaining industry experience through internships in bicycle component testing and development.</p>
-                    </div>
-                      <div class="hero-actions">
-                        <button class="btn-primary">
-                            <span>View Portfolio</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                        <button class="btn-secondary">
-                            <i class="fas fa-download"></i>
-                            <span>Download Resume</span>
-                        </button>
-                    </div>
-                </div>                <div class="hero-stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>Product Testing</h3>
-                            <p>Impact Testing Systems</p>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-greeting">Hello, I'm</p>
+                        <h1 class="hero-name">Westley Kleinman</h1>                        <p class="hero-title">Mechanical Engineering Student & Founder</p>
+                        <p class="hero-description">
+                            Sophomore at Duke University pursuing Mechanical Engineering and Innovation & Entrepreneurship. 
+                            Founded Elevon, designed 200J+ testing equipment at Boyd Cycling, and passionate about 
+                            turning ideas into impactful engineering solutions.</p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn-primary">View Projects</a>
+                            <a href="#contact" class="btn-secondary">Get In Touch</a>
                         </div>
                     </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-users"></i>
+                    <div class="hero-image">
+                        <div class="image-container">
+                            <img src="images/Extras/headshot.png" alt="Westley Kleinman" class="profile-img">
+                            <div class="image-backdrop"></div>
                         </div>
-                        <div class="stat-content">
-                            <h3>Leadership</h3>
-                            <p>Club Cycling President</p>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>3D Design</h3>
-                            <p>Topographic Maps</p>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-bicycle"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>Industry Experience</h3>
-                            <p>Boyd Cycling Intern</p>
-                        </div>
-                    </div>
-                </div><div class="quick-links-card">
-                    <h3>Professional Links</h3>                    <div class="social-links">                        <a href="mailto:westley.kleinman@duke.edu" class="social-link" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/westley-kleinman-154048332" class="social-link" title="LinkedIn" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Westley-Kleinman" class="social-link" title="GitHub" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
                     </div>
                 </div>
             </div>
-        </section>        <!-- About Section -->
-        <section id="about" class="about-section">            <div class="section-header">
-                <div class="section-number">01</div>
-                <h2 class="section-title">About</h2>
-                <div class="section-subtitle">Academic Background & Experience</div>
-            </div>
-            
-            <div class="about-layout">                <div class="about-timeline">                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-year">2024-2028</div>
-                            <h3>Duke University</h3>
-                            <p>B.S. Mechanical Engineering<br>Club Cycling President</p>
-                            <span class="timeline-badge">Current</span>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-year">Summer 2024</div>
-                            <h3>Boyd Cycling</h3>
-                            <p>Engineering Intern - Product Development & Testing</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-year">2024</div>
-                            <h3>Elevon Co-Founder</h3>
-                            <p>3D Topographic Map Company</p>
-                        </div>
-                    </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Engineering Philosophy & Background</h2>
+                    <p class="section-subtitle">
+                        Passionate about identifying real-world problems and developing comprehensive engineering solutions
+                    </p>
                 </div>
                 
-                <div class="about-content-grid">                    <div class="about-text-card">
-                        <h3>Professional Summary</h3>
-                        <p>I am a sophomore mechanical engineering student at Duke University with hands-on industry experience in product development and testing. Currently serving as Club Cycling President, I lead a team of competitive cyclists while managing operations and fostering team development.</p>
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="text-block">
+                            <h3>Academic Journey</h3>
+                            <p>
+                                Currently a sophomore at Duke University pursuing a B.S. in Mechanical Engineering 
+                                with a certificate in Innovation & Entrepreneurship. This dual focus reflects my 
+                                goal: to become an engineer who can not only design and build, but also recognize 
+                                market opportunities and lead product development from concept to customer.
+                            </p>
+                        </div>
                         
-                        <p>Through my internship at Boyd Cycling, I gained valuable experience in bicycle component testing and developed expertise in impact testing methodologies. I also co-founded Elevon, a company specializing in 3D printed topographic maps, demonstrating entrepreneurial spirit and product development skills.</p>
+                        <div class="text-block">
+                            <h3>Engineering Philosophy</h3>
+                            <p>
+                                I believe engineering is fundamentally about identifying fixable problems in the 
+                                world and developing the technical skills to create meaningful solutions. Great 
+                                engineering starts with understanding the right problem to solve, then having the 
+                                determination and technical expertise to solve it completely.
+                            </p>
+                        </div>
                         
-                        <p>I am passionate about applying engineering principles to solve real-world problems and am seeking opportunities to further develop my technical skills in mechanical engineering and product development.</p>
+                        <div class="text-block">
+                            <h3>Hands-On Experience</h3>
+                            <p>
+                                My experience ranges from designing precision testing equipment for the cycling 
+                                industry to co-founding Elevon, where I've transformed topographic data into custom 
+                                3D printed maps. Through leadership as Club Cycling President, I've learned that 
+                                the best solutions come from understanding user needs and effective collaboration.
+                            </p>
+                        </div>
                     </div>
-                      <div class="skills-showcase">                        <h3>Technical Competencies</h3>
-                        <div class="skills-container">
+                    
+                    <div class="about-skills">
+                        <div class="skills-grid">
                             <div class="skill-category">
-                                <h4>Design & CAD Software</h4>
-                                <div class="skill-bars">
-                                    <div class="skill-bar">
-                                        <span class="skill-name">SolidWorks</span>
-                                        <div class="skill-progress">
-                                            <div class="skill-fill" style="width: 90%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <span class="skill-name">3D Printing</span>
-                                        <div class="skill-progress">
-                                            <div class="skill-fill" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <span class="skill-name">Product Development</span>
-                                        <div class="skill-progress">
-                                            <div class="skill-fill" style="width: 80%"></div>
-                                        </div>
-                                    </div>
+                                <h4>Design & CAD</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">SolidWorks</span>
+                                    <span class="skill-tag">Fusion 360</span>
+                                    <span class="skill-tag">3D Modeling</span>
                                 </div>
                             </div>
                             
                             <div class="skill-category">
-                                <h4>Testing & Manufacturing</h4>
-                                <div class="skill-bars">
-                                    <div class="skill-bar">
-                                        <span class="skill-name">Impact Testing</span>
-                                        <div class="skill-progress">
-                                            <div class="skill-fill" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <span class="skill-name">Test Equipment Design</span>
-                                        <div class="skill-progress">
-                                            <div class="skill-fill" style="width: 80%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <span class="skill-name">Quality Control</span>
-                                        <div class="skill-progress">
-                                            <div class="skill-fill" style="width: 75%"></div>
-                                        </div>
-                                    </div>
+                                <h4>Systems & Development</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Linux Ubuntu</span>
+                                    <span class="skill-tag">Testing Equipment</span>
+                                    <span class="skill-tag">Manufacturing</span>
                                 </div>
                             </div>
-
+                            
                             <div class="skill-category">
-                                <h4>Leadership & Management</h4>
-                                <div class="skill-bars">
-                                    <div class="skill-bar">
-                                        <span class="skill-name">Team Leadership</span>
-                                        <div class="skill-progress">
-                                            <div class="skill-fill" style="width: 90%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <span class="skill-name">Project Management</span>
-                                        <div class="skill-progress">
-                                            <div class="skill-fill" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <span class="skill-name">Event Coordination</span>
-                                        <div class="skill-progress">
-                                            <div class="skill-fill" style="width: 80%"></div>
-                                        </div>
-                                    </div>
+                                <h4>Leadership & Business</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Product Development</span>
+                                    <span class="skill-tag">Entrepreneurship</span>
+                                    <span class="skill-tag">Team Leadership</span>
                                 </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2024-2028</div>
+                                <div class="timeline-content">
+                                    <h4>Duke University</h4>
+                                    <p>B.S. Mechanical Engineering + Innovation & Entrepreneurship Certificate</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date">Summer 2024</div>
+                                <div class="timeline-content">
+                                    <h4>Boyd Cycling Intern</h4>
+                                    <p>Designed & built 200J+ carbon rim impact testing machine</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date">2022-Present</div>                                <div class="timeline-content">
+                                    <h4>Elevon Founder</h4>
+                                    <p>3D topographic map business from high school to commercial success</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-logos">
+                            <div class="logo-item">
+                                <img src="images/Extras/duke_logo.png" alt="Duke University" class="experience-logo">
+                                <span>Duke University</span>
+                            </div>
+                            <div class="logo-item">
+                                <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="experience-logo">
+                                <span>Boyd Cycling</span>
+                            </div>
+                            <div class="logo-item">
+                                <img src="images/Elevon/elevon_logo.png" alt="Elevon" class="experience-logo">
+                                <span>Elevon</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>        <!-- Projects Section -->
-        <section id="projects" class="projects-section">            <div class="section-header">
-                <div class="section-number">02</div>
-                <h2 class="section-title">Portfolio</h2>
-                <div class="section-subtitle">Engineering Projects & Research</div>
-            </div>
-              <div class="projects-masonry">                <div class="project-item featured">
-                    <div class="project-image">
-                        <img src="images/project1.jpg" alt="Bicycle Rim Impact Testing Machine">
-                        <div class="project-overlay">
-                            <div class="project-details">
-                                <h3>Bicycle Rim Impact Testing Machine</h3>
-                                <p>Designed and built a specialized testing apparatus for Boyd Cycling to evaluate rim impact resistance and durability under various load conditions during internship.</p>
-                                <div class="project-tech">
-                                    <span>SolidWorks</span>
-                                    <span>Manufacturing</span>
-                                    <span>Testing Equipment</span>
-                                    <span>Product Development</span>
-                                </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">
+                        Engineering solutions from testing equipment to business ventures
+                    </p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card featured">                        <div class="project-image">
+                            <img src="images/Extras/duke_logo.png" alt="Carbon Rim Testing Machine">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Engineering Design</span>
+                                <span class="project-year">2024</span>
+                            </div>                            <h3 class="project-title">Carbon Rim Impact Testing Machine</h3>
+                            <p class="project-description">
+                                UCI-compliant testing machine for Boyd Cycling with 200J+ force capacity, 
+                                electromagnetic release system, and precision-guided impact mechanism.
+                            </p>
+                            <div class="project-tech">
+                                <span>SolidWorks</span>
+                                <span>Manufacturing</span>
+                                <span>Testing Protocol</span>
                             </div>
                             <a href="project1.html" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
                     </div>
-                </div>
-                
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="images/project2.jpg" alt="Elevon 3D Topographic Maps">
-                        <div class="project-overlay">
-                            <div class="project-details">
-                                <h3>Elevon - 3D Topographic Maps</h3>
-                                <p>Co-founded company specializing in 3D printed topographic maps, developing manufacturing processes and product design from concept to market.</p>
-                                <div class="project-tech">
-                                    <span>3D Printing</span>
-                                    <span>Product Design</span>
-                                    <span>Entrepreneurship</span>
-                                    <span>Manufacturing</span>
-                                </div>
+                    
+                    <div class="project-card">                        <div class="project-image">
+                            <img src="images/Extras/duke_logo.png" alt="Elevon 3D Maps">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Business</span>
+                                <span class="project-year">2022-Present</span>
+                            </div>                            <h3 class="project-title">Elevon - 3D Topographic Maps</h3>
+                            <p class="project-description">
+                                Custom 3D printed topographic maps from real elevation data. 
+                                From high school project to serving race directors nationwide.
+                            </p>
+                            <div class="project-tech">
+                                <span>3D Printing</span>
+                                <span>Business Development</span>
+                                <span>E-commerce</span>
                             </div>
                             <a href="project2.html" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
+                        </div>                    </div>
+                    
+                    <div class="project-card">                        <div class="project-image">
+                            <img src="images/Extras/duke_logo.png" alt="EGR101 Bucket Washing System">
                         </div>
-                    </div>
-                </div>
-                
-                <div class="project-item tall">
-                    <div class="project-image">
-                        <img src="images/project3.jpg" alt="Duke Club Cycling Leadership">
-                        <div class="project-overlay">
-                            <div class="project-details">
-                                <h3>Club Cycling Leadership</h3>
-                                <p>Serving as President of Duke Club Cycling, leading team operations, coordinating training programs, and managing competitive cycling events.</p>
-                                <div class="project-tech">
-                                    <span>Leadership</span>
-                                    <span>Team Management</span>
-                                    <span>Event Planning</span>
-                                    <span>Athletics</span>
-                                </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Academic</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-title">Automated Bucket Washing System</h3>
+                            <p class="project-description">
+                                Duke EGR101 design thinking project. Automated cleaning system 
+                                from problem identification to working prototype.
+                            </p>
+                            <div class="project-tech">
+                                <span>Design Methodology</span>
+                                <span>Prototyping</span>
+                                <span>Fabrication</span>
                             </div>
                             <a href="project3.html" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
@@ -331,112 +260,65 @@
                         </div>
                     </div>
                 </div>
-                  <div class="project-item">
-                    <div class="project-content-only">
-                        <div class="project-info">
-                            <h3>Additional Projects</h3>
-                            <p>View complete portfolio including coursework, research contributions, and technical documentation</p>
-                            <a href="#" class="view-all-btn">
-                                <span>Full Portfolio</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </section>        <!-- Contact Section -->
-        <section id="contact" class="contact-section">            <div class="section-header">
-                <div class="section-number">03</div>
-                <h2 class="section-title">Contact</h2>
-                <div class="section-subtitle">Professional Opportunities</div>
-            </div>
-            
-            <div class="contact-split">
-                <div class="contact-info-side">
-                    <div class="contact-card">                        <div class="contact-intro">
-                            <h3>Open to Opportunities</h3>
-                            <p>I am actively seeking internship positions for Summer 2025 in mechanical engineering, product development, or related fields. With hands-on experience in testing equipment design and leadership roles, I'm interested in positions that offer technical challenges and professional growth opportunities.</p>
-                        </div>
-                        
-                        <div class="contact-methods">                            <div class="contact-method">
-                                <div class="method-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>                                <div class="method-content">
-                                    <h4>Email</h4>
-                                    <a href="mailto:westley.kleinman@duke.edu">westley.kleinman@duke.edu</a>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <div class="method-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="method-content">
-                                    <h4>Phone</h4>
-                                    <a href="tel:+15017017973">(501) 701-7973</a>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <div class="method-icon">
-                                    <i class="fab fa-linkedin"></i>
-                                </div>
-                                <div class="method-content">
-                                    <h4>LinkedIn</h4>
-                                    <a href="https://linkedin.com/in/westley-kleinman-154048332" target="_blank">linkedin.com/in/westley-kleinman</a>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <div class="method-icon">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                                <div class="method-content">
-                                    <h4>GitHub</h4>
-                                    <a href="https://github.com/Westley-Kleinman" target="_blank">github.com/Westley-Kleinman</a>
-                                </div>
-                            </div>
-                        </div>
-                          <div class="availability-status">
-                            <div class="status-indicator active"></div>
-                            <span>Available for Summer 2025 Internships</span>
-                        </div>
-                    </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">
+                        Interested in collaboration, internships, or just want to chat about engineering?
+                    </p>
                 </div>
                 
-                <div class="contact-form-side">
-                    <div class="form-container">
-                        <form class="contact-form">
-                            <div class="form-row">
-                                <div class="form-field">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-                                <div class="form-field">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
                             </div>
-                              <div class="form-field">
-                                <label for="subject">Inquiry Type</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Select inquiry type</option>
-                                    <option value="internship">Internship Opportunity</option>
-                                    <option value="collaboration">Project Collaboration</option>
-                                    <option value="networking">Professional Networking</option>
-                                    <option value="other">Other</option>
-                                </select>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:westley.kleinman@duke.edu">westley.kleinman@duke.edu</a>
                             </div>
-                              <div class="form-field">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="6" required placeholder="Please describe the opportunity or inquiry..."></textarea>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
                             </div>
-                            
-                            <button type="submit" class="submit-btn">
-                                <span>Send Message</span>
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <a href="tel:+19198026999">(919) 802-6999</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <span>Durham, NC / Duke University</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/westley-kleinman-154048332" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Westley-Kleinman" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://elevon3d.netlify.app/" target="_blank" class="social-link">
+                                <i class="fas fa-globe"></i>
+                                <span>Elevon Website</span>
+                            </a>                        </div>
                     </div>
                 </div>
             </div>
@@ -444,18 +326,30 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">        <div class="footer-content">
-            <div class="footer-left">
-                <p>&copy; 2025 Westley Kleinman</p>
-                <span>Mechanical Engineering Student, Duke University</span>
-            </div>
-            <div class="footer-right">
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Portfolio</a>
-                    <a href="#contact">Contact</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-text">WK</span>
+                    </div>
+                    <p class="footer-text">
+                        Mechanical Engineering Student at Duke University.<br>
+                        Building solutions from ideas to impact.
+                    </p>
                 </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                        <a href="resume.pdf" target="_blank">Resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
             </div>
         </div>
     </footer>
