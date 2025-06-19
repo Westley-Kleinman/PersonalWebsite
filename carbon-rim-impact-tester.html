@@ -2,13 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="description" content="Boyd Cycling & Time Bicycles Engineering Internship - RTM process optimization, custom impact testing equipment, and international composite technology transfer by Westley Kleinman.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boyd Cycling & Time Bicycles Engineering Internship - RTM process optimization, custom impact testing equipment, and international composite technology transfer by Westley Kleinman.">
     <meta name="keywords" content="Boyd Cycling, Time Bicycles, RTM process, carbon rim fabrication, impact testing, UCI standards, mechanical engineering, composite materials, CU-ICAR">
     <meta name="author" content="Westley Kleinman">
     <title>Boyd Cycling & Time Bicycles Engineering | Westley Kleinman</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .company-logos {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .company-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        .company-logo:hover {
+            opacity: 1;
+        }
+        .project-overview {
+            background: var(--bg-secondary);
+            padding: 4rem 0;
+            margin: 3rem 0;
+            border-radius: 12px;
+        }
+        .key-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .highlight-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .highlight-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .highlight-icon i {
+            color: white;
+            font-size: 1.2rem;
+        }
+        .highlight-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .highlight-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .company-logos {
+                gap: 1rem;
+            }
+            .company-logo {
+                height: 50px;
+            }
+            .key-highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -37,92 +139,157 @@
         <!-- Hero Section -->
         <section class="project-hero">
             <div class="container">
-                <div class="project-hero-content">                    <div class="project-breadcrumb">
+                <div class="project-hero-content">
+                    <div class="project-breadcrumb">
                         <a href="index.html">Portfolio</a>
                         <span>/</span>
                         <span>Boyd Cycling & Time Bicycles Engineering</span>
                     </div>
                     <div class="project-hero-text">
-                        <h1 class="hero-name">Boyd Cycling & Time Bicycles Engineering</h1>
-                        <p class="hero-subtitle">RTM Process Optimization & International Technology Transfer</p>
+                        <h1 class="hero-name">Boyd Cycling & Time Bicycles Engineering Internship</h1>
+                        <p class="hero-subtitle">Advanced Carbon Fiber Manufacturing & Quality Assurance</p>
                         <p class="hero-description">
-                            Engineering internship at Boyd Cycling and Time Bicycles focusing on carbon-rim 
-                            fabrication optimization, custom impact testing equipment development, and transferring 
-                            European composite injection protocols to U.S. operations at CU-ICAR.
-                        </p>                        <div class="project-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">RTM</span>
-                                <span class="stat-label">Process Optimized</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">UCI</span>
-                                <span class="stat-label">Testing Standards</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">CU-ICAR</span>
-                                <span class="stat-label">Tech Transfer</span>
-                            </div>
-                        </div>
-                    </div>                    <div class="project-hero-image">
-                        <div class="hero-image-container">
-                            <img src="images/Internship/time_logo.jpeg" alt="Boyd Cycling & Time Bicycles" class="hero-project-img">
-                            <div class="hero-image-backdrop"></div>
+                            Engineering internship at Boyd Cycling and Time Bicycles, focusing on RTM process optimization, 
+                            custom impact testing equipment development, and international technology transfer at CU-ICAR.
+                        </p>
+                        
+                        <div class="company-logos">
+                            <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="company-logo">
+                            <img src="images/Internship/time_logo.jpeg" alt="Time Bicycles" class="company-logo">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>        <!-- RTM Process Optimization -->
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="section-subtitle">
+                        A comprehensive engineering internship encompassing three major initiatives: RTM process optimization, 
+                        custom testing equipment development, and international technology transfer.
+                    </p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">RTM</span>
+                        <span class="stat-label">Process Optimization</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">40J</span>
+                        <span class="stat-label">UCI Testing Standards</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">International Facilities</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Highlights -->
         <section class="project-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Project 1</span>
-                    <h2 class="section-title">RTM Process Optimization</h2>
-                    <p class="section-subtitle">Enhancing Carbon-Rim Fabrication Quality & Consistency</p>
+                    <h2 class="section-title">Key Achievements</h2>
+                    <p class="section-subtitle">Three major engineering initiatives that enhanced manufacturing capabilities and quality assurance</p>
                 </div>
-                
-                <div class="project-overview-grid">
-                    <div class="overview-content">
-                        <h3>The Challenge</h3>
-                        <p>
-                            Boyd Cycling's RTM (Resin Transfer Molding) process was experiencing inconsistent 
-                            resin distribution, leading to dry zones in carbon rims and variable product quality. 
-                            Manufacturing efficiency was compromised by unpredictable fabrication outcomes.
-                        </p>
-                        
-                        <h3>Solution Approach</h3>
-                        <p>
-                            Conducted comprehensive analysis of mold geometry and machine calibration parameters. 
-                            Overhauled the entire RTM process by redesigning mold flow patterns and optimizing 
-                            injection parameters to achieve uniform resin distribution and eliminate dry zones.
-                        </p>
-                        
-                        <h3>Impact</h3>
-                        <p>
-                            Standardized resin distribution across all carbon rim production, improving manufacturing 
-                            consistency and product quality. Enhanced production efficiency and reduced material waste 
-                            through optimized process parameters.
+
+                <div class="key-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="highlight-title">RTM Process Optimization</h3>
+                        <p class="highlight-description">
+                            Enhanced carbon-rim fabrication by overhauling mold geometry and machine calibration, 
+                            eradicating dry zones and standardizing resin distribution across production.
                         </p>
                     </div>
-                    
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3 class="highlight-title">Custom Impact Testing Equipment</h3>
+                        <p class="highlight-description">
+                            Conceived and built a custom wheel-impact rig using winch and electromagnetic stopper systems, 
+                            validating rim durability to 40J UCI standards with precision and repeatability.
+                        </p>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="highlight-title">International Technology Transfer</h3>
+                        <p class="highlight-description">
+                            Transferred European carbon-injection protocols to CU-ICAR facilities, accelerating 
+                            Time Bicycles' U.S.A. rollout and demonstrating cross-cultural technical adaptability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Details -->
+        <section class="project-section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Implementation</h2>
+                    <p class="section-subtitle">Advanced engineering solutions for carbon fiber manufacturing and quality control</p>
+                </div>
+
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>RTM Process Enhancement</h3>
+                        <p>
+                            Conducted comprehensive analysis of existing mold geometry and machine calibration parameters. 
+                            Identified inconsistent resin distribution patterns causing dry zones in carbon rim production. 
+                            Redesigned mold flow patterns and optimized injection parameters to achieve uniform distribution.
+                        </p>
+
+                        <h3>Impact Testing Development</h3>
+                        <p>
+                            Designed and fabricated a custom testing apparatus utilizing electromagnetic release mechanisms 
+                            for consistent impact delivery. Implemented precision control systems ensuring repeatable testing 
+                            according to UCI standards while maintaining cost-effectiveness compared to commercial alternatives.
+                        </p>
+
+                        <h3>Technology Transfer</h3>
+                        <p>
+                            Collaborated with European engineering teams to adapt established carbon-injection protocols for 
+                            U.S. manufacturing operations. Successfully integrated Time Bicycles' proven processes into 
+                            CU-ICAR facilities while maintaining quality standards and production efficiency.
+                        </p>
+                    </div>
+
                     <div class="overview-specs">
                         <div class="specs-card">
-                            <h4>Key Achievements</h4>
+                            <h4>Technical Specifications</h4>
                             <div class="achievement-list">
                                 <div class="achievement-item">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>Eliminated dry zones in carbon rim fabrication</span>
+                                    <span>Resin Transfer Molding (RTM) optimization</span>
                                 </div>
                                 <div class="achievement-item">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>Standardized resin distribution process</span>
+                                    <span>Electromagnetic impact release system</span>
                                 </div>
                                 <div class="achievement-item">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>Improved manufacturing consistency</span>
+                                    <span>40J UCI compliance testing</span>
                                 </div>
                                 <div class="achievement-item">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>Enhanced product quality standards</span>
+                                    <span>Cross-facility protocol implementation</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Quality assurance standardization</span>
                                 </div>
                             </div>
                         </div>
@@ -131,122 +298,49 @@
             </div>
         </section>
 
-        <!-- Impact Testing Development -->
-        <section class="project-section bg-secondary">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Project 2</span>
-                    <h2 class="section-title">Custom Impact Testing Development</h2>
-                    <p class="section-subtitle">UCI-Compliant Wheel Durability Validation</p>
-                </div>
-                
-                <div class="project-overview-grid">
-                    <div class="overview-content">
-                        <h3>The Challenge</h3>
-                        <p>
-                            Boyd Cycling needed reliable, consistent impact testing capabilities to validate carbon 
-                            rim durability according to UCI standards. Existing commercial testing equipment was 
-                            cost-prohibitive and lacked customization for specific rim geometries.
-                        </p>
-                        
-                        <h3>Solution Approach</h3>
-                        <p>
-                            Conceived and built a custom wheel-impact rig utilizing winch and electromagnetic stopper 
-                            systems. Designed the testing apparatus to deliver precise, repeatable impacts while 
-                            meeting UCI standard requirements for comprehensive quality assurance.
-                        </p>
-                        
-                        <h3>Technical Implementation</h3>
-                        <p>
-                            Integrated electromagnetic release mechanism for consistent impact delivery, developed 
-                            precision control systems for repeatable testing, and implemented safety protocols 
-                            for reliable operation in production environment.
-                        </p>
-                    </div>
-                    
-                    <div class="overview-specs">
-                        <div class="specs-card">
-                            <h4>Technical Specifications</h4>
-                            <div class="spec-grid">
-                                <div class="spec-item">
-                                    <span class="spec-label">Release System</span>
-                                    <span class="spec-value">Electromagnetic</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Control Method</span>
-                                    <span class="spec-value">Winch + Stopper</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Testing Standard</span>
-                                    <span class="spec-value">UCI Compliant</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Application</span>
-                                    <span class="spec-value">Rim Durability</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- International Technology Transfer -->
+        <!-- Impact & Results -->
         <section class="project-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Project 3</span>
-                    <h2 class="section-title">International Technology Transfer</h2>
-                    <p class="section-subtitle">European Composite Protocols to U.S. Operations</p>
+                    <h2 class="section-title">Impact & Results</h2>
+                    <p class="section-subtitle">Measurable improvements in manufacturing quality and operational efficiency</p>
                 </div>
-                
-                <div class="project-overview-grid">
-                    <div class="overview-content">
-                        <h3>The Challenge</h3>
-                        <p>
-                            Time Bicycles needed to establish U.S. manufacturing capabilities at CU-ICAR while 
-                            maintaining the quality and precision of their European composite injection processes. 
-                            This required adapting established protocols to new facilities and equipment.
-                        </p>
-                        
-                        <h3>Solution Approach</h3>
-                        <p>
-                            Transferred European carbon-injection protocols to CU-ICAR facilities, adapting 
-                            established manufacturing processes to American operations. Collaborated across 
-                            international teams to ensure process fidelity and quality standards.
-                        </p>
-                        
-                        <h3>Cross-Cultural Impact</h3>
-                        <p>
-                            Successfully accelerated Time Bicycles' U.S.A. rollout by implementing proven European 
-                            manufacturing techniques. Demonstrated technical adaptability and cross-cultural 
-                            collaboration skills in high-stakes manufacturing environment.
+
+                <div class="key-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="highlight-title">Manufacturing Quality</h3>
+                        <p class="highlight-description">
+                            Eliminated dry zones in carbon rim fabrication, standardized resin distribution process, 
+                            and significantly improved manufacturing consistency across production runs.
                         </p>
                     </div>
-                    
-                    <div class="overview-specs">
-                        <div class="specs-card">
-                            <h4>Key Contributions</h4>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <i class="fas fa-globe"></i>
-                                    <span>European to U.S. protocol transfer</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-industry"></i>
-                                    <span>CU-ICAR facility integration</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Accelerated U.S. market rollout</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Cross-cultural technical collaboration</span>
-                                </div>
-                            </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                    </div>            </div>
+                        <h3 class="highlight-title">Quality Assurance</h3>
+                        <p class="highlight-description">
+                            Established reliable, repeatable impact testing capabilities that meet UCI standards 
+                            while providing cost-effective validation for rim durability requirements.
+                        </p>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="highlight-title">Market Expansion</h3>
+                        <p class="highlight-description">
+                            Accelerated Time Bicycles' U.S. market rollout by successfully implementing European 
+                            manufacturing protocols at CU-ICAR facilities with maintained quality standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -275,436 +369,6 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-                
-                <div class="design-process">
-                    <div class="process-step">
-                        <div class="step-number">01</div>
-                        <div class="step-content">
-                            <h3>UCI Standards Analysis & Force Calculations</h3>
-                            <p>
-                                I began by thoroughly analyzing UCI testing protocols and conducting detailed force 
-                                calculations to determine exact impact energy requirements. Using physics principles, 
-                                I calculated drop heights, impact velocities, and mass requirements to achieve 
-                                200+ joule impacts. This analysis informed all subsequent design decisions and 
-                                established the mathematical foundation for the entire system.
-                            </p>
-                            <div class="step-tags">
-                                <span>Physics Calculations</span>
-                                <span>UCI Protocol Analysis</span>
-                                <span>Force Requirements</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">02</div>
-                        <div class="step-content">
-                            <h3>Structural Frame Design & SolidWorks Modeling</h3>
-                            <p>
-                                Designed the main structural framework in SolidWorks, focusing on rigid vertical guides 
-                                that could withstand repeated high-energy impacts. I performed finite element analysis 
-                                on critical load-bearing components, optimized material selection for cost and strength, 
-                                and ensured the frame could maintain precision alignment over thousands of test cycles.
-                            </p>
-                            <div class="step-tags">
-                                <span>SolidWorks CAD</span>
-                                <span>FEA Analysis</span>
-                                <span>Structural Engineering</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">03</div>
-                        <div class="step-content">
-                            <h3>Electromagnetic Release System Engineering</h3>
-                            <p>
-                                Developed a precision electromagnetic release mechanism to eliminate human timing 
-                                variability. I designed the electromagnet specifications, calculated holding forces, 
-                                selected appropriate power supplies, and created the control circuitry. This system 
-                                ensures consistent release timing and enables repeatable test conditions across 
-                                all testing scenarios.
-                            </p>
-                            <div class="step-tags">
-                                <span>Electromagnetic Design</span>
-                                <span>Control Circuitry</span>
-                                <span>Precision Timing</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">04</div>
-                        <div class="step-content">
-                            <h3>Manufacturing Coordination & Assembly</h3>
-                            <p>
-                                Coordinated with Boyd Cycling's manufacturing partners to produce precision components 
-                                according to my SolidWorks specifications. I created detailed assembly drawings, 
-                                established quality control checkpoints, and personally oversaw the assembly process 
-                                to ensure all components met tolerance requirements and safety standards.
-                            </p>
-                            <div class="step-tags">
-                                <span>Manufacturing Drawings</span>
-                                <span>Quality Control</span>
-                                <span>Assembly Management</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">05</div>
-                        <div class="step-content">
-                            <h3>Safety System Integration & Testing</h3>
-                            <p>
-                                Implemented comprehensive safety features including emergency stops, protective barriers, 
-                                operator lockout systems, and fail-safe mechanisms. I conducted extensive safety testing, 
-                                validated all protection systems, created operating procedures, and ensured compliance 
-                                with industrial safety standards for high-energy equipment operation.
-                            </p>
-                            <div class="step-tags">
-                                <span>Safety Engineering</span>
-                                <span>System Validation</span>
-                                <span>Operating Procedures</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">06</div>
-                        <div class="step-content">
-                            <h3>Calibration & UCI Compliance Validation</h3>
-                            <p>
-                                Performed detailed calibration procedures to ensure accurate force delivery and 
-                                measurement. I conducted extensive testing against UCI standards, documented all 
-                                results, implemented data logging systems, and validated that the machine consistently 
-                                met or exceeded all required testing protocols for professional cycling equipment.
-                            </p>
-                            <div class="step-tags">
-                                <span>Precision Calibration</span>
-                                <span>UCI Validation</span>
-                                <span>Data Logging</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-                
-                <div class="design-process">
-                    <div class="process-step">
-                        <div class="step-number">01</div>
-                        <div class="step-content">
-                            <h3>Research & Requirements</h3>
-                            <p>
-                                Conducted extensive research on UCI testing standards, analyzed existing testing 
-                                methods, and collaborated with Boyd Cycling engineers to define precise requirements. 
-                                Studied impact mechanics and material testing protocols.
-                            </p>
-                            <div class="step-tags">
-                                <span>UCI Standards</span>
-                                <span>Material Science</span>
-                                <span>Requirements Analysis</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">02</div>
-                        <div class="step-content">
-                            <h3>Concept Development</h3>
-                            <p>
-                                Developed multiple design concepts focusing on precision, safety, and repeatability. 
-                                Evaluated electromagnetic vs. mechanical release systems, analyzed force distribution 
-                                mechanisms, and optimized the overall system architecture.
-                            </p>
-                            <div class="step-tags">
-                                <span>Concept Design</span>
-                                <span>System Architecture</span>
-                                <span>Force Analysis</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">03</div>
-                        <div class="step-content">
-                            <h3>3D Modeling & Simulation</h3>
-                            <p>
-                                Created detailed 3D models in SolidWorks with complete assembly drawings. 
-                                Performed finite element analysis on critical components, validated electromagnetic 
-                                release mechanisms, and optimized structural elements for maximum reliability.
-                            </p>
-                            <div class="step-tags">
-                                <span>SolidWorks</span>
-                                <span>FEA Analysis</span>
-                                <span>3D Modeling</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">04</div>
-                        <div class="step-content">
-                            <h3>Manufacturing & Assembly</h3>
-                            <p>
-                                Coordinated with machining partners for precision component manufacturing. 
-                                Oversaw assembly process, integrated electromagnetic control systems, and 
-                                implemented comprehensive safety features including emergency stops and protective barriers.
-                            </p>
-                            <div class="step-tags">
-                                <span>Manufacturing</span>
-                                <span>Assembly</span>
-                                <span>Quality Control</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">05</div>
-                        <div class="step-content">
-                            <h3>Testing & Validation</h3>
-                            <p>
-                                Conducted extensive testing protocols to validate UCI compliance and ensure 
-                                consistent performance. Calibrated impact forces, verified safety systems, 
-                                and documented complete operating procedures for production use.
-                            </p>
-                            <div class="step-tags">
-                                <span>Testing Protocol</span>
-                                <span>UCI Validation</span>
-                                <span>Documentation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Implementation -->
-        <section class="project-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Technical Details</span>
-                    <h2 class="section-title">Engineering Implementation</h2>
-                </div>
-                
-                <div class="tech-implementation">
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <h4>Electromagnetic Release System</h4>
-                            <p>
-                                Precision electromagnetic release mechanism ensures consistent drop timing and 
-                                eliminates human error. Digital control system allows for exact force calibration 
-                                and repeatable test conditions.
-                            </p>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h4>Safety Systems</h4>
-                            <p>
-                                Comprehensive safety features including emergency stops, protective barriers, 
-                                operator lockout systems, and fail-safe mechanisms to ensure complete operator 
-                                protection during high-energy testing.
-                            </p>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h4>Data Collection</h4>
-                            <p>
-                                Integrated measurement systems capture impact force, deformation data, and 
-                                failure modes. Digital logging enables comprehensive analysis and UCI 
-                                compliance documentation.
-                            </p>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fas fa-wrench"></i>
-                            </div>
-                            <h4>Precision Manufacturing</h4>
-                            <p>
-                                Designed for manufacturing efficiency with standard components and clear 
-                                assembly procedures. Modular design allows for easy maintenance and 
-                                component replacement in production environments.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Results & Impact -->
-        <section class="project-section bg-secondary">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Project Results</span>
-                    <h2 class="section-title">Impact & Outcomes</h2>
-                </div>
-                
-                <div class="results-content">
-                    <div class="results-grid">
-                        <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="result-content">
-                                <h4>UCI Compliance Achieved</h4>
-                                <p>Successfully met all International Cycling Union testing standards, enabling Boyd Cycling to validate their carbon rim designs for professional racing applications.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <div class="result-content">
-                                <h4>Production Implementation</h4>
-                                <p>Machine successfully integrated into Boyd Cycling's quality control process, enabling consistent testing of all carbon rim products before market release.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-dollar-sign"></i>
-                            </div>
-                            <div class="result-content">
-                                <h4>Cost-Effective Solution</h4>
-                                <p>Delivered a custom testing solution at significantly lower cost than commercial alternatives while meeting all technical requirements and safety standards.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="result-item">
-                            <div class="result-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="result-content">
-                                <h4>Professional Development</h4>
-                                <p>Gained hands-on experience in industrial equipment design, manufacturing processes, and quality control systems in a professional engineering environment.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="key-learnings">
-                        <h3>Key Technical Learnings</h3>
-                        <div class="learning-grid">
-                            <div class="learning-item">
-                                <strong>Material Testing Protocols:</strong>
-                                <span>Deep understanding of carbon fiber testing standards and impact analysis</span>
-                            </div>
-                            <div class="learning-item">
-                                <strong>Industrial Design:</strong>
-                                <span>Experience designing equipment for manufacturing environments with safety requirements</span>
-                            </div>
-                            <div class="learning-item">
-                                <strong>System Integration:</strong>
-                                <span>Successfully integrated mechanical, electrical, and control systems</span>
-                            </div>
-                            <div class="learning-item">
-                                <strong>Regulatory Compliance:</strong>
-                                <span>Navigated complex industry standards and certification requirements</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Gallery -->
-        <section class="project-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Project Gallery</span>
-                    <h2 class="section-title">Development Process</h2>
-                </div>
-                
-                <div class="project-gallery">
-                    <div class="gallery-item">
-                        <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling Partnership">
-                        <div class="gallery-caption">
-                            <h4>Industry Partnership</h4>
-                            <p>Collaboration with Boyd Cycling engineering team</p>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item">
-                        <img src="images/Internship/time_logo.jpeg" alt="Time Cycling Integration">
-                        <div class="gallery-caption">
-                            <h4>Technical Integration</h4>
-                            <p>Advanced control systems and precision mechanics</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Next Steps & Contact -->
-        <section class="project-section bg-secondary">
-            <div class="container">
-                <div class="next-steps-content">
-                    <div class="next-steps-text">
-                        <h2>Project Success & Future Applications</h2>
-                        <p>
-                            This project demonstrated my ability to work in a professional engineering environment, 
-                            delivering a complex technical solution that meets industry standards. The experience 
-                            reinforced my passion for mechanical design and manufacturing engineering.
-                        </p>
-                        
-                        <div class="project-skills">
-                            <h4>Skills Demonstrated</h4>
-                            <div class="skills-grid">
-                                <span class="skill-tag">SolidWorks 3D Modeling</span>
-                                <span class="skill-tag">Manufacturing Processes</span>
-                                <span class="skill-tag">System Integration</span>
-                                <span class="skill-tag">Testing Protocols</span>
-                                <span class="skill-tag">Safety Engineering</span>
-                                <span class="skill-tag">Project Management</span>
-                                <span class="skill-tag">Industry Standards</span>
-                                <span class="skill-tag">Quality Control</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-cta">
-                        <h3>Interested in Learning More?</h3>
-                        <p>I'd be happy to discuss the technical details of this project and my engineering experience.</p>
-                        <div class="cta-buttons">
-                            <a href="index.html#contact" class="btn-primary">Get In Touch</a>
-                            <a href="index.html#projects" class="btn-secondary">View Other Projects</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html#home">Home</a>
-                    <a href="index.html#about">About</a>
-                    <a href="index.html#projects">Projects</a>
-                    <a href="index.html#contact">Contact</a>
-                </div>
             </div>
         </div>
     </footer>
