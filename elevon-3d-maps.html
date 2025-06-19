@@ -3,17 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tri-Dimensional Topographic Maps - Entrepreneurial venture with provisional patent, four-figure revenue, and strategic partnerships with Visit Hot Springs and Arkansas NICA by Westley Kleinman.">
+    <meta name="keywords" content="3D printing, topographic maps, entrepreneurship, Fusion360, digital manufacturing, patent, business development, trail maps">
+    <meta name="author" content="Westley Kleinman">
     <title>Tri-Dimensional Topographic Maps | Westley Kleinman</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .partner-logos {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .partner-logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .partner-logo:hover {
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .partner-logos {
+                gap: 1rem;
+            }
+            .partner-logo {
+                height: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html"><span class="logo-text">WK</span></a>
+                <a href="index.html" class="logo-text">WK</a>
             </div>
             <div class="nav-menu">
                 <a href="index.html#home" class="nav-link">Home</a>
@@ -22,54 +63,61 @@
                 <a href="index.html#contact" class="nav-link">Contact</a>
                 <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Project Hero -->
-        <section class="hero" style="padding-top: 120px;">
+        <!-- Hero Section -->
+        <section class="project-hero">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <a href="index.html#projects" class="back-link">
-                            <i class="fas fa-arrow-left"></i> Back to Projects
-                        </a>                        <h1 class="hero-name">Tri-Dimensional Topographic Maps</h1>
-                        <p class="hero-title">Entrepreneurial Venture with Provisional Patent</p>
+                <div class="project-hero-content">
+                    <div class="project-breadcrumb">
+                        <a href="index.html">Portfolio</a>
+                        <span>/</span>
+                        <span>Tri-Dimensional Topographic Maps</span>
+                    </div>
+                    <div class="project-hero-text">
+                        <h1 class="hero-name">Tri-Dimensional Topographic Maps</h1>
+                        <p class="hero-subtitle">Entrepreneurial Venture with Provisional Patent</p>
                         <p class="hero-description">
                             Designed and produced 3D-printed trail maps providing undistorted topographic visualization. 
                             Secured provisional patent and developed marketing strategy resulting in four-figure revenue 
                             with established partnerships including Visit Hot Springs and Arkansas NICA.
                         </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <span class="stat-number">4+</span>
-                                <span class="stat-label">Years Operating</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">Founder</span>
-                                <span class="stat-label">Business Owner</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">Active</span>
-                                <span class="stat-label">Current Status</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <div class="image-container">
-                            <img src="images/Extras/trail_maps.jpg" alt="3D Topographic Maps" class="profile-img">
+                        
+                        <div class="project-image">
+                            <img src="images/Extras/trail_maps.jpg" alt="3D Topographic Trail Maps">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>        <!-- Project Overview -->
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="section-subtitle">
+                        Four-year entrepreneurial venture combining technical innovation with strategic business development 
+                        to create market-leading 3D topographic visualization solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation & Design -->
         <section class="project-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Entrepreneurial Venture</span>
-                    <h2 class="section-title">From Concept to Business</h2>
-                    <p class="section-subtitle">4+ Years of Continuous Innovation & Growth</p>
+                    <h2 class="section-title">Innovation & Design</h2>
+                    <p class="section-subtitle">Converting 2D topographic limitations into 3D visualization solutions</p>
                 </div>
                 
                 <div class="project-overview-grid">
@@ -81,78 +129,19 @@
                             changes, trail difficulty, or spatial relationships needed for race planning and navigation.
                         </p>
                         
-                        <h3>The Solution</h3>
+                        <h3>Technical Solution</h3>
                         <p>
                             Designed and produced 3D-printed trail maps providing undistorted topographic visualization. 
-                            Developed proprietary process converting elevation data into accurate, scaled terrain models 
-                            that preserve true topographic relationships.
+                            Developed proprietary process using Fusion360 and applied digital manufacturing techniques, 
+                            converting GIS elevation data into accurate, scaled terrain models that preserve true 
+                            topographic relationships.
                         </p>
                         
-                        <h3>Business Impact</h3>
+                        <h3>Innovation Impact</h3>
                         <p>
-                            Secured provisional patent protection and established revenue-generating partnerships with 
-                            Visit Hot Springs and Arkansas NICA. Achieved four-figure revenue through strategic 
-                            marketing and direct client relationships.
-                        </p>
-                    </div>
-                    
-                    <div class="overview-specs">
-                        <div class="specs-card">
-                            <h4>Business Achievements</h4>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <i class="fas fa-certificate"></i>
-                                    <span>Provisional Patent Secured</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-dollar-sign"></i>
-                                    <span>Four-Figure Revenue Generated</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-handshake"></i>
-                                    <span>Strategic Partnerships Established</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <span>4+ Years Continuous Operation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Development -->
-        <section class="project-section bg-secondary">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Technical Innovation</span>
-                    <h2 class="section-title">3D Design & Manufacturing Process</h2>
-                    <p class="section-subtitle">Fusion360 & Digital Manufacturing Excellence</p>
-                </div>
-                
-                <div class="project-overview-grid">
-                    <div class="overview-content">
-                        <h3>Design Process</h3>
-                        <p>
-                            Utilized Fusion360 for precise 3D modeling, converting GIS elevation data into 
-                            manufacturable designs. Developed proprietary scaling techniques to maintain 
-                            topographic accuracy while optimizing for 3D printing constraints.
-                        </p>
-                        
-                        <h3>Manufacturing Innovation</h3>
-                        <p>
-                            Applied advanced digital manufacturing techniques including multi-material printing, 
-                            support optimization, and post-processing workflows. Achieved consistent quality 
-                            across variable terrain complexities and scale requirements.
-                        </p>
-                        
-                        <h3>Quality Standards</h3>
-                        <p>
-                            Established rigorous quality control processes ensuring accurate elevation representation, 
-                            dimensional consistency, and durability standards suitable for professional race 
-                            director applications and customer trophy pieces.
+                            Created market-first solution combining real topographic elevation data with trail route information, 
+                            difficulty classifications, and geographic accuracy while remaining cost-effective for 
+                            small race events and custom applications.
                         </p>
                     </div>
                     
@@ -184,12 +173,11 @@
         </section>
 
         <!-- Business Development -->
-        <section class="project-section">
+        <section class="project-section bg-secondary">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Business Strategy</span>
-                    <h2 class="section-title">Market Development & Partnerships</h2>
-                    <p class="section-subtitle">Strategic Growth Through Key Relationships</p>
+                    <h2 class="section-title">Business Development</h2>
+                    <p class="section-subtitle">Strategic partnerships and market development driving four-figure revenue</p>
                 </div>
                 
                 <div class="project-overview-grid">
@@ -205,14 +193,14 @@
                         <p>
                             Established partnerships with Visit Hot Springs for tourism promotion and Arkansas NICA 
                             for youth cycling programs. These relationships expanded market reach and validated 
-                            commercial viability of the product concept.
+                            commercial viability while providing recurring revenue streams.
                         </p>
                         
-                        <h3>Revenue Generation</h3>
+                        <h3>Revenue Achievement</h3>
                         <p>
                             Achieved consistent four-figure revenue through direct sales, custom commissions, and 
                             partnership agreements. Demonstrated sustainable business model with recurring customer 
-                            relationships and referral-based growth.
+                            relationships and referral-based growth over four years of operation.
                         </p>
                     </div>
                     
@@ -239,7 +227,67 @@
                             </div>
                         </div>
                     </div>
-                </div>            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intellectual Property & Growth -->
+        <section class="project-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Intellectual Property & Growth</h2>
+                    <p class="section-subtitle">Patent protection and continuous business expansion since 2021</p>
+                </div>
+                
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Patent Protection</h3>
+                        <p>
+                            Secured provisional patent protection for the proprietary 3D topographic visualization 
+                            process. This intellectual property foundation provides competitive advantage and 
+                            validates the technical innovation of the solution.
+                        </p>
+                        
+                        <h3>Continuous Operation</h3>
+                        <p>
+                            Maintained active business operations since 2021 with consistent four-figure revenue 
+                            generation. Demonstrated entrepreneurial persistence and business acumen through 
+                            market fluctuations and competitive challenges.
+                        </p>
+                        
+                        <h3>Future Expansion</h3>
+                        <p>
+                            Established foundation for scalable growth through proven manufacturing processes, 
+                            strategic partnerships, and validated market demand. Created sustainable competitive 
+                            advantage through technical innovation and customer relationships.
+                        </p>
+                    </div>
+                    
+                    <div class="overview-specs">
+                        <div class="specs-card">
+                            <h4>Business Achievements</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Provisional Patent Secured</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Four-Figure Revenue Generated</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>4+ Years Continuous Operation</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Sustainable Growth Model</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -259,426 +307,6 @@
                 <div class="footer-right">
                     <div class="footer-links">
                         <a href="index.html">Home</a>
-                        <a href="index.html#about">About</a>
-                        <a href="index.html#projects">Projects</a>
-                        <a href="index.html#contact">Contact</a>
-                        <a href="resume.pdf" target="_blank">Resume</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-                        
-                        <div class="text-block">
-                            <h3>Existing Solution Limitations</h3>
-                            <p>
-                                Commercial 3D terrain models were expensive, generic, and didn't include trail-specific 
-                                information. Available options couldn't incorporate trail difficulty data, custom route 
-                                highlighting, or be produced at accessible price points for small race events. 
-                                The technology existed but wasn't accessible for the trail running community.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Technical Requirements</h3>
-                            <p>
-                                The solution needed to combine real topographic elevation data with trail route information, 
-                                incorporate difficulty classifications, maintain geographic accuracy, and be producible 
-                                using consumer-grade 3D printing technology while remaining cost-effective for small orders.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="about-skills">
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Key Problems</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">2D Limitation</span>
-                                    <span class="skill-tag">Cost Barrier</span>
-                                    <span class="skill-tag">Generic Products</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>User Needs</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Custom Routes</span>
-                                    <span class="skill-tag">Trail Difficulty</span>
-                                    <span class="skill-tag">Affordable Pricing</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Technical Goals</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Real Elevation Data</span>
-                                    <span class="skill-tag">Multi-Color Printing</span>
-                                    <span class="skill-tag">Scalable Process</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Solution Process -->
-        <section class="about" style="background: var(--bg-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Technical Implementation</span>
-                    <h2 class="section-title">How I Built Elevon</h2>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-text">
-                        <div class="text-block">
-                            <h3>Step 1: Trail Data Collection & Processing</h3>
-                            <p>
-                                I start with trail maps provided by race directors or screenshot from Trailforks. 
-                                Using a custom web application I developed (<a href="https://elevon.onrender.com/" target="_blank">elevon.onrender.com</a>), 
-                                I create black and white images separating trail difficulties - each difficulty level 
-                                becomes a distinct black trail on white background image. This automated process ensures 
-                                consistent data formatting for downstream processing.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Step 2: Vector Conversion & Preparation</h3>
-                            <p>
-                                Each difficulty-specific bitmap image is converted to SVG format using Inkscape, creating 
-                                precise vector paths that can be scaled and manipulated without quality loss. This 
-                                vectorization step is crucial for accurate 3D extrusion and ensures clean trail edges 
-                                in the final printed model.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Step 3: Topographic Data Integration</h3>
-                            <p>
-                                Real elevation data is sourced from <a href="https://touchterrain.geol.iastate.edu/main" target="_blank">TouchTerrain</a>, 
-                                providing accurate geographic information for the specific region. This data forms the 
-                                foundation 3D terrain mesh that accurately represents the actual landscape topography 
-                                with proper elevation scaling and geographic precision.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="about-skills">
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Data Sources</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Race Director Maps</span>
-                                    <span class="skill-tag">Trailforks Screenshots</span>
-                                    <span class="skill-tag">TouchTerrain Data</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Processing Tools</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Custom Web App</span>
-                                    <span class="skill-tag">Inkscape SVG</span>
-                                    <span class="skill-tag">Blender 3D</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Output Formats</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Vector Paths</span>
-                                    <span class="skill-tag">3D Meshes</span>
-                                    <span class="skill-tag">Print Files</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3D Modeling Process -->
-        <section class="about">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">3D Modeling Workflow</span>
-                    <h2 class="section-title">Blender Processing Pipeline</h2>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-text">
-                        <div class="text-block">
-                            <h3>Step 4: 3D Trail Extrusion</h3>
-                            <p>
-                                In Blender, I import each SVG trail path and extrude them to create 3D trail representations. 
-                                Each difficulty level gets its own extrusion height and will eventually become a different 
-                                color in the final print. The trails are precisely positioned to align with the 
-                                corresponding locations on the topographic base mesh.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Step 5: Terrain Integration & Boolean Operations</h3>
-                            <p>
-                                The topographic mesh undergoes Z-axis scaling to exaggerate landscape features for better 
-                                visual impact and printability. I perform boolean intersection operations between the 
-                                extruded trail paths and the scaled terrain mesh, ensuring trails follow the actual 
-                                ground contours while maintaining their distinct elevation characteristics.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Step 6: Alignment & Final Assembly</h3>
-                            <p>
-                                All mesh components are carefully aligned to ensure proper registration between terrain 
-                                base and trail overlays. Each element is verified for printability, including overhang 
-                                angles, minimum feature sizes, and structural integrity. The final assembled model 
-                                maintains geographic accuracy while optimizing for 3D printing constraints.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="about-skills">
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Blender Operations</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">SVG Import</span>
-                                    <span class="skill-tag">Mesh Extrusion</span>
-                                    <span class="skill-tag">Boolean Intersection</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Optimization</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Z-Axis Scaling</span>
-                                    <span class="skill-tag">Feature Enhancement</span>
-                                    <span class="skill-tag">Print Validation</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Quality Control</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Alignment Check</span>
-                                    <span class="skill-tag">Structural Integrity</span>
-                                    <span class="skill-tag">Geographic Accuracy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Manufacturing Process -->
-        <section class="about" style="background: var(--bg-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Production Pipeline</span>
-                    <h2 class="section-title">3D Printing & Finishing</h2>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-text">
-                        <div class="text-block">
-                            <h3>Step 7: Print Preparation</h3>
-                            <p>
-                                The final aligned models are imported into BambuStudio for print preparation. I configure 
-                                the slicer for 4-color printing on my BambuLab printer, assigning different colors to 
-                                the terrain base and each trail difficulty level. Print settings are optimized for 
-                                detail resolution while maintaining reasonable print times and material usage.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Step 8: Multi-Color Production</h3>
-                            <p>
-                                The BambuLab printer handles automatic filament changes to produce maps with distinct 
-                                colors for different trail difficulties and terrain base. This eliminates post-processing 
-                                painting steps while ensuring consistent color separation and professional appearance. 
-                                Each map typically uses 4 colors: base terrain plus three difficulty levels.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Step 9: Quality Assurance & Delivery</h3>
-                            <p>
-                                Each printed map undergoes quality inspection for dimensional accuracy, color consistency, 
-                                and structural integrity. Maps are carefully packaged to prevent damage during shipping 
-                                and include documentation explaining the trail difficulty color coding and any specific 
-                                route features highlighted in the model.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="about-skills">
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Print Technology</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">BambuLab Printer</span>
-                                    <span class="skill-tag">4-Color Capability</span>
-                                    <span class="skill-tag">Automatic Filament Change</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Software Stack</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">BambuStudio Slicer</span>
-                                    <span class="skill-tag">Custom Web App</span>
-                                    <span class="skill-tag">Blender Pipeline</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Quality Standards</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Dimensional Accuracy</span>
-                                    <span class="skill-tag">Color Consistency</span>
-                                    <span class="skill-tag">Professional Packaging</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-                                <h4>Tools & Systems</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">CAD Software</span>
-                                    <span class="skill-tag">E-commerce</span>
-                                    <span class="skill-tag">Quality Control</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Results -->
-        <section class="about">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Business Results</span>
-                    <h2 class="section-title">Growth & Impact</h2>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-text">
-                        <div class="text-block">
-                            <h3>Market Success</h3>
-                            <p>
-                                Successfully transitioned from high school project to profitable business operations. 
-                                Established customer base including race directors who return for annual events. 
-                                Demonstrated product-market fit with consistent repeat business and referrals.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Entrepreneurial Learning</h3>
-                            <p>
-                                Gained comprehensive business experience including product development, customer service, 
-                                operations management, and financial planning. Learned to balance creative problem-solving 
-                                with practical business constraints and customer expectations.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Technical Innovation</h3>
-                            <p>
-                                Developed efficient workflows for data processing and 3D model generation. Created 
-                                quality standards and processes that ensure consistent output. Built systems that 
-                                can scale with business growth while maintaining product quality.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="about-skills">
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-date">2022</div>
-                                <div class="timeline-content">
-                                    <h4>Business Launch</h4>
-                                    <p>Started as high school project, developed initial processes</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-date">2023</div>
-                                <div class="timeline-content">
-                                    <h4>Market Validation</h4>
-                                    <p>First race director partnerships, established customer base</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-date">2024-Present</div>
-                                <div class="timeline-content">
-                                    <h4>Ongoing Operations</h4>
-                                    <p>Continued growth while balancing Duke University studies</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Website Link -->
-        <section class="hero" style="padding: 3rem 0; background: var(--bg-secondary);">
-            <div class="container">
-                <div class="hero-content" style="text-align: center;">
-                    <h2>Visit Elevon Website</h2>
-                    <p>See our full product line and custom order system</p>
-                    <div class="hero-actions">
-                        <a href="https://elevon3d.netlify.app/" target="_blank" class="btn-primary">
-                            <i class="fas fa-external-link-alt"></i>
-                            Visit Elevon3D.com
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Navigation -->
-        <section class="hero" style="padding: 3rem 0;">
-            <div class="container">
-                <div class="hero-actions">                    <a href="carbon-rim-impact-tester.html" class="btn-secondary">Previous Project</a>
-                    <a href="egr101-automated-bucket-washer.html" class="btn-primary">Next Project</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">
-                        <span class="logo-text">WK</span>
-                    </div>
-                    <p class="footer-text">
-                        Mechanical Engineering Student at Duke University.<br>
-                        Building solutions from ideas to impact.
-                    </p>
-                </div>
-                <div class="footer-right">
-                    <div class="footer-links">
-                        <a href="index.html#home">Home</a>
                         <a href="index.html#about">About</a>
                         <a href="index.html#projects">Projects</a>
                         <a href="index.html#contact">Contact</a>

@@ -3,17 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bucket Washing Mechanism - EGR101 freshman design project reducing cleaning time by 43% through innovative mechanical design solutions using SolidWorks and laser cutting technologies by Westley Kleinman.">
+    <meta name="keywords" content="mechanical design, SolidWorks, laser cutting, freshman design, CompostNow, bucket washer, prototype development, team collaboration">
+    <meta name="author" content="Westley Kleinman">
     <title>Bucket Washing Mechanism | Westley Kleinman</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .video-container {
+            text-align: center;
+            margin: 3rem 0;
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        .video-container video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .video-caption {
+            margin-top: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .team-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .team-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .video-container {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html"><span class="logo-text">WK</span></a>
+                <a href="index.html" class="logo-text">WK</a>
             </div>
             <div class="nav-menu">
                 <a href="index.html#home" class="nav-link">Home</a>
@@ -22,74 +61,71 @@
                 <a href="index.html#contact" class="nav-link">Contact</a>
                 <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Project Hero -->
-        <section class="hero" style="padding-top: 120px;">
+        <!-- Hero Section -->
+        <section class="project-hero">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <a href="index.html#projects" class="back-link">
-                            <i class="fas fa-arrow-left"></i> Back to Projects
-                        </a>                        <h1 class="hero-name">Bucket Washing Mechanism</h1>
-                        <p class="hero-title">EGR101 Freshman Design Project</p>                        <p class="hero-description">
-                            Collaborative design project for CompostNow container cleaning system. 
-                            Reduced cleaning time by 43% through innovative mechanical design solutions 
-                            using SolidWorks and laser cutting technologies.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <span class="stat-number">43%</span>
-                                <span class="stat-label">Time Reduction</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">2024</span>
-                                <span class="stat-label">Fall Semester</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">Team</span>
-                                <span class="stat-label">Collaboration</span>
-                            </div>
-                        </div>
+                <div class="project-hero-content">
+                    <div class="project-breadcrumb">
+                        <a href="index.html">Portfolio</a>
+                        <span>/</span>
+                        <span>Bucket Washing Mechanism</span>
                     </div>
-                    <div class="hero-image">
-                        <div class="image-container">
-                            <img src="images/EGR101/GroupPhoto_EGR101.jpg" alt="EGR101 Team" class="profile-img">
+                    <div class="project-hero-text">
+                        <h1 class="hero-name">Bucket Washing Mechanism</h1>
+                        <p class="hero-subtitle">EGR101 Freshman Design Project</p>
+                        <p class="hero-description">
+                            Collaborated to design and fabricate a cleaning system for CompostNow containers. 
+                            Reduced cleaning time by 43% through innovative mechanical design solutions using 
+                            SolidWorks and laser cutting technologies.
+                        </p>
+                        
+                        <div class="team-image">
+                            <img src="images/EGR101/GroupPhoto_EGR101.jpg" alt="EGR101 Project Team">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Video Section -->
-        <section class="about" style="background: var(--bg-secondary);">
+        <!-- Project Overview -->
+        <section class="project-overview">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Project Demo</span>
-                    <h2 class="section-title">System in Action</h2>
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="section-subtitle">
+                        Collaborative freshman design project addressing real-world manufacturing inefficiencies 
+                        through innovative mechanical engineering solutions.
+                    </p>
                 </div>
-                
-                <div class="video-container" style="text-align: center; margin: 2rem 0;">
-                    <video controls style="max-width: 100%; height: auto; border-radius: var(--border-radius-lg);">
+
+                <div class="video-container">
+                    <video controls>
                         <source src="images/EGR101/EGR101_DisplayVideo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p style="margin-top: 1rem; color: var(--text-secondary);">
-                        Demonstration of the automated bucket washing system prototype
+                    <p class="video-caption">
+                        Demonstration of the automated bucket washing system prototype in action
                     </p>
                 </div>
-            </div>        </section>
+            </div>
+        </section>
 
-        <!-- Problem Definition -->
+        <!-- Problem & Solution -->
         <section class="project-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Design Challenge</span>
-                    <h2 class="section-title">CompostNow Container Cleaning</h2>
-                    <p class="section-subtitle">Reducing Manual Labor Through Mechanical Innovation</p>
+                    <h2 class="section-title">Problem & Solution</h2>
+                    <p class="section-subtitle">Addressing CompostNow's container cleaning inefficiencies</p>
                 </div>
                 
                 <div class="project-overview-grid">
@@ -98,43 +134,43 @@
                         <p>
                             CompostNow required an efficient cleaning system for their compost collection containers. 
                             Manual cleaning was time-intensive, labor-heavy, and inconsistent, creating operational 
-                            bottlenecks in their waste processing workflow.
+                            bottlenecks that limited their service capacity and increased labor costs.
                         </p>
                         
                         <h3>Design Approach</h3>
                         <p>
-                            Collaborated with team members to design and fabricate a mechanical cleaning system. 
-                            Applied systematic engineering methodology and iterative design process to develop 
-                            an innovative solution addressing both efficiency and ergonomic considerations.
+                            Developed an automated mechanical cleaning system focusing on reducing manual labor 
+                            and improving consistency. The solution integrated rotating mechanisms, water distribution 
+                            systems, and automated positioning to streamline the entire cleaning process.
                         </p>
                         
-                        <h3>Results Achieved</h3>
+                        <h3>Measurable Impact</h3>
                         <p>
-                            Successfully reduced cleaning time by 43% through innovative mechanical design. 
-                            Demonstrated effective teamwork, design communication, and prototype development 
-                            using professional engineering tools and manufacturing processes.
+                            Successfully reduced cleaning time by 43% through innovative mechanical design solutions. 
+                            The prototype demonstrated significant efficiency improvements while maintaining cleaning 
+                            quality standards required for CompostNow's operations.
                         </p>
                     </div>
                     
                     <div class="overview-specs">
                         <div class="specs-card">
-                            <h4>Project Achievements</h4>
+                            <h4>Key Achievements</h4>
                             <div class="achievement-list">
                                 <div class="achievement-item">
                                     <i class="fas fa-clock"></i>
-                                    <span>43% Cleaning Time Reduction</span>
+                                    <span>43% Time Reduction</span>
                                 </div>
                                 <div class="achievement-item">
-                                    <i class="fas fa-tools"></i>
-                                    <span>SolidWorks Design Implementation</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-laser"></i>
-                                    <span>Laser Cutting Manufacturing</span>
+                                    <i class="fas fa-cogs"></i>
+                                    <span>Automated Cleaning System</span>
                                 </div>
                                 <div class="achievement-item">
                                     <i class="fas fa-users"></i>
-                                    <span>Collaborative Team Development</span>
+                                    <span>Collaborative Team Design</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Functional Prototype Delivered</span>
                                 </div>
                             </div>
                         </div>
@@ -143,45 +179,44 @@
             </div>
         </section>
 
-        <!-- Technical Implementation -->
+        <!-- Technical Development -->
         <section class="project-section bg-secondary">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Engineering Process</span>
-                    <h2 class="section-title">Design & Manufacturing</h2>
-                    <p class="section-subtitle">SolidWorks Modeling to Laser-Cut Prototype</p>
+                    <h2 class="section-title">Technical Development</h2>
+                    <p class="section-subtitle">SolidWorks design and laser cutting prototype fabrication</p>
                 </div>
                 
                 <div class="project-overview-grid">
                     <div class="overview-content">
-                        <h3>Design Development</h3>
+                        <h3>Design Process</h3>
                         <p>
-                            Utilized SolidWorks for precision mechanical design, creating detailed component models 
-                            and assembly drawings. Applied engineering design principles including stress analysis, 
-                            material selection, and manufacturing constraint consideration.
+                            Utilized SolidWorks for comprehensive 3D modeling and system design. Developed detailed 
+                            mechanical assemblies incorporating rotating cleaning mechanisms, water distribution 
+                            systems, and automated positioning components for optimal cleaning efficiency.
                         </p>
                         
-                        <h3>Manufacturing Process</h3>
+                        <h3>Prototype Fabrication</h3>
                         <p>
-                            Employed laser cutting technologies for accurate fabrication of mechanical components. 
-                            Coordinated manufacturing workflow from digital design files through material preparation, 
-                            cutting operations, and final assembly procedures.
+                            Applied laser cutting technologies for precision component manufacturing. Integrated 
+                            multiple subsystems including mechanical drive systems, water management, and 
+                            structural framework to create a functional prototype for testing and validation.
                         </p>
                         
-                        <h3>Team Collaboration</h3>
+                        <h3>System Integration</h3>
                         <p>
-                            Contributed to collaborative team environment, sharing responsibility for design decisions, 
-                            manufacturing coordination, and prototype testing. Demonstrated effective communication 
-                            and project management skills essential for engineering teamwork.
+                            Successfully integrated mechanical, hydraulic, and control systems into a cohesive 
+                            cleaning solution. Demonstrated effective team collaboration in problem-solving, 
+                            design iteration, and prototype development throughout the engineering process.
                         </p>
                     </div>
                     
                     <div class="overview-specs">
                         <div class="specs-card">
-                            <h4>Technical Skills Applied</h4>
+                            <h4>Technical Specifications</h4>
                             <div class="spec-grid">
                                 <div class="spec-item">
-                                    <span class="spec-label">CAD Design</span>
+                                    <span class="spec-label">Design Software</span>
                                     <span class="spec-value">SolidWorks</span>
                                 </div>
                                 <div class="spec-item">
@@ -189,12 +224,71 @@
                                     <span class="spec-value">Laser Cutting</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Development</span>
-                                    <span class="spec-value">Prototype Testing</span>
+                                    <span class="spec-label">System Type</span>
+                                    <span class="spec-value">Automated Mechanical</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Process</span>
-                                    <span class="spec-value">Design Methodology</span>
+                                    <span class="spec-label">Application</span>
+                                    <span class="spec-value">Container Cleaning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Collaboration & Results -->
+        <section class="project-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Team Collaboration & Results</h2>
+                    <p class="section-subtitle">Successful freshman design project demonstrating engineering problem-solving</p>
+                </div>
+                
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Collaborative Approach</h3>
+                        <p>
+                            Contributed to prototype development through effective team collaboration, combining 
+                            individual strengths in mechanical design, system integration, and project management. 
+                            Demonstrated ability to work effectively in multidisciplinary engineering teams.
+                        </p>
+                        
+                        <h3>Engineering Process</h3>
+                        <p>
+                            Applied systematic engineering design methodology including problem definition, 
+                            concept development, detailed design, prototyping, and testing. Successfully 
+                            navigated design challenges and iteration cycles to achieve functional results.
+                        </p>
+                        
+                        <h3>Project Impact</h3>
+                        <p>
+                            Delivered functional prototype meeting client requirements with measurable performance 
+                            improvements. The 43% cleaning time reduction validated the design approach and 
+                            demonstrated real-world engineering problem-solving capabilities.
+                        </p>
+                    </div>
+                    
+                    <div class="overview-specs">
+                        <div class="specs-card">
+                            <h4>Project Outcomes</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Successful Prototype Delivery</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>Measurable Performance Improvement</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-handshake"></i>
+                                    <span>Client Requirements Met</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Engineering Design Experience</span>
                                 </div>
                             </div>
                         </div>
@@ -220,377 +314,6 @@
                 <div class="footer-right">
                     <div class="footer-links">
                         <a href="index.html">Home</a>
-                        <a href="index.html#about">About</a>
-                        <a href="index.html#projects">Projects</a>
-                        <a href="index.html#contact">Contact</a>
-                        <a href="resume.pdf" target="_blank">Resume</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-                                effort, iterative design, and learning from failure as an essential part of the process.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Professional Engineering Standards</h3>
-                            <p>
-                                The course mirrors professional engineering practice with systematic design methodology, 
-                                formal documentation requirements, constraint analysis, and iterative prototyping. 
-                                Students develop the "I Can Do This" mindset that builds self-efficacy and prepares 
-                                them for advanced engineering coursework and professional careers.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Problem Statement -->
-        <section class="about">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Design Challenge</span>
-                    <h2 class="section-title">Problem Identification</h2>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-text">                        <div class="text-block">
-                            <h3>Problem Definition Within EGR 101 Framework</h3>
-                            <p>
-                                Following Duke Pratt's systematic design methodology, our team conducted comprehensive 
-                                user research and problem analysis to identify inefficiencies in manual bucket cleaning 
-                                processes. This aligned with the course's emphasis on real-world problem identification 
-                                and the professional engineering practice of understanding user needs before proposing solutions.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Collaborative Requirements Development</h3>
-                            <p>
-                                Working as a collaborative team, we established quantifiable design criteria including 
-                                cleaning coverage targets (95%+ surface area), cycle time goals (under 3 minutes), 
-                                and water efficiency parameters. This process exemplified the course's emphasis on 
-                                teamwork and systematic constraint analysis within real-world limitations.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Innovation-Level Solution Architecture</h3>
-                            <p>
-                                Developed comprehensive system architecture combining mechanical rotation, pressurized 
-                                water delivery, and automated positioning—demonstrating the innovation-level thinking 
-                                that characterizes Duke's first-year design course. Created detailed specifications 
-                                and integration plans that would meet the course's professional engineering standards.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="about-skills">                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>EGR 101 Core Competencies</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Systematic Design Process</span>
-                                    <span class="skill-tag">Collaborative Practice</span>
-                                    <span class="skill-tag">Constraint Analysis</span>
-                                    <span class="skill-tag">Professional Communication</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Leadership & Innovation</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Team Leadership</span>
-                                    <span class="skill-tag">Innovation-Level Thinking</span>
-                                    <span class="skill-tag">Self-Efficacy Building</span>
-                                    <span class="skill-tag">Challenge Embracing</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Technical Integration</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Mechanical Design</span>
-                                    <span class="skill-tag">Control Systems</span>
-                                    <span class="skill-tag">Prototype Development</span>
-                                    <span class="skill-tag">Testing Validation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Solution -->
-        <section class="about" style="background: var(--bg-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Engineering Solution</span>
-                    <h2 class="section-title">Automated Washing System</h2>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-text">                        <div class="text-block">
-                            <h3>Mechanical System Design & Professional Practice</h3>
-                            <p>
-                                Following EGR 101's systematic design methodology, I led the mechanical system development 
-                                including DC motor selection with gear reduction for optimal cleaning performance. Applied 
-                                professional engineering standards in fabricating mounting brackets and positioning systems, 
-                                demonstrating the course's emphasis on real-world engineering practice and attention to detail.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Fluid Systems Integration & Innovation</h3>
-                            <p>
-                                Designed and implemented a comprehensive water delivery system using engineering principles 
-                                taught in EGR 101. The pressurized system with filtration and recycling capabilities 
-                                exemplified the innovation-level thinking the course fosters, going beyond basic 
-                                requirements to create an environmentally conscious and efficient solution.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Control System Development & Testing</h3>
-                            <p>
-                                Programmed Arduino-based automation system with safety interlocks and user interfaces, 
-                                demonstrating the interdisciplinary approach emphasized in EGR 101. Conducted iterative 
-                                testing following the course's "learning from failure" philosophy to optimize performance 
-                                and ensure reliable operation across multiple cleaning cycles.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="about-skills">
-                        <div class="skills-grid">                            <div class="skill-category">
-                                <h4>Mechanical Systems</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">DC Motor Control</span>
-                                    <span class="skill-tag">Gear Reduction</span>
-                                    <span class="skill-tag">Mounting Design</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Fluid Systems</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Pump Selection</span>
-                                    <span class="skill-tag">Pressure Regulation</span>
-                                    <span class="skill-tag">Spray Optimization</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Control Systems</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Arduino Programming</span>
-                                    <span class="skill-tag">Timing Control</span>
-                                    <span class="skill-tag">Safety Interlocks</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Engineering Outcomes</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Functional Prototype</span>
-                                    <span class="skill-tag">Testing Validation</span>
-                                    <span class="skill-tag">Design Documentation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testing Plan Section -->
-        <section class="about">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Testing & Validation</span>
-                    <h2 class="section-title">Systematic Testing Protocol</h2>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-text">                        <div class="text-block">
-                            <h3>EGR 101 Testing Protocol Development</h3>
-                            <p>
-                                Applied the systematic testing methodology emphasized in Duke's first-year design course 
-                                to validate system performance against established criteria. Developed comprehensive 
-                                protocols that exemplified the course's professional engineering standards and 
-                                commitment to data-driven decision making throughout the design process.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Quantitative Analysis & Professional Standards</h3>
-                            <p>
-                                Established measurable success criteria following EGR 101's emphasis on quantifiable 
-                                engineering outcomes. Created standardized procedures for consistent evaluation, 
-                                demonstrating the systematic approach that characterizes Duke Pratt's innovative 
-                                first-year design methodology and builds student confidence in tackling complex challenges.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Collaborative Data Collection & Learning from Results</h3>
-                            <p>
-                                Implemented team-based data collection methods including statistical analysis and 
-                                user feedback integration. This approach embodied EGR 101's collaborative philosophy 
-                                and the course's core principle that engineering challenges are solvable through 
-                                systematic methodology, teamwork, and continuous learning from both success and failure.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="about-skills">
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Testing Categories</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Functionality Tests</span>
-                                    <span class="skill-tag">Performance Metrics</span>
-                                    <span class="skill-tag">User Experience</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Validation Methods</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Quantitative Analysis</span>
-                                    <span class="skill-tag">Statistical Evaluation</span>
-                                    <span class="skill-tag">Iterative Testing</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Documentation</h4>
-                                <div class="skill-list">
-                                    <span class="skill-tag">Test Procedures</span>
-                                    <span class="skill-tag">Results Analysis</span>
-                                    <span class="skill-tag">Design Recommendations</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Results -->
-        <section class="about">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Project Results</span>
-                    <h2 class="section-title">Learning Outcomes</h2>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-text">                        <div class="text-block">
-                            <h3>Innovation-Level Technical Achievement</h3>
-                            <p>
-                                Successfully developed and validated an automated system that exemplified the innovation-level 
-                                expectations of Duke's EGR 101 course. The project demonstrated systematic engineering 
-                                design methodology from problem identification through comprehensive testing, achieving 
-                                measurable performance improvements and embodying the "I Can Do This" mindset the course fosters.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Professional Engineering Competency Development</h3>
-                            <p>
-                                Applied the complete engineering design process emphasized in EGR 101, including user research, 
-                                requirements analysis, concept generation, and iterative prototyping. Demonstrated proficiency 
-                                in quantitative analysis, collaborative problem-solving, and the systematic methodology 
-                                that prepares students for advanced engineering coursework and professional practice.
-                            </p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Leadership & Communication Skills</h3>
-                            <p>
-                                Developed essential professional skills emphasized throughout EGR 101, including project 
-                                leadership, technical documentation, and effective team collaboration. Gained experience 
-                                presenting engineering solutions to diverse audiences, defending design decisions, and 
-                                communicating complex technical concepts—core competencies for engineering careers.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="about-skills">
-                        <div class="timeline">                            <div class="timeline-item">
-                                <div class="timeline-date">Week 1-4</div>
-                                <div class="timeline-content">
-                                    <h4>Problem Definition & Research</h4>
-                                    <p>User interviews, problem analysis, requirements establishment, and market research</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-date">Week 5-9</div>
-                                <div class="timeline-content">
-                                    <h4>Design & Development</h4>
-                                    <p>Concept generation, systematic evaluation, design selection, and detailed planning</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-date">Week 10-12</div>
-                                <div class="timeline-content">
-                                    <h4>Prototype Construction</h4>
-                                    <p>System assembly, component integration, and initial functionality testing</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-date">Week 13-15</div>
-                                <div class="timeline-content">
-                                    <h4>Testing & Validation</h4>
-                                    <p>Comprehensive testing protocol execution, data analysis, and final presentation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Navigation -->
-        <section class="hero" style="padding: 3rem 0;">
-            <div class="container">
-                <div class="hero-actions">
-                    <a href="elevon-3d-maps.html" class="btn-secondary">Previous Project</a>
-                    <a href="index.html#projects" class="btn-primary">Back to Projects</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">
-                        <span class="logo-text">WK</span>
-                    </div>
-                    <p class="footer-text">
-                        Mechanical Engineering Student at Duke University.<br>
-                        Building solutions from ideas to impact.
-                    </p>
-                </div>
-                <div class="footer-right">
-                    <div class="footer-links">
-                        <a href="index.html#home">Home</a>
                         <a href="index.html#about">About</a>
                         <a href="index.html#projects">Projects</a>
                         <a href="index.html#contact">Contact</a>
