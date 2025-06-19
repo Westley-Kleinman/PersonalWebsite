@@ -10,107 +10,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .company-logos {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            justify-content: center;
-            margin: 2rem 0;
-        }
-        .company-logo {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
-        }
-        .company-logo:hover {
-            opacity: 1;
-        }
-        .project-overview {
-            background: var(--bg-secondary);
-            padding: 4rem 0;
-            margin: 3rem 0;
-            border-radius: 12px;
-        }
-        .key-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .highlight-card {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .highlight-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        .highlight-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-color);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        .highlight-icon i {
-            color: white;
-            font-size: 1.2rem;
-        }
-        .highlight-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-        .highlight-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .stat-card {
-            text-align: center;
-            padding: 2rem;
-            background: var(--bg-card);
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: block;
-        }
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-        @media (max-width: 768px) {
-            .company-logos {
-                gap: 1rem;
-            }
-            .company-logo {
-                height: 50px;
-            }
-            .key-highlights {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -146,37 +45,48 @@
                         <span>Boyd Cycling & Time Bicycles Engineering</span>
                     </div>
                     <div class="project-hero-text">
-                        <h1 class="hero-name">Boyd Cycling & Time Bicycles Engineering Internship</h1>
-                        <p class="hero-subtitle">Advanced Carbon Fiber Manufacturing & Quality Assurance</p>
+                        <h1 class="hero-name">Boyd Cycling & Time Bicycles Engineering</h1>
+                        <p class="hero-subtitle">RTM Process Optimization & International Technology Transfer</p>
                         <p class="hero-description">
-                            Engineering internship at Boyd Cycling and Time Bicycles, focusing on RTM process optimization, 
-                            custom impact testing equipment development, and international technology transfer at CU-ICAR.
+                            Engineering internship at Boyd Cycling and Time Bicycles focusing on carbon-rim 
+                            fabrication optimization, custom impact testing equipment development, and transferring 
+                            European composite injection protocols to U.S. operations at CU-ICAR.
                         </p>
-                        
-                        <div class="company-logos">
-                            <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="company-logo">
-                            <img src="images/Internship/time_logo.jpeg" alt="Time Bicycles" class="company-logo">
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">RTM</span>
+                                <span class="stat-label">Process Optimized</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">UCI</span>
+                                <span class="stat-label">Testing Standards</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">US</span>
+                                <span class="stat-label">Tech Transfer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-hero-image">
+                        <div class="hero-image-container">
+                            <div class="logo-grid" style="display: flex; gap: 1rem; align-items: center;">
+                                <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="hero-project-img" style="height: 80px; width: auto;">
+                                <img src="images/Internship/time_logo.jpeg" alt="Time Bicycles" class="hero-project-img" style="height: 80px; width: auto;">
+                            </div>
+                            <div class="hero-image-backdrop"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>        <!-- Project Overview -->
-        <section class="project-overview">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Project Overview</h2>
-                    <p class="section-subtitle">
-                        A comprehensive engineering internship encompassing three major initiatives: RTM process optimization, 
-                        custom testing equipment development, and international technology transfer.
-                    </p>
-                </div>
-            </div>
-        </section>        <!-- RTM Process Optimization -->
+        </section>
+
+        <!-- RTM Process Optimization -->
         <section class="project-section">
             <div class="container">
                 <div class="section-header">
+                    <span class="section-tag">Project 1</span>
                     <h2 class="section-title">RTM Process Optimization</h2>
-                    <p class="section-subtitle">Enhanced carbon-rim fabrication by overhauling mold geometry and machine calibration</p>
+                    <p class="section-subtitle">Enhancing Carbon-Rim Fabrication Quality & Consistency</p>
                 </div>
                 
                 <div class="project-overview-grid">
@@ -190,16 +100,16 @@
                         
                         <h3>Solution Approach</h3>
                         <p>
-                            Conducted comprehensive analysis of existing mold geometry and machine calibration parameters. 
-                            Identified inconsistent resin distribution patterns causing dry zones in carbon rim production. 
-                            Redesigned mold flow patterns and optimized injection parameters to achieve uniform distribution.
+                            Conducted comprehensive analysis of mold geometry and machine calibration parameters. 
+                            Overhauled the entire RTM process by redesigning mold flow patterns and optimizing 
+                            injection parameters to achieve uniform resin distribution and eliminate dry zones.
                         </p>
                         
-                        <h3>Results</h3>
+                        <h3>Impact</h3>
                         <p>
-                            Eradicated dry zones and standardized resin distribution across all carbon rim production. 
-                            Significantly improved manufacturing consistency and product quality standards throughout 
-                            the fabrication process.
+                            Standardized resin distribution across all carbon rim production, improving manufacturing 
+                            consistency and product quality. Enhanced production efficiency and reduced material waste 
+                            through optimized process parameters.
                         </p>
                     </div>
                     
@@ -230,12 +140,13 @@
             </div>
         </section>
 
-        <!-- Custom Impact Testing Equipment -->
+        <!-- Impact Testing Development -->
         <section class="project-section bg-secondary">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Custom Impact Testing Equipment</h2>
-                    <p class="section-subtitle">Conceived and built a custom wheel-impact rig validating rim durability to 40J UCI standards</p>
+                    <span class="section-tag">Project 2</span>
+                    <h2 class="section-title">Custom Impact Testing Development</h2>
+                    <p class="section-subtitle">UCI-Compliant Wheel Durability Validation</p>
                 </div>
                 
                 <div class="project-overview-grid">
@@ -249,16 +160,16 @@
                         
                         <h3>Solution Approach</h3>
                         <p>
-                            Designed and fabricated a custom testing apparatus utilizing electromagnetic release mechanisms 
-                            for consistent impact delivery. Implemented precision control systems using winch and electromagnetic 
-                            stopper systems to ensure repeatable testing according to UCI standards.
+                            Conceived and built a custom wheel-impact rig utilizing winch and electromagnetic stopper 
+                            systems. Designed the testing apparatus to deliver precise, repeatable impacts while 
+                            meeting UCI standard requirements for comprehensive quality assurance.
                         </p>
                         
-                        <h3>Results</h3>
+                        <h3>Technical Implementation</h3>
                         <p>
-                            Successfully validated rim durability to 40J UCI standards with precision and repeatability. 
-                            Provided cost-effective validation solution compared to commercial alternatives while maintaining 
-                            professional testing standards.
+                            Integrated electromagnetic release mechanism for consistent impact delivery, developed 
+                            precision control systems for repeatable testing, and implemented safety protocols 
+                            for reliable operation in production environment.
                         </p>
                     </div>
                     
@@ -276,11 +187,11 @@
                                 </div>
                                 <div class="spec-item">
                                     <span class="spec-label">Testing Standard</span>
-                                    <span class="spec-value">40J UCI Compliant</span>
+                                    <span class="spec-value">UCI Compliant</span>
                                 </div>
                                 <div class="spec-item">
                                     <span class="spec-label">Application</span>
-                                    <span class="spec-value">Rim Durability Validation</span>
+                                    <span class="spec-value">Rim Durability</span>
                                 </div>
                             </div>
                         </div>
@@ -293,8 +204,9 @@
         <section class="project-section">
             <div class="container">
                 <div class="section-header">
+                    <span class="section-tag">Project 3</span>
                     <h2 class="section-title">International Technology Transfer</h2>
-                    <p class="section-subtitle">Transferred European carbon-injection protocols to CU-ICAR, accelerating Time Bicycles' U.S.A. rollout</p>
+                    <p class="section-subtitle">European Composite Protocols to U.S. Operations</p>
                 </div>
                 
                 <div class="project-overview-grid">
@@ -308,16 +220,16 @@
                         
                         <h3>Solution Approach</h3>
                         <p>
-                            Collaborated with European engineering teams to adapt established carbon-injection protocols for 
-                            U.S. manufacturing operations. Successfully integrated Time Bicycles' proven processes into 
-                            CU-ICAR facilities while maintaining quality standards and production efficiency.
+                            Transferred European carbon-injection protocols to CU-ICAR facilities, adapting 
+                            established manufacturing processes to American operations. Collaborated across 
+                            international teams to ensure process fidelity and quality standards.
                         </p>
                         
-                        <h3>Results</h3>
+                        <h3>Cross-Cultural Impact</h3>
                         <p>
-                            Accelerated Time Bicycles' U.S.A. rollout by implementing proven European 
-                            manufacturing techniques at CU-ICAR. Demonstrated cross-cultural technical adaptability 
-                            and successfully maintained quality standards across international facilities.
+                            Successfully accelerated Time Bicycles' U.S.A. rollout by implementing proven European 
+                            manufacturing techniques. Demonstrated technical adaptability and cross-cultural 
+                            collaboration skills in high-stakes manufacturing environment.
                         </p>
                     </div>
                     
