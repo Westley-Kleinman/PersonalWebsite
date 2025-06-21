@@ -372,13 +372,13 @@ section:nth-child(even):not(.hero) {
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem; /* Reduced gap */
+    gap: 4rem;
     align-items: start;
 }
 
 .text-block {
-    margin-bottom: 2rem; /* Reduced margin */
-    padding: 1.25rem; /* Reduced padding */
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
     background: var(--bg-primary);
     border-radius: var(--border-radius-lg);
     border: 1px solid var(--border-light);
@@ -392,19 +392,19 @@ section:nth-child(even):not(.hero) {
 }
 
 .text-block h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
     color: var(--text-primary);
     font-weight: 600;
     border-bottom: 2px solid var(--primary);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
     display: inline-block;
 }
 
 .text-block p {
     color: var(--text-secondary);
-    line-height: 1.7;
-    font-size: 0.95rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
     margin: 0;
 }
 
@@ -428,8 +428,8 @@ section:nth-child(even):not(.hero) {
     position: relative;
     display: flex;
     align-items: flex-start;
-    gap: 1.25rem; /* Reduced gap */
-    margin-bottom: 2rem; /* Reduced margin */
+    gap: 1rem;
+    margin-bottom: 1.75rem;
     padding-left: 3rem;
 }
 
@@ -473,22 +473,22 @@ section:nth-child(even):not(.hero) {
 
 .timeline-date {
     font-family: var(--font-mono);
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: var(--primary);
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    min-width: 120px;
+    margin-bottom: 0.4rem;
+    min-width: 100px;
     flex-shrink: 0;
 }
 
 .timeline-content {
     flex: 1;
-    padding-top: 0.25rem;
+    padding-top: 0.1rem;
 }
 
 .timeline-content h4 {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
     color: var(--text-primary);
     font-weight: 600;
     line-height: 1.3;
@@ -496,8 +496,8 @@ section:nth-child(even):not(.hero) {
 
 .timeline-content p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.85rem;
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -738,17 +738,17 @@ section:nth-child(even):not(.hero) {
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: auto;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
     padding-top: 1rem;
 }
 
 .project-tech span {
     background: linear-gradient(135deg, var(--primary), #667eea);
     color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 16px;
+    font-size: 0.7rem;
     font-weight: 500;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
