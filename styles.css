@@ -795,7 +795,7 @@ section:nth-child(even):not(.hero) {
     box-shadow: 
         0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    max-width: 500px;
+    max-width: 900px;
     width: 100%;
     border: 1px solid rgba(226, 232, 240, 0.8);
     backdrop-filter: blur(10px);
@@ -806,10 +806,19 @@ section:nth-child(even):not(.hero) {
     align-items: flex-start;
     gap: 1.25rem;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 1.25rem 1.5rem;
     border-radius: 12px;
     transition: all 0.3s ease;
     position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .contact-item:hover {
@@ -1078,6 +1087,19 @@ section:nth-child(even):not(.hero) {
         padding: 2.5rem 2rem;
     }
     
+    .contact-items-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-item {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    
     .project-card.featured {
         grid-column: span 1;
         grid-template-columns: 1fr;
@@ -1121,6 +1143,11 @@ section:nth-child(even):not(.hero) {
     .contact-info {
         margin: 0 0.5rem;
         padding: 2rem 1.5rem;
+    }
+    
+    .contact-items-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .contact-item {
@@ -1185,12 +1212,17 @@ section:nth-child(even):not(.hero) {
         border-radius: 16px;
     }
     
+    .contact-items-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
     .contact-item {
         flex-direction: row;
         text-align: left;
         gap: 1rem;
         padding: 1rem 0.5rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
     
     .contact-icon {
