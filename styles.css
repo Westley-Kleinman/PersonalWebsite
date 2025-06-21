@@ -790,35 +790,40 @@ section:nth-child(even):not(.hero) {
 
 .contact-info {
     background: white;
-    padding: 3rem 2.5rem;
+    padding: 2.5rem 3rem;
     border-radius: 20px;
     box-shadow: 
         0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
     border: 1px solid rgba(226, 232, 240, 0.8);
     backdrop-filter: blur(10px);
 }
 
+.contact-items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
 .contact-item {
     display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-    margin-bottom: 2rem;
-    padding: 1.25rem 1.5rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
     border-radius: 12px;
     transition: all 0.3s ease;
     position: relative;
-    flex: 1;
-    min-width: 250px;
+    background: rgba(248, 250, 252, 0.5);
+    border: 1px solid rgba(226, 232, 240, 0.3);
 }
 
-.contact-items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+.contact-item:hover {
+    background: rgba(59, 130, 246, 0.02);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact-item:hover {
@@ -882,11 +887,11 @@ section:nth-child(even):not(.hero) {
 }
 
 .social-links {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(226, 232, 240, 0.6);
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
 }
 
@@ -894,7 +899,7 @@ section:nth-child(even):not(.hero) {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.875rem 1.5rem;
+    padding: 1rem 2rem;
     background: white;
     color: var(--text-secondary);
     text-decoration: none;
@@ -904,6 +909,8 @@ section:nth-child(even):not(.hero) {
     font-weight: 500;
     position: relative;
     overflow: hidden;
+    min-width: 140px;
+    justify-content: center;
 }
 
 .social-link::before {
@@ -1084,20 +1091,13 @@ section:nth-child(even):not(.hero) {
     
     .contact-info {
         margin: 0 1rem;
-        padding: 2.5rem 2rem;
+        padding: 2rem 2rem;
+        max-width: 100%;
     }
     
     .contact-items-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .contact-item {
-        margin-bottom: 1rem;
-        padding: 1rem;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 1.25rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .project-card.featured {
@@ -1147,15 +1147,26 @@ section:nth-child(even):not(.hero) {
     
     .contact-items-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
     }
     
     .contact-item {
-        margin-bottom: 1.5rem;
-        padding: 0.75rem;
+        padding: 1rem;
         flex-direction: row;
-        align-items: flex-start;
-        gap: 1.25rem;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+    
+    .social-link {
+        padding: 0.875rem 1.25rem;
     }
     
     .contact-icon {
@@ -1214,15 +1225,16 @@ section:nth-child(even):not(.hero) {
     
     .contact-items-grid {
         grid-template-columns: 1fr;
-        gap: 0.75rem;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .contact-item {
         flex-direction: row;
         text-align: left;
-        gap: 1rem;
-        padding: 1rem 0.5rem;
-        margin-bottom: 1rem;
+        gap: 0.875rem;
+        padding: 1rem;
+        align-items: center;
     }
     
     .contact-icon {
@@ -1234,6 +1246,8 @@ section:nth-child(even):not(.hero) {
     .social-links {
         margin-top: 1.5rem;
         padding-top: 1.5rem;
+        flex-direction: column;
+        gap: 0.75rem;
     }
     
     .social-link {
