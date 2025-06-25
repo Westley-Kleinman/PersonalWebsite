@@ -1919,9 +1919,91 @@ section:nth-child(even):not(.hero) {
     }
 }
 
+/* Responsive Design for Project Pages */
 @media (max-width: 1024px) {
-    .project-hero-header {
-        grid-template-columns: 400px 1fr;
+    .hero-main-content {
+        grid-template-columns: 500px 1fr;
         gap: 3rem;
+    }
+    
+    .hero-team-photo-large {
+        min-height: 350px;
+    }
+    
+    .hero-name-side {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle-side {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-main-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .hero-content-right {
+        padding-left: 0;
+        order: 2;
+    }
+    
+    .hero-photo-large {
+        order: 1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .hero-team-photo-large {
+        min-height: 350px;
+    }
+    
+    .hero-name-side {
+        font-size: 2.5rem;
+    }
+    
+    .hero-highlights-side {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-hero {
+        padding: 2rem 0 3rem 0;
+        min-height: 70vh;
+    }
+    
+    .hero-main-content {
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .hero-photo-large {
+        max-width: 400px;
+    }
+    
+    .hero-team-photo-large {
+        min-height: 300px;
+    }
+    
+    .hero-name-side {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle-side {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description-side {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-highlights-side {
+        gap: 1rem;
+        padding: 0 1rem;
     }
 }
