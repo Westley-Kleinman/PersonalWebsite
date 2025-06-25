@@ -1112,19 +1112,6 @@ section:nth-child(even):not(.hero) {
     }
 }
 
-@media (max-width: 900px) {
-    .project-hero-header {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-    
-    .hero-photo-section {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-}
-
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -1431,28 +1418,6 @@ section:nth-child(even):not(.hero) {
 
 .project-breadcrumb a:hover {
     text-decoration: underline;
-}
-
-.hero-content-section .hero-name {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    line-height: 1.2;
-}
-
-.hero-content-section .hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--primary);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-}
-
-.hero-content-section .hero-description {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 2.5rem;
 }
 
 .project-stats {
