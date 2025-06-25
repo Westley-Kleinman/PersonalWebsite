@@ -1277,32 +1277,31 @@ section:nth-child(even):not(.hero) {
 .project-hero {
     padding: 3rem 0 4rem 0;
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-    min-height: 90vh;
+    min-height: 80vh;
 }
 
 .hero-main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    gap: 4rem;
+    align-items: center;
     margin-top: 2rem;
 }
 
 .hero-photo-large {
     position: relative;
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .hero-team-photo-large {
     width: 100%;
     height: auto;
-    min-height: 500px;
+    min-height: 400px;
     object-fit: cover;
     border-radius: var(--border-radius-lg);
     box-shadow: 
-        0 30px 60px -15px rgba(0, 0, 0, 0.3),
-        0 20px 40px -10px rgba(0, 0, 0, 0.2);
+        0 25px 50px -12px rgba(0, 0, 0, 0.25),
+        0 15px 30px -5px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
     border: 3px solid white;
 }
@@ -1310,62 +1309,40 @@ section:nth-child(even):not(.hero) {
 .hero-team-photo-large:hover {
     transform: scale(1.02) translateY(-5px);
     box-shadow: 
-        0 40px 80px -20px rgba(0, 0, 0, 0.35),
-        0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        0 35px 70px -15px rgba(0, 0, 0, 0.3),
+        0 20px 40px -8px rgba(0, 0, 0, 0.2);
 }
 
-.photo-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(
-        transparent 0%,
-        rgba(0, 0, 0, 0.3) 50%,
-        rgba(0, 0, 0, 0.8) 100%
-    );
-    padding: 3rem 2rem 2rem;
-    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+.hero-content-right {
+    padding-left: 2rem;
 }
 
-.overlay-content {
-    text-align: center;
-    color: white;
-}
-
-.hero-name-overlay {
+.hero-name-side {
     font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    color: var(--text-primary);
     line-height: 1.2;
 }
 
-.hero-subtitle-overlay {
+.hero-subtitle-side {
     font-size: 1.5rem;
+    color: var(--primary);
     font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-    opacity: 0.95;
+    margin-bottom: 2rem;
 }
 
-.hero-description-below {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.hero-description-large {
+.hero-description-side {
     font-size: 1.2rem;
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 2rem;
 }
 
-.hero-highlights-large {
+.hero-highlights-side {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: center;
 }
 
 .highlight-item {
