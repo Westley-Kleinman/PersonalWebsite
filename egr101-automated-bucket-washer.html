@@ -91,6 +91,14 @@
             .project-overview-grid {
                 grid-template-columns: 1fr !important;
             }
+            .achievements-highlight .container > div {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            .achievement-card {
+                min-height: auto !important;
+                padding: 2rem 1.5rem !important;
+            }
         }        /* Enhanced Achievement Styling */
         .specs-card {
             background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
@@ -169,12 +177,16 @@
         }
         .achievement-card {
             background: var(--bg-card);
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             border-radius: 16px;
             text-align: center;
             transition: all 0.3s ease;
             border: 1px solid var(--border-color);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 280px;
         }
         .achievement-card:hover {
             transform: translateY(-5px);
@@ -189,6 +201,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
+            flex-shrink: 0;
         }
         .achievement-icon i {
             color: white;
@@ -196,13 +209,16 @@
         }
         .achievement-title {
             color: var(--text-primary);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            line-height: 1.3;
         }
         .achievement-description {
             color: var(--text-secondary);
             line-height: 1.6;
+            font-size: 0.95rem;
+            flex-grow: 1;
         }
     </style>
 </head>
@@ -284,7 +300,11 @@
 
                 <!-- Project Poster -->
                 <div style="text-align: center; margin-bottom: 3rem;">
-                    <img src="images/EGR101/EGR101_Poster.png" alt="EGR101 Final Project Poster - System for Washing Compost Buckets" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15); border: 2px solid #f0f0f0;">
+                    <img src="images/EGR101/EGR101_Poster.png" alt="EGR101 Final Project Poster - System for Washing Compost Buckets" style="max-width: 100%; max-height: 800px; height: auto; border-radius: 12px; box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15); border: 2px solid #f0f0f0;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display: none; padding: 3rem; background: var(--bg-card); border-radius: 12px; border: 2px solid var(--border-color); color: var(--text-secondary);">
+                        <i class="fas fa-file-image" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                        <p>Project poster will be available soon</p>
+                    </div>
                     <p style="margin-top: 1rem; color: var(--text-secondary); font-style: italic;">Final project poster presented for EGR101 course</p>
                 </div>
 
@@ -531,14 +551,14 @@
                     <h2 class="section-title">Project Impact & Results</h2>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: stretch;">
                     <div class="achievement-card">
                         <div class="achievement-icon">
                             <i class="fas fa-check-circle"></i>
                         </div>
                         <h3 class="achievement-title">89% Cleanliness Success</h3>
                         <p class="achievement-description">
-                            1929 buckets achieved 95% cleanliness through our innovative two-device washing system
+                            1929 buckets achieved 95% cleanliness through our innovative two-device washing system design
                         </p>
                     </div>
                     
@@ -566,7 +586,7 @@
                         <div class="achievement-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
-                        <h3 class="achievement-title">Innovative Two-Device System</h3>
+                        <h3 class="achievement-title">Two-Device System Design</h3>
                         <p class="achievement-description">
                             Rinsing and brushing devices with PVC frames, rotating mechanisms, and automated components
                         </p>
