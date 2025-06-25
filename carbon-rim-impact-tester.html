@@ -42,22 +42,23 @@
     </script>
     
     <style>
+        .hero-logos-section {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
         .company-logos {
             display: flex;
             gap: 2rem;
             align-items: center;
             justify-content: center;
-            margin: 2rem 0;
+            margin: 0;
         }
         .company-logo {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
         .company-logo:hover {
             opacity: 1;
+            transform: scale(1.02);
         }
         .project-overview {
             background: var(--bg-secondary);
@@ -194,6 +195,28 @@
             color: #a8c5e8;
             font-weight: 600;
         }
+        @media (max-width: 1024px) {
+            .hero-main-content {
+                grid-template-columns: 1fr !important;
+                gap: 3rem !important;
+            }
+            .hero-content-left h1 {
+                font-size: 3rem !important;
+            }
+            .hero-logos-section {
+                order: -1;
+            }
+            .hero-logos-section .company-logos {
+                flex-direction: row !important;
+                justify-content: center !important;
+                gap: 3rem !important;
+                margin: 0 !important;
+            }
+            .hero-logos-section .company-logo {
+                max-width: 250px !important;
+                max-height: 100px !important;
+            }
+        }
         @media (max-width: 768px) {
             .company-logos {
                 gap: 1rem;
@@ -203,6 +226,36 @@
             }
             .key-highlights {
                 grid-template-columns: 1fr;
+            }
+            .hero-main-content {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            .hero-content-left h1 {
+                font-size: 2.5rem !important;
+            }
+            .hero-content-left p.hero-subtitle {
+                font-size: 1.2rem !important;
+            }
+            .hero-content-left p.hero-description {
+                font-size: 1rem !important;
+            }
+            .hero-highlights {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            .project-hero {
+                min-height: auto !important;
+                padding: 2rem 0 !important;
+            }
+            .hero-logos-section .company-logos {
+                flex-direction: column !important;
+                gap: 2rem !important;
+                margin: 0 !important;
+            }
+            .hero-logos-section .company-logo {
+                max-width: 300px !important;
+                max-height: 90px !important;
             }
         }
     </style>
@@ -232,59 +285,82 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Section -->
-        <section class="project-hero">
+        <section class="project-hero" style="min-height: 70vh; padding: 3rem 0; display: flex; align-items: center;">
             <div class="container">
-                <div class="project-hero-content">
-                    <div class="project-breadcrumb">
-                        <a href="index.html">Portfolio</a>
-                        <span>/</span>
-                        <span>Boyd Cycling & Time Bicycles Engineering</span>
-                    </div>
-                    <div class="project-hero-text">
-                        <h1 class="hero-name">Boyd Cycling & Time Bicycles Engineering Internship</h1>
-                        <p class="hero-subtitle">Advanced Carbon Fiber Manufacturing & Quality Assurance</p>
-                        <p class="hero-description">
+                <div class="project-breadcrumb">
+                    <a href="index.html">Portfolio</a>
+                    <span>/</span>
+                    <span>Boyd Cycling & Time Bicycles Engineering</span>
+                </div>
+                
+                <div class="hero-main-content" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 500px; gap: 3rem; align-items: center; align-content: center;">
+                    <div class="hero-content-left">
+                        <h1 class="hero-name" style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); line-height: 1.1;">Boyd Cycling & Time Bicycles Engineering Internship</h1>
+                        <p class="hero-subtitle" style="font-size: 1.4rem; color: var(--primary); font-weight: 600; margin-bottom: 2rem;">Advanced Carbon Fiber Manufacturing & Quality Assurance</p>
+                        <p class="hero-description" style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2.5rem;">
                             Engineering internship at Boyd Cycling and Time Bicycles, focusing on RTM process optimization, 
                             custom impact testing equipment development, and international technology transfer at CU-ICAR.
                         </p>
                         
-                        <div class="company-logos">
-                            <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="company-logo">
-                            <img src="images/Internship/time_logo.jpeg" alt="Time Bicycles" class="company-logo">
+                        <div class="hero-highlights" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+                            <div class="highlight-item" style="display: flex; align-items: center; gap: 0.8rem;">
+                                <i class="fas fa-cogs" style="color: var(--primary); font-size: 1.4rem;"></i>
+                                <span style="font-weight: 500;">RTM Process Optimization</span>
+                            </div>
+                            <div class="highlight-item" style="display: flex; align-items: center; gap: 0.8rem;">
+                                <i class="fas fa-hammer" style="color: var(--primary); font-size: 1.4rem;"></i>
+                                <span style="font-weight: 500;">Custom Impact Testing</span>
+                            </div>
+                            <div class="highlight-item" style="display: flex; align-items: center; gap: 0.8rem;">
+                                <i class="fas fa-globe" style="color: var(--primary); font-size: 1.4rem;"></i>
+                                <span style="font-weight: 500;">International Tech Transfer</span>
+                            </div>
+                            <div class="highlight-item" style="display: flex; align-items: center; gap: 0.8rem;">
+                                <i class="fas fa-check-circle" style="color: var(--primary); font-size: 1.4rem;"></i>
+                                <span style="font-weight: 500;">UCI Standards Validation</span>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <div class="hero-logos-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; min-height: 400px;">
+                        <div class="company-logos" style="display: flex; flex-direction: column; gap: 3rem; align-items: center; margin: 0; flex: 1; justify-content: center;">
+                            <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="company-logo" style="width: 100%; height: auto; max-height: 200px; max-width: 500px; object-fit: contain; opacity: 0.9;">
+                            <img src="images/Internship/time_logo.jpeg" alt="Time Bicycles" class="company-logo" style="width: 100%; height: auto; max-height: 200px; max-width: 500px; object-fit: contain; opacity: 0.9;">
+                        </div>
+                        <p style="margin-top: 2rem; color: var(--text-secondary); font-weight: 500; font-size: 1rem;">Industry Partners</p>
                     </div>
                 </div>
             </div>
         </section>        <!-- Key Achievements Highlight -->
-        <section class="project-section" style="background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%); padding: 4rem 0; margin: 0;">
+        <section class="project-section" style="background: linear-gradient(135deg, #e8f4fd 0%, #cde7f7 100%); padding: 4rem 0; margin: 0;">
             <div class="container">
                 <div class="section-header" style="text-align: center;">
-                    <h2 class="section-title" style="color: white; font-size: 2.5rem; margin-bottom: 3rem;">Key Engineering Achievements</h2>
+                    <h2 class="section-title" style="color: #2c5282; font-size: 2.5rem; margin-bottom: 3rem;">Key Engineering Achievements</h2>
                 </div>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); text-align: center; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.15);">
-                        <div style="background: rgba(255, 255, 255, 0.9); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                            <i class="fas fa-cogs" style="color: #003087; font-size: 2rem;"></i>
+                    <div style="background: rgba(255, 255, 255, 0.8); padding: 2rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; border: 1px solid rgba(41, 82, 130, 0.2); box-shadow: 0 4px 20px rgba(41, 82, 130, 0.1);">
+                        <div style="background: #2c5282; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                            <i class="fas fa-cogs" style="color: white; font-size: 2rem;"></i>
                         </div>
-                        <h3 style="color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">RTM Process Optimization</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Eradicated dry zones and standardized resin distribution across carbon rim production</p>
+                        <h3 style="color: #2c5282; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">RTM Process Optimization</h3>
+                        <p style="color: #4a5568; line-height: 1.6;">Eradicated dry zones and standardized resin distribution across carbon rim production</p>
                     </div>
                     
-                    <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); text-align: center; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.15);">
-                        <div style="background: rgba(255, 255, 255, 0.9); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                            <i class="fas fa-hammer" style="color: #003087; font-size: 2rem;"></i>
+                    <div style="background: rgba(255, 255, 255, 0.8); padding: 2rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; border: 1px solid rgba(41, 82, 130, 0.2); box-shadow: 0 4px 20px rgba(41, 82, 130, 0.1);">
+                        <div style="background: #2c5282; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                            <i class="fas fa-hammer" style="color: white; font-size: 2rem;"></i>
                         </div>
-                        <h3 style="color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">Custom Impact Testing</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Built custom wheel-impact rig validating 40J UCI standards with precision</p>
+                        <h3 style="color: #2c5282; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">Custom Impact Testing</h3>
+                        <p style="color: #4a5568; line-height: 1.6;">Built custom wheel-impact rig validating 40J UCI standards with precision</p>
                     </div>
                     
-                    <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); text-align: center; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.15);">
-                        <div style="background: rgba(255, 255, 255, 0.9); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                            <i class="fas fa-globe" style="color: #003087; font-size: 2rem;"></i>
+                    <div style="background: rgba(255, 255, 255, 0.8); padding: 2rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; border: 1px solid rgba(41, 82, 130, 0.2); box-shadow: 0 4px 20px rgba(41, 82, 130, 0.1);">
+                        <div style="background: #2c5282; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                            <i class="fas fa-globe" style="color: white; font-size: 2rem;"></i>
                         </div>
-                        <h3 style="color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">International Tech Transfer</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Accelerated Time Bicycles' U.S.A. rollout through European protocol implementation</p>
+                        <h3 style="color: #2c5282; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">International Tech Transfer</h3>
+                        <p style="color: #4a5568; line-height: 1.6;">Accelerated Time Bicycles' U.S.A. rollout through European protocol implementation</p>
                     </div>
                 </div>
             </div>
