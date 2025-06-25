@@ -73,6 +73,11 @@
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+        @media (max-width: 1024px) {
+            .achievements-highlight .container > div {
+                max-width: 600px !important;
+            }
+        }
         @media (max-width: 768px) {
             .video-container {
                 padding: 1rem;
@@ -94,6 +99,7 @@
             .achievements-highlight .container > div {
                 grid-template-columns: 1fr !important;
                 gap: 1.5rem !important;
+                max-width: 100% !important;
             }
             .achievement-card {
                 min-height: auto !important;
@@ -551,7 +557,7 @@
                     <h2 class="section-title">Project Impact & Results</h2>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: stretch;">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 800px; margin: 0 auto;">
                     <div class="achievement-card">
                         <div class="achievement-icon">
                             <i class="fas fa-check-circle"></i>
