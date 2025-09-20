@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boyd Cycling Engineering Internship - Carbon fiber rim manufacturing process optimization and RTM process improvement by Westley Kleinman.">
+    <meta name="keywords" content="Boyd Cycling, Time Bicycles, RTM process, carbon rim fabrication, Resin Transfer Molding, composite materials, BobinWinder">
+    <meta name="author" content="Westley Kleinman">
+    <title>Boyd Cycling Engineering Internship | Westley Kleinman</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Extras/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Extras/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/Extras/favicon/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Hero Section with Cover Photo */
+        .hero {
+            padding: 8rem 0 6rem;
+            background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            color: #a8c5e8;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Process Journey Sections */
+        .process-section {
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        .process-section:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+        
+        .process-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .process-number {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        
+        .process-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .process-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .process-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        
+        .process-media {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .process-media video,
+        .process-media img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .process-text {
+            padding: 2rem;
+        }
+        
+        .process-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+        
+        .tech-specs {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-specs h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .tech-specs li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .tech-specs li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Problem Analysis Section */
+        .problem-analysis {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 4rem 0;
+            margin: 3rem 0;
+        }
+        
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .analysis-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .analysis-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), #4299e1);
+        }
+        
+        .analysis-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .analysis-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .analysis-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Solutions Section */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .solution-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .solution-icon {
+            background: var(--primary-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .solution-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .solution-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Company Logos */
+        .company-logos {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+        
+        .company-logo {
+            height: 60px;
+            width: auto;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .company-logo:hover {
+            opacity: 1;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .process-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .process-title {
+                font-size: 2rem;
+            }
+            
+            .company-logos {
+                gap: 1.5rem;
+            }
+            
+            .company-logo {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">WK</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Cover Photo -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Carbon Fiber Manufacturing Journey</h1>
+            <p class="hero-subtitle">Boyd Cycling & Time Bicycles Engineering Internship</p>
+            <p class="hero-description">
+                Exploring and optimizing the carbon fiber rim manufacturing process through hands-on engineering work, 
+                focusing on the Resin Transfer Molding (RTM) process and quality improvements.
+            </p>
+            <div class="company-logos">
+                <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="company-logo">
+                <img src="images/Internship/time_logo.jpeg" alt="Time Bicycles" class="company-logo">
+                <img src="images/Internship/ICAR_logo.png" alt="CU-ICAR" class="company-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 1: BobinWinder Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="process-header">
+                <div class="process-number">Step 01</div>
+                <h2 class="process-title">BobinWinder Operation</h2>
+                <p class="process-subtitle">The foundation of carbon fiber rim manufacturing</p>
+            </div>
+            
+            <div class="process-content">
+                <div class="process-media">
+                    <video controls poster="images/Internship/REMOVED">
+                        <source src="images/Internship/BobinWinder.MOV" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="process-text">
+                    <p class="process-description">
+                        The BobinWinder machine is where the carbon fiber rim manufacturing process begins. This machine takes the wax mold of the rim and wraps it with two layers of carbon fiber weave, creating the structural foundation for the final product.
+                    </p>
+                    
+                    <p class="process-description">
+                        I worked on optimizing this machine's operation to ensure consistent fiber placement and proper layer alignment. The precision achieved at this stage directly impacts the quality and performance characteristics of the finished rim.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 2: Mold Preparation -->
+    <section class="process-section">
+        <div class="container">
+            <div class="process-header">
+                <div class="process-number">Step 02</div>
+                <h2 class="process-title">Mold Placement</h2>
+                <p class="process-subtitle">Positioning for the injection process</p>
+            </div>
+            
+            <div class="process-content">
+                <div class="process-text">
+                    <p class="process-description">
+                        After the carbon fiber layers are applied by the BobinWinder, the wrapped rim is positioned in the injection mold. This step requires careful alignment to ensure proper resin flow patterns during the subsequent injection process.
+                    </p>
+                    
+                    <p class="process-description">
+                        The positioning and mold preparation directly influence how effectively the resin will saturate the carbon fiber matrix during the RTM process.
+                    </p>
+                </div>
+                
+                <div class="process-media">
+                    <img src="images/Internship/Wheel_in_mold.jpg" alt="Carbon rim positioned in injection mold" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 3: RTM Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="process-header">
+                <div class="process-number">Step 03</div>
+                <h2 class="process-title">Resin Transfer Molding (RTM)</h2>
+                <p class="process-subtitle">The injection and curing process</p>
+            </div>
+            
+            <div class="process-content">
+                <div class="process-media">
+                    <img src="images/Internship/wheen_no_bg.png" alt="Completed carbon rim after RTM process" />
+                </div>
+                
+                <div class="process-text">
+                    <p class="process-description">
+                        The RTM process involves sealing the mold, applying vacuum to remove air, and injecting resin under pressure. This transforms the dry carbon fiber layers into a solid composite structure.
+                    </p>
+                    
+                    <p class="process-description">
+                        During my work, I observed and analyzed issues with resin distribution that led to inconsistent quality in the final products, specifically resin-poor and resin-rich zones that affected performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Analysis Section -->
+    <section class="problem-analysis">
+        <div class="container">
+            <div class="process-header">
+                <div class="process-number">Challenge</div>
+                <h2 class="process-title">Resin Distribution Issues</h2>
+                <p class="process-subtitle">Identifying manufacturing inconsistencies</p>
+            </div>
+            
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <img src="images/Internship/resin_poor.png" alt="Resin poor zones in carbon rim" class="analysis-image" />
+                    <h3 class="analysis-title">Resin-Poor Zones</h3>
+                    <p class="analysis-description">
+                        Areas where insufficient resin penetration created dry spots in the carbon fiber matrix. These zones represent potential failure points and inconsistent structural properties.
+                    </p>
+                </div>
+                
+                <div class="analysis-card">
+                    <img src="images/Internship/resin rich zones.png" alt="Resin rich zones in carbon rim" class="analysis-image" />
+                    <h3 class="analysis-title">Resin-Rich Zones</h3>
+                    <p class="analysis-description">
+                        Areas with excess resin accumulation that add unnecessary weight without structural benefit. These zones indicate inefficient resin flow and distribution patterns.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Implemented -->
+    <section class="process-section">
+        <div class="container">
+            <div class="process-header">
+                <div class="process-number">Solutions</div>
+                <h2 class="process-title">Process Improvement Approaches</h2>
+                <p class="process-subtitle">Engineering solutions to address resin distribution challenges</p>
+            </div>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 class="solution-title">Secondary Injection Points</h3>
+                    <p class="solution-description">
+                        Explored adding secondary injection and vacuum points to create multiple resin flow paths and improve saturation of complex rim geometries.
+                    </p>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h3 class="solution-title">Enhanced Resin Channels</h3>
+                    <p class="solution-description">
+                        Investigated increasing the size of resin impregnation channels to improve flow volume and reduce pressure restrictions across the fiber matrix.
+                    </p>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3 class="solution-title">Temperature Optimization</h3>
+                    <p class="solution-description">
+                        Experimented with adjusting mold and resin temperatures to optimize viscosity and improve flow characteristics during the injection process.
+                    </p>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="solution-title">Process Parameter Tuning</h3>
+                    <p class="solution-description">
+                        Worked on optimizing injection timing, pressure settings, and vacuum application to improve overall resin distribution and reduce defects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning and Experience -->
+    <section class="process-section" style="background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%); color: white;">
+        <div class="container">
+            <div class="process-header">
+                <div class="process-number" style="color: #a8c5e8;">Experience</div>
+                <h2 class="process-title" style="color: white;">Engineering Learning & Development</h2>
+                <p class="process-subtitle" style="color: rgba(255, 255, 255, 0.85);">Key insights gained through hands-on manufacturing engineering</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem;">
+                    This internship provided valuable hands-on experience with advanced composite manufacturing processes. Working with the RTM process, I gained insights into the complexities of resin flow dynamics, the importance of process control, and the engineering challenges involved in achieving consistent quality in composite manufacturing.
+                </p>
+                
+                <p style="font-size: 1.1rem; line-height: 1.8; color: rgba(255, 255, 255, 0.9);">
+                    The experience reinforced the importance of systematic problem identification, collaborative engineering approaches, and the iterative nature of process optimization in manufacturing environments.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Portfolio -->
+    <section class="process-section">
+        <div class="container" style="text-align: center;">
+            <h2 class="process-title">Manufacturing Engineering Experience</h2>
+            <p class="process-subtitle" style="max-width: 800px; margin: 0 auto 3rem;">
+                This internship provided valuable exposure to advanced composite manufacturing, process optimization challenges, 
+                and collaborative engineering problem-solving in an industrial setting.
+            </p>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html#projects" class="btn-primary">Back to Projects</a>
+                <a href="elevon-3d-maps.html" class="btn-secondary">Next: Elevon 3D Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">WK</div>
+                    <p>Mechanical Engineering student passionate about innovation, entrepreneurship, and engineering solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#home">Home</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Projects</h4>
+                        <ul>
+                            <li><a href="carbon-rim-impact-tester.html">Boyd Cycling Internship</a></li>
+                            <li><a href="elevon-3d-maps.html">Elevon 3D Maps</a></li>
+                            <li><a href="egr101-automated-bucket-washer.html">Automated Bucket Washer</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:westley.kleinman@duke.edu">Email</a></li>
+                            <li><a href="https://linkedin.com/in/westley-kleinman" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/Westley-Kleinman" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

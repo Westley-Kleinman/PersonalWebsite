@@ -3,567 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Boyd Cycling & Time Bicycles Engineering Internship - RTM process optimization, custom impact testing equipment, and international composite technology transfer by Westley Kleinman.">
-    <meta name="keywords" content="Boyd Cycling, Time Bicycles, RTM process, carbon rim fabrication, impact testing, UCI standards, mechanical engineering, composite materials, CU-ICAR">
-    <meta name="author" content="Westley Kleinman">    <title>Boyd Cycling & Time Bicycles Engineering | Westley Kleinman</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/Extras/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/Extras/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/Extras/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/Extras/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/Extras/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/Extras/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/Extras/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/Extras/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/Extras/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/Extras/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/Extras/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/Extras/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/Extras/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/Extras/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-      <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-9XCECK2SGS');
-    </script>
-    
+    <title>Carbon Rim Impact Testing</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        .company-logos {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            justify-content: center;
-            margin: 2rem 0;
-        }
-        .company-logo {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
-        }
-        .company-logo:hover {
-            opacity: 1;
-        }
-        .project-overview {
-            background: var(--bg-secondary);
-            padding: 4rem 0;
-            margin: 3rem 0;
-            border-radius: 12px;
-        }
-        .key-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .highlight-card {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .highlight-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        .highlight-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-color);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        .highlight-icon i {
-            color: white;
-            font-size: 1.2rem;
-        }
-        .highlight-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-        .highlight-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .stat-card {
+        .video-container {
             text-align: center;
-            padding: 2rem;
+            margin: 3rem 0;
             background: var(--bg-card);
+            padding: 2rem;
             border-radius: 12px;
             border: 1px solid var(--border-color);
         }
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: block;
+        .video-container video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        .stat-label {
+        .video-caption {
+            margin-top: 1rem;
             color: var(--text-secondary);
             font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }        /* Enhanced Achievement Styling */
-        .specs-card {
-            background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
-            border: none;
-            box-shadow: 0 15px 35px rgba(0, 48, 135, 0.15);
-            transition: all 0.3s ease;
-        }
-        .specs-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 48, 135, 0.25);
-        }
-        .specs-card h4 {
-            color: white;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        .achievement-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            padding: 0.8rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        .achievement-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateX(5px);
-        }
-        .achievement-item i {
-            color: #a8c5e8;
-            font-size: 1.2rem;
-            width: 20px;
-            text-align: center;
-        }
-        .achievement-item span {
-            color: white;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-        .spec-grid {
-            display: grid;
-            gap: 1rem;
-        }
-        .spec-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.8rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-        }
-        .spec-label {
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 500;
-        }
-        .spec-value {
-            color: #a8c5e8;
-            font-weight: 600;
         }
         @media (max-width: 768px) {
-            .company-logos {
-                gap: 1rem;
+            .hero-main-content {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
             }
-            .company-logo {
-                height: 50px;
+            .hero-photo-large {
+                order: 2;
             }
-            .key-highlights {
-                grid-template-columns: 1fr;
+            .hero-content-right {
+                order: 1;
+                padding-left: 0 !important;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="logo-text">WK</a>
-            </div>
-            <div class="nav-menu">
-                <a href="index.html#home" class="nav-link">Home</a>
-                <a href="index.html#about" class="nav-link">About</a>
-                <a href="index.html#projects" class="nav-link">Projects</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <nav class="nav">
+        <div class="nav-left">
+            <a href="index.html" class="nav-brand">West Ollie</a>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Experience</a>
+            <a href="#" class="nav-link">Projects</a>
+            <a href="#" class="nav-link">Contact</a>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="project-hero">
-            <div class="container">
-                <div class="project-hero-content">
-                    <div class="project-breadcrumb">
-                        <a href="index.html">Portfolio</a>
-                        <span>/</span>
-                        <span>Boyd Cycling & Time Bicycles Engineering</span>
-                    </div>
-                    <div class="project-hero-text">
-                        <h1 class="hero-name">Boyd Cycling & Time Bicycles Engineering Internship</h1>
-                        <p class="hero-subtitle">Advanced Carbon Fiber Manufacturing & Quality Assurance</p>
-                        <p class="hero-description">
-                            Engineering internship at Boyd Cycling and Time Bicycles, focusing on RTM process optimization, 
-                            custom impact testing equipment development, and international technology transfer at CU-ICAR.
-                        </p>
-                        
-                        <div class="company-logos">
-                            <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="company-logo">
-                            <img src="images/Internship/time_logo.jpeg" alt="Time Bicycles" class="company-logo">
-                        </div>
-                    </div>
-                </div>
+    <main class="hero-main-content" style="display: grid; grid-template-columns: 690px 1fr; max-width: 1200px; margin: 2rem auto; gap: 4rem; padding: 0 2rem;">
+        <div class="hero-photo-large">
+            <img src="images/Extras/wheelie.png" alt="Carbon Rim Impact Testing" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);" />
+        </div>
+        
+        <div class="hero-content-right" style="display: flex; flex-direction: column; justify-content: center; padding-left: 3rem;">
+            <div class="breadcrumb" style="margin-bottom: 1rem;">
+                <a href="index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <span style="color: var(--text-secondary); margin: 0 0.5rem;">></span>
+                <span style="color: var(--text-primary);">Carbon Rim Impact Testing</span>
             </div>
-        </section>        <!-- Key Achievements Highlight -->
-        <section class="project-section" style="background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%); padding: 4rem 0; margin: 0;">
-            <div class="container">
-                <div class="section-header" style="text-align: center;">
-                    <h2 class="section-title" style="color: white; font-size: 2.5rem; margin-bottom: 3rem;">Key Engineering Achievements</h2>
-                </div>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); text-align: center; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.15);">
-                        <div style="background: rgba(255, 255, 255, 0.9); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                            <i class="fas fa-cogs" style="color: #003087; font-size: 2rem;"></i>
-                        </div>
-                        <h3 style="color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">RTM Process Optimization</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Eradicated dry zones and standardized resin distribution across carbon rim production</p>
-                    </div>
-                    
-                    <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); text-align: center; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.15);">
-                        <div style="background: rgba(255, 255, 255, 0.9); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                            <i class="fas fa-hammer" style="color: #003087; font-size: 2rem;"></i>
-                        </div>
-                        <h3 style="color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">Custom Impact Testing</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Built custom wheel-impact rig validating 40J UCI standards with precision</p>
-                    </div>
-                    
-                    <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); text-align: center; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.15);">
-                        <div style="background: rgba(255, 255, 255, 0.9); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                            <i class="fas fa-globe" style="color: #003087; font-size: 2rem;"></i>
-                        </div>
-                        <h3 style="color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">International Tech Transfer</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Accelerated Time Bicycles' U.S.A. rollout through European protocol implementation</p>
-                    </div>
-                </div>
+            
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.1;">Carbon Rim Impact Testing</h1>
+            <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">Advanced impact testing methodology for carbon fiber bicycle rims at Boyd Cycling</p>
+            
+            <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                <span style="background: var(--bg-card); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--border-color); font-size: 0.875rem; color: var(--text-primary);">Materials Testing</span>
+                <span style="background: var(--bg-card); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--border-color); font-size: 0.875rem; color: var(--text-primary);">Engineering Analysis</span>
+                <span style="background: var(--bg-card); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--border-color); font-size: 0.875rem; color: var(--text-primary);">Quality Control</span>
             </div>
-        </section><!-- Project Overview -->
-        <section class="project-overview">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Project Overview</h2>
-                    <p class="section-subtitle">
-                        A comprehensive engineering internship encompassing three major initiatives: RTM process optimization, 
-                        custom testing equipment development, and international technology transfer.
-                    </p>
+            
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" style="height: 40px;" />
+                <div>
+                    <div style="font-weight: 600;">Boyd Cycling</div>
+                    <div style="color: var(--text-secondary); font-size: 0.875rem;">Engineering Intern</div>
                 </div>
-            </div>
-        </section>        <!-- RTM Process Optimization -->
-        <section class="project-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">RTM Process Optimization</h2>
-                    <p class="section-subtitle">Enhanced carbon-rim fabrication by overhauling mold geometry and machine calibration</p>
-                </div>
-                
-                <div class="project-overview-grid">
-                    <div class="overview-content">
-                        <h3>The Challenge</h3>
-                        <p>
-                            Boyd Cycling's RTM (Resin Transfer Molding) process was experiencing inconsistent 
-                            resin distribution, leading to dry zones in carbon rims and variable product quality. 
-                            Manufacturing efficiency was compromised by unpredictable fabrication outcomes.
-                        </p>
-                        
-                        <h3>Solution Approach</h3>
-                        <p>
-                            Conducted comprehensive analysis of existing mold geometry and machine calibration parameters. 
-                            Identified inconsistent resin distribution patterns causing dry zones in carbon rim production. 
-                            Redesigned mold flow patterns and optimized injection parameters to achieve uniform distribution.
-                        </p>
-                        
-                        <h3>Results</h3>
-                        <p>
-                            Eradicated dry zones and standardized resin distribution across all carbon rim production. 
-                            Significantly improved manufacturing consistency and product quality standards throughout 
-                            the fabrication process.
-                        </p>
-                    </div>
-                    
-                    <div class="overview-specs">
-                        <div class="specs-card">
-                            <h4>Key Achievements</h4>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Eliminated dry zones in carbon rim fabrication</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Standardized resin distribution process</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Improved manufacturing consistency</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Enhanced product quality standards</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Custom Impact Testing Equipment -->
-        <section class="project-section bg-secondary">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Custom Impact Testing Equipment</h2>
-                    <p class="section-subtitle">Conceived and built a custom wheel-impact rig validating rim durability to 40J UCI standards</p>
-                </div>
-                
-                <div class="project-overview-grid">
-                    <div class="overview-content">
-                        <h3>The Challenge</h3>
-                        <p>
-                            Boyd Cycling needed reliable, consistent impact testing capabilities to validate carbon 
-                            rim durability according to UCI standards. Existing commercial testing equipment was 
-                            cost-prohibitive and lacked customization for specific rim geometries.
-                        </p>
-                        
-                        <h3>Solution Approach</h3>
-                        <p>
-                            Designed and fabricated a custom testing apparatus utilizing electromagnetic release mechanisms 
-                            for consistent impact delivery. Implemented precision control systems using winch and electromagnetic 
-                            stopper systems to ensure repeatable testing according to UCI standards.
-                        </p>
-                        
-                        <h3>Results</h3>
-                        <p>
-                            Successfully validated rim durability to 40J UCI standards with precision and repeatability. 
-                            Provided cost-effective validation solution compared to commercial alternatives while maintaining 
-                            professional testing standards.
-                        </p>
-                    </div>
-                    
-                    <div class="overview-specs">
-                        <div class="specs-card">
-                            <h4>Technical Specifications</h4>
-                            <div class="spec-grid">
-                                <div class="spec-item">
-                                    <span class="spec-label">Release System</span>
-                                    <span class="spec-value">Electromagnetic</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Control Method</span>
-                                    <span class="spec-value">Winch + Stopper</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Testing Standard</span>
-                                    <span class="spec-value">40J UCI Compliant</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Application</span>
-                                    <span class="spec-value">Rim Durability Validation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- International Technology Transfer -->
-        <section class="project-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">International Technology Transfer</h2>
-                    <p class="section-subtitle">Transferred European carbon-injection protocols to CU-ICAR, accelerating Time Bicycles' U.S.A. rollout</p>
-                </div>
-                
-                <div class="project-overview-grid">
-                    <div class="overview-content">
-                        <h3>The Challenge</h3>
-                        <p>
-                            Time Bicycles needed to establish U.S. manufacturing capabilities at CU-ICAR while 
-                            maintaining the quality and precision of their European composite injection processes. 
-                            This required adapting established protocols to new facilities and equipment.
-                        </p>
-                        
-                        <h3>Solution Approach</h3>
-                        <p>
-                            Collaborated with European engineering teams to adapt established carbon-injection protocols for 
-                            U.S. manufacturing operations. Successfully integrated Time Bicycles' proven processes into 
-                            CU-ICAR facilities while maintaining quality standards and production efficiency.
-                        </p>
-                        
-                        <h3>Results</h3>
-                        <p>
-                            Accelerated Time Bicycles' U.S.A. rollout by implementing proven European 
-                            manufacturing techniques at CU-ICAR. Demonstrated cross-cultural technical adaptability 
-                            and successfully maintained quality standards across international facilities.
-                        </p>
-                    </div>
-                    
-                    <div class="overview-specs">
-                        <div class="specs-card">
-                            <h4>Key Contributions</h4>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <i class="fas fa-globe"></i>
-                                    <span>European to U.S. protocol transfer</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-industry"></i>
-                                    <span>CU-ICAR facility integration</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Accelerated U.S. market rollout</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Cross-cultural technical collaboration</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Contact</span>
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">
-                        Open to discussing engineering opportunities, collaborations, and innovative projects.
-                    </p>
-                </div>
-                  <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-items-grid">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Email</h4>
-                                    <a href="mailto:westley.kleinman@duke.edu">westley.kleinman@duke.edu</a>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Location</h4>
-                                    <span>Duke University, Durham, NC</span>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-file-alt"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Resume</h4>
-                                    <a href="resume.pdf" target="_blank">Download PDF</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="social-links">
-                            <a href="https://linkedin.com/in/westley-kleinman-154048332" target="_blank" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="https://github.com/Westley-Kleinman" target="_blank" class="social-link">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">
-                        <a href="index.html" class="logo-text">WK</a>
-                    </div>
-                    <p class="footer-text">
-                        Mechanical Engineering Student at Duke University.<br>
-                        Building solutions from ideas to impact.
-                    </p>
-                </div>
-                <div class="footer-right">
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="index.html#about">About</a>
-                        <a href="index.html#projects">Projects</a>
-                        <a href="index.html#contact">Contact</a>
-                        <a href="resume.pdf" target="_blank">Resume</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
             </div>
         </div>
-    </footer>
+    </main>
 
-    <script src="script.js"></script>
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+        <section style="margin: 4rem 0;">
+            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 2rem;">Project Overview</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
+                During my internship at Boyd Cycling, I developed and implemented comprehensive impact testing protocols for carbon fiber bicycle rims. This project involved creating standardized testing procedures, analyzing failure modes, and establishing quality control benchmarks for production rims.
+            </p>
+            
+            <h3 style="font-size: 1.5rem; font-weight: 600; margin: 2rem 0 1rem;">Key Achievements</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                    <span style="background: var(--accent-color); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0; font-size: 0.875rem; font-weight: 600;">1</span>
+                    <span style="line-height: 1.6;">Designed and constructed impact testing apparatus capable of simulating real-world riding conditions</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                    <span style="background: var(--accent-color); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0; font-size: 0.875rem; font-weight: 600;">2</span>
+                    <span style="line-height: 1.6;">Developed standardized testing protocols and data collection procedures</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                    <span style="background: var(--accent-color); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0; font-size: 0.875rem; font-weight: 600;">3</span>
+                    <span style="line-height: 1.6;">Analyzed failure modes and established quality control benchmarks</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                    <span style="background: var(--accent-color); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0; font-size: 0.875rem; font-weight: 600;">4</span>
+                    <span style="line-height: 1.6;">Contributed to improved rim durability and manufacturing processes</span>
+                </li>
+            </ul>
+        </section>
+
+        <section style="margin: 4rem 0;">
+            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 2rem;">Technical Implementation</h2>
+            <div style="background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                <p style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    The impact testing system was designed to replicate the forces and impacts that carbon rims experience during normal and extreme riding conditions. This involved creating controlled impact scenarios and measuring rim response under various load conditions.
+                </p>
+                <p style="line-height: 1.8; color: var(--text-secondary);">
+                    Data collection included force measurements, deformation analysis, and failure mode documentation, providing comprehensive insights into rim performance and durability characteristics.
+                </p>
+            </div>
+        </section>
+
+        <section style="margin: 4rem 0;">
+            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 2rem;">Impact and Results</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
+                The testing protocols I developed became part of Boyd Cycling's standard quality control process. The insights gained from this project contributed to design improvements and manufacturing refinements that enhanced the overall durability and performance of their carbon rim products.
+            </p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 West Ollie. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
