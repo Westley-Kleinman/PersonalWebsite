@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Duke Club Cycling & DukeCycling.dev - Leading the university cycling team and developing a comprehensive web platform for team management.">
+    <meta name="keywords" content="Duke Cycling, Web Development, Team Management, React, Ride Scheduling, Collegiate Cycling, Leadership">
+    <meta name="author" content="Westley Kleinman">
+    <title>Duke Cycling & Website | Westley Kleinman</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/Extras/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/Extras/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/Extras/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/Extras/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/Extras/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/Extras/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/Extras/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/Extras/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Extras/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/Extras/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/Extras/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Extras/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/Extras/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/Extras/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9XCECK2SGS');
+    </script>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        .project-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .specs-card {
+            background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
+            border: none;
+            box-shadow: 0 15px 35px rgba(0, 48, 135, 0.15);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .specs-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 48, 135, 0.25);
+        }
+        .specs-card h4 {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .achievement-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .achievement-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+        .achievement-item i {
+            color: #a8c5e8;
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+        .achievement-item span {
+            color: white;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .spec-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .spec-label {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+        .spec-value {
+            color: #a8c5e8;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">WK</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-hero-content">
+                    <div class="project-hero-text">
+                        <div class="project-breadcrumb">
+                            <a href="index.html">Portfolio</a>
+                            <span>/</span>
+                            <span>Duke Cycling</span>
+                        </div>
+                        <h1 class="hero-name">Duke Club Cycling & Website</h1>
+                        <p class="hero-subtitle">Team President & Lead Developer</p>
+                        <p class="hero-description">
+                            As President of Duke Club Cycling, I lead the university's cycling community while simultaneously developing and maintaining DukeCycling.dev, a custom web platform that centralizes ride scheduling, race logistics, and team resources.
+                        </p>
+                        <div style="margin-top: 2rem;">
+                            <a href="https://dukecycling.dev/" target="_blank" class="nav-cta" style="display: inline-block;">Visit Website</a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <!-- Placeholder using Duke Logo -->
+                        <div style="background: #003087; height: 300px; width: 100%; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem;">
+                            <img src="images/Extras/duke_logo.png" alt="Duke Cycling" style="height: 100px; width: auto; filter: brightness(0) invert(1);">
+                            <span style="color: white; font-weight: bold; font-size: 1.5rem;">DukeCycling.dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="section-subtitle">Leadership Through Technology</p>
+                </div>
+                
+                <div class="overview-grid">
+                    <div class="overview-content">
+                        <h3>The Challenge</h3>
+                        <p>
+                            Managing a collegiate sports team involves complex logistics: coordinating training rides for different skill levels, managing race registrations, and maintaining communication with members. Existing general-purpose tools were fragmented and inefficient for our specific needs.
+                        </p>
+                        
+                        <h3 style="margin-top: 2rem;">The Solution: DukeCycling.dev</h3>
+                        <p>
+                            I built a dedicated platform to serve as the digital hub for the team. The website features a dynamic ride calendar where members can view and submit rides, a race schedule tracker, and a curated list of local cycling resources. This centralized approach has streamlined team operations and improved member engagement.
+                        </p>
+                        
+                        <h3 style="margin-top: 2rem;">Leadership & Impact</h3>
+                        <p>
+                            Beyond the code, my role as President involves strategic planning, budget management, and fostering an inclusive community. The website serves as a tool to support these goals, making it easier for new students to join, find rides, and connect with the broader cycling community in the Research Triangle area.
+                        </p>
+                    </div>
+                    
+                    <div class="overview-sidebar">
+                        <div class="specs-card">
+                            <div style="padding: 2rem;">
+                                <h4>Role Details</h4>
+                                <div class="spec-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Role</span>
+                                        <span class="spec-value">President</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Development</span>
+                                        <span class="spec-value">Full Stack</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Team Size</span>
+                                        <span class="spec-value">50+ Members</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Status</span>
+                                        <span class="spec-value">Active</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="specs-card" style="margin-top: 2rem; background-color: #003087; background: linear-gradient(135deg, #003087 0%, #001A57 100%);">
+                            <div style="padding: 2rem;">
+                                <h4>Key Features</h4>
+                                <div class="achievement-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Dynamic Ride Calendar</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Member Management</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-flag-checkered"></i>
+                                    <span>Race Logistics</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <span>Route Repository</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo-text">WK</a>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/westley-kleinman-b05260233/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:westleykleinman@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025 Westley Kleinman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

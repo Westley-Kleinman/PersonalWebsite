@@ -3,8 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbon Rim Impact Testing</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Carbon Rim Impact Testing & Manufacturing Optimization - Engineering internship at Boyd Cycling & Time Bicycles by Westley Kleinman.">
+    <meta name="keywords" content="carbon fiber, impact testing, RTM process, Boyd Cycling, Time Bicycles, engineering, manufacturing, composite materials">
+    <meta name="author" content="Westley Kleinman">
+    <title>Carbon Rim Impact Testing | Westley Kleinman</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/Extras/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/Extras/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/Extras/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/Extras/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/Extras/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/Extras/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/Extras/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/Extras/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Extras/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/Extras/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/Extras/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Extras/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/Extras/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/Extras/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9XCECK2SGS');
+    </script>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .video-container {
             text-align: center;
@@ -25,116 +68,217 @@
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
-        @media (max-width: 768px) {
-            .hero-main-content {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-            .hero-photo-large {
-                order: 2;
-            }
-            .hero-content-right {
-                order: 1;
-                padding-left: 0 !important;
-            }
+        .project-image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .analysis-image {
+            background: var(--bg-card);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        .analysis-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .analysis-caption {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .analysis-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
         }
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-left">
-            <a href="index.html" class="nav-brand">West Ollie</a>
-        </div>
-        <div class="nav-links">
-            <a href="#" class="nav-link">Experience</a>
-            <a href="#" class="nav-link">Projects</a>
-            <a href="#" class="nav-link">Contact</a>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">WK</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <main class="hero-main-content" style="display: grid; grid-template-columns: 690px 1fr; max-width: 1200px; margin: 2rem auto; gap: 4rem; padding: 0 2rem;">
-        <div class="hero-photo-large">
-            <img src="images/Extras/wheelie.png" alt="Carbon Rim Impact Testing" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);" />
-        </div>
-        
-        <div class="hero-content-right" style="display: flex; flex-direction: column; justify-content: center; padding-left: 3rem;">
-            <div class="breadcrumb" style="margin-bottom: 1rem;">
-                <a href="index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
-                <span style="color: var(--text-secondary); margin: 0 0.5rem;">></span>
-                <span style="color: var(--text-primary);">Carbon Rim Impact Testing</span>
-            </div>
-            
-            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.1;">Carbon Rim Impact Testing</h1>
-            <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">Advanced impact testing methodology for carbon fiber bicycle rims at Boyd Cycling</p>
-            
-            <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-                <span style="background: var(--bg-card); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--border-color); font-size: 0.875rem; color: var(--text-primary);">Materials Testing</span>
-                <span style="background: var(--bg-card); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--border-color); font-size: 0.875rem; color: var(--text-primary);">Engineering Analysis</span>
-                <span style="background: var(--bg-card); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--border-color); font-size: 0.875rem; color: var(--text-primary);">Quality Control</span>
-            </div>
-            
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" style="height: 40px;" />
-                <div>
-                    <div style="font-weight: 600;">Boyd Cycling</div>
-                    <div style="color: var(--text-secondary); font-size: 0.875rem;">Engineering Intern</div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-hero-content">
+                    <div class="project-hero-text">
+                        <div class="project-breadcrumb">
+                            <a href="index.html">Portfolio</a>
+                            <span>/</span>
+                            <span>Carbon Rim Impact Testing</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 0.5rem;">
+                            <h1 class="hero-name" style="margin-bottom: 0;">Carbon Rim Impact Testing</h1>
+                            <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" style="height: 40px; width: auto; background: white; padding: 5px; border-radius: 4px;">
+                        </div>
+                        <p class="hero-subtitle">Engineering Internship at Boyd Cycling & Time Bicycles</p>
+                        <p class="hero-description">
+                            Engineered a custom "Guillotine" wheel-impact testing rig to UCI standards, enabling precise simulation of real-world impact forces for carbon fiber rim durability testing.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/Internship/Cover_photo.jpg" alt="Carbon Rim Impact Testing">
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <section style="margin: 4rem 0;">
-            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 2rem;">Project Overview</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
-                During my internship at Boyd Cycling, I developed and implemented comprehensive impact testing protocols for carbon fiber bicycle rims. This project involved creating standardized testing procedures, analyzing failure modes, and establishing quality control benchmarks for production rims.
-            </p>
-            
-            <h3 style="font-size: 1.5rem; font-weight: 600; margin: 2rem 0 1rem;">Key Achievements</h3>
-            <ul style="list-style: none; padding: 0;">
-                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
-                    <span style="background: var(--accent-color); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0; font-size: 0.875rem; font-weight: 600;">1</span>
-                    <span style="line-height: 1.6;">Designed and constructed impact testing apparatus capable of simulating real-world riding conditions</span>
-                </li>
-                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
-                    <span style="background: var(--accent-color); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0; font-size: 0.875rem; font-weight: 600;">2</span>
-                    <span style="line-height: 1.6;">Developed standardized testing protocols and data collection procedures</span>
-                </li>
-                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
-                    <span style="background: var(--accent-color); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0; font-size: 0.875rem; font-weight: 600;">3</span>
-                    <span style="line-height: 1.6;">Analyzed failure modes and established quality control benchmarks</span>
-                </li>
-                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
-                    <span style="background: var(--accent-color); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 1rem; flex-shrink: 0; font-size: 0.875rem; font-weight: 600;">4</span>
-                    <span style="line-height: 1.6;">Contributed to improved rim durability and manufacturing processes</span>
-                </li>
-            </ul>
         </section>
 
-        <section style="margin: 4rem 0;">
-            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 2rem;">Technical Implementation</h2>
-            <div style="background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                <p style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                    The impact testing system was designed to replicate the forces and impacts that carbon rims experience during normal and extreme riding conditions. This involved creating controlled impact scenarios and measuring rim response under various load conditions.
-                </p>
-                <p style="line-height: 1.8; color: var(--text-secondary);">
-                    Data collection included force measurements, deformation analysis, and failure mode documentation, providing comprehensive insights into rim performance and durability characteristics.
-                </p>
+        <!-- Project Overview -->
+        <section class="project-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="section-subtitle">
+                        Design and fabrication of a custom impact testing apparatus to validate carbon rim durability and meet international safety standards.
+                    </p>
+                </div>
+                
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>The Challenge</h3>
+                        <p>
+                            Boyd Cycling required a standardized method to test rim durability against impacts to meet UCI safety standards. Existing solutions were either too expensive or didn't provide the specific data needed for their development process.
+                        </p>
+                        
+                        <h3>Engineering Solution</h3>
+                        <p>
+                            I designed and built a custom "Guillotine" impact tester to simulate real-world impact forces in a controlled environment. The system allows for adjustable drop heights and anvil weights, providing versatile testing capabilities for various rim profiles.
+                        </p>
+                        
+                        <!-- Live Data Visualization -->
+                        <div class="chart-container">
+                            <canvas id="impactChart"></canvas>
+                        </div>
+                        <p class="video-caption" style="text-align: center;">Simulated Impact Force vs. Time Data</p>
+                    </div>
+                    
+                    <div class="overview-specs">
+                        <div class="specs-card">
+                            <h4>Key Technologies</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-cogs"></i>
+                                    <span>Custom Machine Design</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-drafting-compass"></i>
+                                    <span>CAD Modeling</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Fabrication</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>UCI Standards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section style="margin: 4rem 0;">
-            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 2rem;">Impact and Results</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
-                The testing protocols I developed became part of Boyd Cycling's standard quality control process. The insights gained from this project contributed to design improvements and manufacturing refinements that enhanced the overall durability and performance of their carbon rim products.
-            </p>
-        </section>
-    </div>
+        <!-- The Guillotine Impact Tester -->
+        <section class="project-section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">The "Guillotine" Impact Tester</h2>
+                    <p class="section-subtitle">Custom-built apparatus for standardized impact testing</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 3rem; align-items: center;">
+                    <div class="video-container" style="margin: 0; padding: 1.5rem;">
+                        <video controls autoplay loop muted playsinline style="width: 100%; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px;">
+                            <source src="images/Internship/guillotine_working.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="video-caption">
+                            High-speed capture of the "Guillotine" impact tester in action, demonstrating the precise energy transfer to the carbon rim.
+                        </p>
+                    </div>
 
+                    <div class="project-text-content">
+                        <div class="overview-content" style="margin-bottom: 2rem;">
+                            <h3>Design & Function</h3>
+                            <p>
+                                The "Guillotine" was engineered to deliver precise, repeatable impacts to carbon rims. 
+                                The system features a weighted anvil that drops from adjustable heights, allowing for 
+                                controlled energy transfer to the rim structure. This setup enables testing to UCI 
+                                standards and beyond, simulating pothole strikes and other road hazards.
+                            </p>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Implementation</h3>
+                            <p>
+                                The tester includes safety mechanisms and a quick-release system for efficient operation. 
+                                Data collected from these tests helped establish a baseline for rim durability and 
+                                validated design improvements in the carbon layup schedule.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 West Ollie. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo-text">WK</a>
+                    </div>
+                    <p class="footer-text">
+                        Mechanical Engineering Student at Duke University.<br>
+                        Building solutions from ideas to impact.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#projects">Projects</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="resume.pdf" target="_blank">Resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

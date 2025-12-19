@@ -29,7 +29,7 @@
     <meta name="msapplication-TileImage" content="images/Extras/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=4">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -42,7 +42,10 @@
 
       gtag('config', 'G-9XCECK2SGS');
     </script>
-    
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
         .project-image {
             text-align: center;
@@ -81,6 +84,7 @@
             }
         }        /* Enhanced Achievement Styling */
         .specs-card {
+            background-color: #003087;
             background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
             border: none;
             box-shadow: 0 15px 35px rgba(0, 48, 135, 0.15);
@@ -147,6 +151,10 @@
     </style>
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -174,12 +182,12 @@
         <section class="project-hero">
             <div class="container">
                 <div class="project-hero-content">
-                    <div class="project-breadcrumb">
-                        <a href="index.html">Portfolio</a>
-                        <span>/</span>
-                        <span>Tri-Dimensional Topographic Maps</span>
-                    </div>
                     <div class="project-hero-text">
+                        <div class="project-breadcrumb">
+                            <a href="index.html">Portfolio</a>
+                            <span>/</span>
+                            <span>Tri-Dimensional Topographic Maps</span>
+                        </div>
                         <h1 class="hero-name">Tri-Dimensional Topographic Maps</h1>
                         <p class="hero-subtitle">Entrepreneurial Venture with Provisional Patent</p>
                         <p class="hero-description">
@@ -187,10 +195,9 @@
                             Secured provisional patent and developed marketing strategy resulting in four-figure revenue 
                             with established partnerships including Visit Hot Springs and Arkansas NICA.
                         </p>
-                        
-                        <div class="project-image">
-                            <img src="images/Extras/trail_maps.jpg" alt="3D Topographic Trail Maps">
-                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/Elevon/finished map.jpg" alt="3D Topographic Trail Maps">
                     </div>
                 </div>
             </div>
@@ -234,6 +241,12 @@
                             topographic relationships.
                         </p>
                         
+                        <div class="analysis-image" style="margin: 2rem 0;">
+                            <img src="images/Elevon/blender_model.png" alt="Blender Model of Topographic Map" style="width: 100%; border-radius: 8px;">
+                            <div class="analysis-caption">3D Modeling Process</div>
+                            <p class="analysis-desc">Digital terrain model generated from GIS data before 3D printing.</p>
+                        </div>
+
                         <h3>Innovation Impact</h3>
                         <p>
                             Created market-first solution combining real topographic elevation data with trail route information, 
@@ -386,7 +399,7 @@
                 </div>
             </div>
         </section>        <!-- Key Achievements Highlight -->
-        <section class="project-section" style="background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%); padding: 4rem 0; margin: 0;">
+        <section class="project-section" style="background-color: #003087; background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%); padding: 4rem 0; margin: 0;">
             <div class="container">
                 <div class="section-header" style="text-align: center;">
                     <h2 class="section-title" style="color: white; font-size: 2.5rem; margin-bottom: 3rem;">Key Business Achievements</h2>

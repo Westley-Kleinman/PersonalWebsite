@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carbon Fiber Rim Mold Optimization - Engineering internship at Boyd Cycling & Time Bicycles by Westley Kleinman.">
+    <meta name="keywords" content="carbon fiber, RTM process, mold optimization, Boyd Cycling, Time Bicycles, engineering, manufacturing, composite materials">
+    <meta name="author" content="Westley Kleinman">
+    <title>Carbon Fiber Rim Mold Optimization | Westley Kleinman</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/Extras/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/Extras/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/Extras/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/Extras/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/Extras/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/Extras/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/Extras/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/Extras/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/Extras/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Extras/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/Extras/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/Extras/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Extras/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/Extras/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/Extras/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9XCECK2SGS');
+    </script>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        .video-container {
+            text-align: center;
+            margin: 3rem 0;
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        .video-container video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .video-caption {
+            margin-top: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .project-image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            align-items: start; /* Prevent stretching */
+        }
+        .analysis-image {
+            background: var(--bg-card);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            height: 100%; /* Ensure equal height cards if needed, but align-items: start overrides this for the grid item itself unless we want them to fill */
+            display: flex;
+            flex-direction: column;
+        }
+        .analysis-image img, 
+        .analysis-image video {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .analysis-caption {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .analysis-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">WK</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-hero-content">
+                    <div class="project-hero-text">
+                        <div class="project-breadcrumb">
+                            <a href="index.html">Portfolio</a>
+                            <span>/</span>
+                            <span>Carbon Fiber Rim Mold Optimization</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 0.5rem;">
+                            <h1 class="hero-name" style="margin-bottom: 0;">Carbon Fiber Rim Mold Optimization</h1>
+                            <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" style="height: 40px; width: auto; background: white; padding: 5px; border-radius: 4px;">
+                        </div>
+                        <p class="hero-subtitle">Engineering Internship at Boyd Cycling & Time Bicycles</p>
+                        <p class="hero-description">
+                            Optimized RTM carbon-rim fabrication processes, analyzed mold geometry, and resolved resin distribution issues to ensure consistent structural integrity and performance.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/Internship/Wheel_in_mold.jpg" alt="Carbon Rim Mold Optimization">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="section-subtitle">
+                        A detailed engineering analysis and optimization of the Resin Transfer Molding (RTM) process for high-performance carbon fiber bicycle rims.
+                    </p>
+                </div>
+                
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>The Challenge</h3>
+                        <p>
+                            Boyd Cycling faced challenges with inconsistent resin distribution in their carbon rim production, leading to potential structural weaknesses and cosmetic defects. The goal was to optimize the mold geometry and injection process to ensure uniform resin flow and cure.
+                        </p>
+                        
+                        <h3>Engineering Solution</h3>
+                        <p>
+                            I conducted a comprehensive analysis of the RTM process, tracking resin flow patterns and identifying critical variables. By adjusting mold temperatures, injection pressures, and layup schedules, I was able to eliminate resin-rich and resin-poor zones, resulting in a higher quality product.
+                        </p>
+                    </div>
+                    
+                    <div class="overview-specs">
+                        <div class="specs-card">
+                            <h4>Key Technologies</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span>RTM Composites</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-microscope"></i>
+                                    <span>Failure Analysis</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-industry"></i>
+                                    <span>Process Optimization</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Data Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manufacturing Process -->
+        <section class="project-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Manufacturing Optimization</h2>
+                    <p class="section-subtitle">Refining the Resin Transfer Molding (RTM) process</p>
+                </div>
+
+                <div class="project-image-grid">
+                    <div class="analysis-image">
+                        <img src="images/Internship/Wheel_in_mold.jpg" alt="Wheel in Mold">
+                        <div class="analysis-caption">RTM Mold Setup</div>
+                        <p class="analysis-desc">Carbon fiber preform positioned in the mold prior to resin injection.</p>
+                    </div>
+                    <div class="analysis-image">
+                        <video controls style="width: 100%; height: auto; border-radius: 8px;">
+                            <source src="images/Internship/BobinWinder.MOV" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="analysis-caption">BobinWinder Process</div>
+                        <p class="analysis-desc">Automated winding of carbon fiber filaments.</p>
+                    </div>
+                </div>
+
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Process Analysis</h3>
+                        <p>
+                            I conducted a detailed analysis of the RTM process, tracking resin flow and cure cycles. 
+                            By identifying variables that led to inconsistencies, we were able to optimize the 
+                            injection parameters and mold temperatures.
+                        </p>
+                    </div>
+                    <div class="overview-content">
+                        <h3>Defect Resolution</h3>
+                        <p>
+                            A key focus was eliminating resin-rich and resin-poor zones. Through careful adjustment 
+                            of the process, we achieved a more uniform resin distribution, resulting in stronger, 
+                            lighter, and more reliable rims.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-image-grid">
+                    <div class="analysis-image">
+                        <img src="images/Internship/resin rich zones.png" alt="Resin Rich Zones">
+                        <div class="analysis-caption">Resin-Rich Analysis</div>
+                        <p class="analysis-desc">Identifying areas of excess resin accumulation.</p>
+                    </div>
+                    <div class="analysis-image">
+                        <img src="images/Internship/resin_poor.png" alt="Resin Poor Zones">
+                        <div class="analysis-caption">Resin-Poor Analysis</div>
+                        <p class="analysis-desc">Identifying areas of insufficient resin penetration.</p>
+                    </div>
+                </div>
+
+                <div class="project-overview-grid" style="margin-top: 3rem;">
+                    <div class="overview-content">
+                        <h3>Hand-Wrapped Carbon Prototyping</h3>
+                        <p>
+                            In addition to automated processes, I worked on a specialized project involving the hand-wrapping of bike frame wax molds using Non-Crimp Fabric (NCF). This hands-on approach allowed us to test complex geometries and layup schedules that were difficult to achieve with automated machinery initially.
+                        </p>
+                        <p>
+                            By manually applying the NCF, we could precisely control fiber orientation in critical stress zones, providing valuable data on how manual intervention could enhance the structural integrity of specific frame sections before scaling to full production.
+                        </p>
+                    </div>
+                    <div class="analysis-image">
+                        <img src="images/Internship/hand_wrapped_carbon.png" alt="Hand Wrapped Carbon Frame">
+                        <div class="analysis-caption">Hand-Wrapped Wax Mold</div>
+                        <p class="analysis-desc">Application of Non-Crimp Fabric (NCF) to a wax mold for prototype testing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo-text">WK</a>
+                    </div>
+                    <p class="footer-text">
+                        Mechanical Engineering Student at Duke University.<br>
+                        Building solutions from ideas to impact.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#projects">Projects</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="resume.pdf" target="_blank">Resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
