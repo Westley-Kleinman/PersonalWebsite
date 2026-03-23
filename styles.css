@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section Styles */
 section {
-    padding: calc(var(--section-padding) * 1.2) 0;
+    padding: clamp(4rem, 8vw, 5.75rem) 0;
 }
 
 section:nth-child(even):not(.hero) {
@@ -287,7 +287,7 @@ section:nth-child(even):not(.hero) {
 
 .section-header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
 .section-tag {
@@ -298,24 +298,25 @@ section:nth-child(even):not(.hero) {
     border-radius: 25px;
     font-size: 0.875rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.9rem, 3.7vw, 2.65rem);
+    margin: 0 auto 1rem;
     color: var(--text-primary);
     font-weight: 700;
     line-height: 1.2;
+    max-width: 24ch;
 }
 
 .section-subtitle {
     font-size: 1.2rem;
     color: var(--text-secondary);
-    max-width: 700px;
+    max-width: 58ch;
     margin: 0 auto;
     line-height: 1.6;
 }
@@ -702,7 +703,7 @@ section:nth-child(even):not(.hero) {
 }
 
 .projects .section-header {
-    margin-bottom: 6rem; /* Increased margin */
+    margin-bottom: clamp(3rem, 6vw, 4.5rem);
 }
 
 .projects-grid {
@@ -1433,16 +1434,19 @@ section:nth-child(even):not(.hero) {
 /* Enhanced Section Headers */
 .section-title {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 52px;
     height: 4px;
     background: var(--primary);
     border-radius: 2px;
