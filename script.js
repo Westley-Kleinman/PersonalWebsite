@@ -1,7 +1,10 @@
 // Modern Portfolio JavaScript
 document.addEventListener('DOMContentLoaded', function() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+
     // --- 3. GSAP Animations ---
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    if (!prefersReducedMotion && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
 
         // Animate Sections - Disabled to prevent "foggy" moving effect
@@ -230,54 +233,70 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Start typing loop
-        setTimeout(type, 1000);
+        if (!prefersReducedMotion) {
+            setTimeout(type, 1000);
+        }
     }
 
     // 3D Tilt Effect for Project Cards
     const cards = document.querySelectorAll('.project-card');
-    
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = ((y - centerY) / centerY) * -5; // Max rotation deg
-            const rotateY = ((x - centerX) / centerX) * 5;
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-        });
+    if (!prefersReducedMotion && !isCoarsePointer) {
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
 
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = ((y - centerY) / centerY) * -3;
+                const rotateY = ((x - centerX) / centerX) * 3;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
         });
-    });
+    }
 
     // Magnetic Buttons
     const magneticBtns = document.querySelectorAll('.btn-magnetic');
-    
-    magneticBtns.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const moveX = (x - centerX) * 0.2;
-            const moveY = (y - centerY) * 0.2;
-            
-            btn.style.transform = `translate(${moveX}px, ${moveY}px)`;
+
+    if (!prefersReducedMotion && !isCoarsePointer) {
+        magneticBtns.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const moveX = (x - centerX) * 0.12;
+                const moveY = (y - centerY) * 0.12;
+
+                btn.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
         });
-        
-        btn.addEventListener('mouseleave', () => {
-            btn.style.transform = 'translate(0, 0)';
+    }
+
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', () => {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+            }
         });
-    });
+    }
 
     // Intersection Observer for Scroll Animations - REMOVED to prevent conflict and "foggy" effect
     /*

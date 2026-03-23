@@ -66,6 +66,12 @@ p {
     color: var(--text-secondary);
 }
 
+img,
+video {
+    display: block;
+    max-width: 100%;
+}
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -137,7 +143,7 @@ select:focus-visible {
     left: 40%;
     width: 40vw;
     height: 40vw;
-    background: rgba(139, 92, 246, 0.2);
+    background: rgba(37, 99, 235, 0.12);
     animation-delay: -10s;
 }
 
@@ -202,10 +208,9 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
     color: var(--text-secondary);
     text-decoration: none;
-    font-weight: 600; /* Increased weight */
+    font-weight: 600;
     transition: var(--transition);
     position: relative;
-    opacity: 1 !important; /* Force opacity */
 }
 
 .nav-link:hover,
@@ -406,6 +411,7 @@ section:nth-child(even):not(.hero) {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center 18%;
     border: 4px solid white;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
@@ -711,19 +717,19 @@ section:nth-child(even):not(.hero) {
     background: var(--bg-primary);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12); /* Enhanced shadow */
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
     transition: var(--transition);
     position: relative;
     text-decoration: none;
     color: inherit;
     display: block;
     height: 100%;
-    min-height: 500px; /* Increased minimum height */
+    min-height: 480px;
 }
 
 .project-card:hover {
-    transform: translateY(-10px) scale(1.02); /* Enhanced hover effect */
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
 }
 
 .project-card.featured {
@@ -751,11 +757,11 @@ section:nth-child(even):not(.hero) {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: var(--transition);
+    transition: transform 0.4s ease;
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.08);
+    transform: scale(1.04);
 }
 
 .project-content {
@@ -1302,8 +1308,8 @@ section:nth-child(even):not(.hero) {
 
 /* Enhanced hover effects */
 .project-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
 }
 
 /* Clean borders and shadows */
@@ -1402,24 +1408,8 @@ section:nth-child(even):not(.hero) {
 
 /* 3D Tilt Effect */
 .project-card {
-    background: var(--bg-card);
-    backdrop-filter: blur(10px);
+    background: var(--bg-primary);
     border: 1px solid var(--border-light);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-}
-
-.project-content {
-    transform: translateZ(20px);
-}
-
-.project-image {
-    transform: translateZ(0px);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-image {
-    transform: translateZ(30px);
 }
 
 /* Magnetic Buttons */
@@ -1427,6 +1417,17 @@ section:nth-child(even):not(.hero) {
     position: relative;
     overflow: hidden;
     transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* Enhanced Section Headers */
