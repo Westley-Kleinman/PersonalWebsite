@@ -148,6 +148,65 @@
             color: #a8c5e8;
             font-weight: 600;
         }
+        .analysis-image-spaced {
+            margin: 2rem 0;
+        }
+        .analysis-image-full {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .achievements-section-blue {
+            background-color: #003087;
+            background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
+            padding: 4rem 0;
+            margin: 0;
+        }
+        .achievements-header-centered {
+            text-align: center;
+        }
+        .achievements-title-light {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        .achievements-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .achievement-glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .achievement-icon-circle {
+            background: rgba(255, 255, 255, 0.9);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        .achievement-icon-blue {
+            color: #003087;
+            font-size: 2rem;
+        }
+        .achievement-title-light {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .achievement-desc-light {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -241,8 +300,8 @@
                             topographic relationships.
                         </p>
                         
-                        <div class="analysis-image" style="margin: 2rem 0;">
-                            <img src="images/Elevon/blender_model.png" alt="Blender Model of Topographic Map" style="width: 100%; border-radius: 8px;">
+                        <div class="analysis-image analysis-image-spaced">
+                            <img src="images/Elevon/blender_model.png" alt="Blender Model of Topographic Map" class="analysis-image-full">
                             <div class="analysis-caption">3D Modeling Process</div>
                             <p class="analysis-desc">Digital terrain model generated from GIS data before 3D printing.</p>
                         </div>
@@ -398,36 +457,37 @@
                     </div>
                 </div>
             </div>
-        </section>        <!-- Key Achievements Highlight -->
-        <section class="project-section" style="background-color: #003087; background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%); padding: 4rem 0; margin: 0;">
+        </section>
+        <!-- Key Achievements Highlight -->
+        <section class="project-section achievements-section-blue">
             <div class="container">
-                <div class="section-header" style="text-align: center;">
-                    <h2 class="section-title" style="color: white; font-size: 2.5rem; margin-bottom: 3rem;">Key Business Achievements</h2>
+                <div class="section-header achievements-header-centered">
+                    <h2 class="section-title achievements-title-light">Key Business Achievements</h2>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); text-align: center; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.15);">
-                        <div style="background: rgba(255, 255, 255, 0.9); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                            <i class="fas fa-certificate" style="color: #003087; font-size: 2rem;"></i>
+                <div class="achievements-cards-grid">
+                    <div class="achievement-glass-card">
+                        <div class="achievement-icon-circle">
+                            <i class="fas fa-certificate achievement-icon-blue"></i>
                         </div>
-                        <h3 style="color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">Provisional Patent</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Secured intellectual property protection for proprietary 3D topographic visualization process</p>
+                        <h3 class="achievement-title-light">Provisional Patent</h3>
+                        <p class="achievement-desc-light">Secured intellectual property protection for proprietary 3D topographic visualization process</p>
                     </div>
                     
-                    <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); text-align: center; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.15);">
-                        <div style="background: rgba(255, 255, 255, 0.9); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                            <i class="fas fa-dollar-sign" style="color: #003087; font-size: 2rem;"></i>
+                    <div class="achievement-glass-card">
+                        <div class="achievement-icon-circle">
+                            <i class="fas fa-dollar-sign achievement-icon-blue"></i>
                         </div>
-                        <h3 style="color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">Four-Figure Revenue</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Generated sustainable revenue through strategic partnerships and direct sales</p>
+                        <h3 class="achievement-title-light">Four-Figure Revenue</h3>
+                        <p class="achievement-desc-light">Generated sustainable revenue through strategic partnerships and direct sales</p>
                     </div>
                     
-                    <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); text-align: center; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.15);">
-                        <div style="background: rgba(255, 255, 255, 0.9); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                            <i class="fas fa-handshake" style="color: #003087; font-size: 2rem;"></i>
+                    <div class="achievement-glass-card">
+                        <div class="achievement-icon-circle">
+                            <i class="fas fa-handshake achievement-icon-blue"></i>
                         </div>
-                        <h3 style="color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">Strategic Partnerships</h3>
-                        <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Established partnerships with Visit Hot Springs and Arkansas NICA</p>
+                        <h3 class="achievement-title-light">Strategic Partnerships</h3>
+                        <p class="achievement-desc-light">Established partnerships with Visit Hot Springs and Arkansas NICA</p>
                     </div>
                 </div>
             </div>

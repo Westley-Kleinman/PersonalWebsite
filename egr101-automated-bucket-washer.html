@@ -76,6 +76,77 @@
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+        .project-hero-compact {
+            min-height: 80vh;
+            padding: 3rem 0 4rem 0;
+        }
+        .hero-main-content-layout {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 690px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .hero-photo-frame {
+            position: relative;
+            width: 100%;
+        }
+        .hero-team-photo-large {
+            width: 100%;
+            min-height: 460px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 3px solid white;
+        }
+        .hero-content-right-offset {
+            padding-left: 1.5rem;
+        }
+        .hero-name-side {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+        .hero-subtitle-side {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .hero-description-side {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .hero-highlights-side {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .project-poster-wrap {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-poster-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+            border: 2px solid #f0f0f0;
+        }
+        .project-poster-caption {
+            margin-top: 1rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
         @media (max-width: 768px) {
             .video-container {
                 padding: 1rem;
@@ -238,7 +309,7 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Section -->
-        <section class="project-hero" style="min-height: 80vh; padding: 3rem 0 4rem 0;">
+        <section class="project-hero project-hero-compact">
             <div class="container">
                 <div class="project-breadcrumb">
                     <a href="index.html">Portfolio</a>
@@ -246,20 +317,20 @@
                     <span>System for Washing Compost Buckets</span>
                 </div>
                 
-                <div class="hero-main-content" style="margin-top: 2rem; display: grid; grid-template-columns: 690px 1fr; gap: 3rem; align-items: center;">
-                    <div class="hero-photo-large" style="position: relative; width: 100%;">
-                        <img src="images/EGR101/GroupPhoto_EGR101.jpg" alt="EGR101 Project Team" class="hero-team-photo-large" style="width: 100%; min-height: 460px; object-fit: cover; border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border: 3px solid white;">
+                <div class="hero-main-content hero-main-content-layout">
+                    <div class="hero-photo-large hero-photo-frame">
+                        <img src="images/EGR101/GroupPhoto_EGR101.jpg" alt="EGR101 Project Team" class="hero-team-photo-large">
                     </div>
                     
-                    <div class="hero-content-right" style="padding-left: 1.5rem;">
-                        <h1 class="hero-name-side" style="font-size: 2.8rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--text-primary); line-height: 1.2;">System for Washing Compost Buckets</h1>
-                        <p class="hero-subtitle-side" style="font-size: 1.2rem; color: var(--primary); font-weight: 600; margin-bottom: 1.5rem;">EGR101 Freshman Design Project</p>
-                        <p class="hero-description-side" style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                    <div class="hero-content-right hero-content-right-offset">
+                        <h1 class="hero-name-side">System for Washing Compost Buckets</h1>
+                        <p class="hero-subtitle-side">EGR101 Freshman Design Project</p>
+                        <p class="hero-description-side">
                             Two-device washing system achieving 89% bucket cleanliness for CompostNow through 
                             collaborative engineering design and innovative rinsing and brushing mechanisms.
                         </p>
                         
-                        <div class="hero-highlights-side" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <div class="hero-highlights-side">
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
                                 <span>89% Cleanliness Rate</span>
@@ -290,9 +361,9 @@
                 </div>
 
                 <!-- Project Poster -->
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <img src="images/EGR101/EGR101_Poster.png" alt="EGR101 Final Project Poster - System for Washing Compost Buckets" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15); border: 2px solid #f0f0f0;">
-                    <p style="margin-top: 1rem; color: var(--text-secondary); font-style: italic;">Final project poster presented for EGR101 course</p>
+                <div class="project-poster-wrap">
+                    <img src="images/EGR101/EGR101_Poster.png" alt="EGR101 Final Project Poster - System for Washing Compost Buckets" class="project-poster-image">
+                    <p class="project-poster-caption">Final project poster presented for EGR101 course</p>
                 </div>
 
                 <div class="video-container">
@@ -538,7 +609,7 @@
                     <h2 class="section-title">Project Impact & Results</h2>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div class="achievements-grid">
                     <div class="achievement-card">
                         <div class="achievement-icon">
                             <i class="fas fa-check-circle"></i>
