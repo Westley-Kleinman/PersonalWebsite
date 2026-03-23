@@ -125,6 +125,7 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -136,18 +137,18 @@
                 <a href="index.html#about" class="nav-link">About</a>
                 <a href="index.html#projects" class="nav-link">Projects</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main id="main-content" class="main-content">
         <!-- Hero Section -->
         <section class="project-hero">
             <div class="container">
@@ -164,7 +165,7 @@
                             An ongoing entrepreneurial venture bridging software and manufacturing. I automated the entire design-to-production workflow using Python scripts and the Spotify API to generate custom assets, which are then precision-manufactured using a laser cutter for the acrylic base and UV printing for the artwork.
                         </p>
                         <div class="link-row">
-                            <a href="https://plaqueify.me/" target="_blank" class="nav-cta inline-block">Visit Website</a>
+                            <a href="https://plaqueify.me/" target="_blank" rel="noopener noreferrer" class="nav-cta inline-block">Visit Website</a>
                         </div>
                     </div>
                     <div class="project-image">
@@ -265,8 +266,8 @@
                     <a href="index.html" class="logo-text">WK</a>
                 </div>
                 <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/westley-kleinman-b05260233/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:westleykleinman@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/westley-kleinman-b05260233/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:westleykleinman@gmail.com" class="social-link" aria-label="Email Westley Kleinman" title="Email"><i class="fas fa-envelope"></i></a>
                 </div>
                 <p class="copyright">&copy; 2025 Westley Kleinman. All rights reserved.</p>
             </div>

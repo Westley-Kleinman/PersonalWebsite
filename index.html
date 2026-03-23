@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,6 +48,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <!-- Animated Background -->
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
@@ -65,18 +66,18 @@
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <a href="resume.pdf" class="nav-cta" target="_blank">Resume</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main id="main-content" class="main-content">
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="container">
@@ -94,7 +95,7 @@
                         </p>
                         <div class="hero-actions">
                             <a href="#projects" class="btn-primary btn-magnetic">View Projects</a>
-                            <a href="resume.pdf" target="_blank" class="btn-secondary btn-magnetic">Download Resume</a>
+                            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-magnetic">Download Resume</a>
                         </div>
                     </div>
                     <div class="hero-image">
@@ -384,17 +385,17 @@
                                 </div>
                                 <div class="contact-details">
                                     <h4>Resume</h4>
-                                    <a href="resume.pdf" target="_blank">Download PDF</a>
+                                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="social-links">
-                            <a href="https://linkedin.com/in/westley-kleinman-154048332" target="_blank" class="social-link">
+                            <a href="https://linkedin.com/in/westley-kleinman-154048332" target="_blank" rel="noopener noreferrer" class="social-link">
                                 <i class="fab fa-linkedin"></i>
                                 <span>LinkedIn</span>
                             </a>
-                            <a href="https://github.com/Westley-Kleinman" target="_blank" class="social-link">
+                            <a href="https://github.com/Westley-Kleinman" target="_blank" rel="noopener noreferrer" class="social-link">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
@@ -424,7 +425,7 @@
                         <a href="#about">About</a>
                         <a href="#projects">Projects</a>
                         <a href="#contact">Contact</a>
-                        <a href="resume.pdf" target="_blank">Resume</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                     </div>
                 </div>
             </div>
