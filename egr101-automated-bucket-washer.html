@@ -3,117 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="System for Washing Compost Buckets - EGR101 freshman design project achieving 89% cleanliness with 95% clean buckets through innovative two-device washing system by Porter Collins, Arvin Deelchmuth, Oliver O'Donoghoe, and Westley Kleinman.">
-    <meta name="keywords" content="compost bucket washing, CompostNow, freshman design, two-device system, rinsing device, brushing device, team collaboration">
+    <meta name="description" content="CompostNow bucket washing system - EGR101 design project by Porter Collins, Arvin Deelchmuth, Oliver O'Donoghoe, and Westley Kleinman. 89% of buckets reached 95% cleanliness.">
+    <meta name="keywords" content="compost bucket washing, CompostNow, freshman design, two-device system, rinsing device, brushing device, EGR101">
     <meta name="author" content="Westley Kleinman">
-    <title>System for Washing Compost Buckets | Westley Kleinman</title>
-    <!-- Favicon -->
+    <title>Bucket Washing System | Westley Kleinman</title>
     <link rel="icon" type="image/png" sizes="512x512" href="images/Extras/headshot.png?v=20260323">
     <link rel="icon" type="image/png" sizes="192x192" href="images/Extras/headshot.png?v=20260323">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/headshot.png?v=20260323">
     <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=5">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-9XCECK2SGS');
     </script>
 
-    <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
-        .video-container {
-            text-align: center;
-            margin: 3rem 0;
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-        .video-container video {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        .video-caption {
-            margin-top: 1rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        .team-image {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        .team-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
         .project-hero-compact {
-            min-height: 80vh;
-            padding: 3rem 0 4rem 0;
+            min-height: auto;
+            padding: 5rem 0 3rem;
         }
-        .hero-main-content-layout {
-            margin-top: 2rem;
-            display: grid;
-            grid-template-columns: 690px 1fr;
-            gap: 3rem;
-            align-items: center;
+        .specs-card {
+            background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
+            border: none;
         }
-        .hero-photo-frame {
-            position: relative;
-            width: 100%;
+        .specs-card h4 { color: white; }
+        .spec-item {
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            border-bottom: none;
         }
-        .hero-team-photo-large {
-            width: 100%;
-            min-height: 460px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            border: 3px solid white;
-        }
-        .hero-content-right-offset {
-            padding-left: 1.5rem;
-        }
-        .hero-name-side {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            color: var(--text-primary);
-            line-height: 1.2;
-        }
-        .hero-subtitle-side {
-            font-size: 1.2rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-        .hero-description-side {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-        .hero-highlights-side {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+        .spec-label { color: rgba(255, 255, 255, 0.85); }
+        .spec-value { color: #a8c5e8; }
         .project-poster-wrap {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: var(--space-xl);
         }
         .project-poster-image {
             max-width: 100%;
@@ -123,151 +57,14 @@
             border: 2px solid #f0f0f0;
         }
         .project-poster-caption {
-            margin-top: 1rem;
+            margin-top: var(--space-sm);
             color: var(--text-secondary);
             font-style: italic;
-        }
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        @media (max-width: 768px) {
-            .video-container {
-                padding: 1rem;
-            }
-            .hero-main-content {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-            .hero-photo-large {
-                order: 2;
-            }
-            .hero-content-right {
-                order: 1;
-                padding-left: 0 !important;
-            }
-            .project-overview-grid {
-                grid-template-columns: 1fr !important;
-            }
-        }        /* Enhanced Achievement Styling */
-        .specs-card {
-            background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
-            border: none;
-            box-shadow: 0 15px 35px rgba(0, 48, 135, 0.15);
-            transition: all 0.3s ease;
-        }
-        .specs-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 48, 135, 0.25);
-        }
-        .specs-card h4 {
-            color: white;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        .achievement-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            padding: 0.8rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        .achievement-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateX(5px);
-        }
-        .achievement-item i {
-            color: #a8c5e8;
-            font-size: 1.2rem;
-            width: 20px;
-            text-align: center;
-        }
-        .achievement-item span {
-            color: white;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-        .spec-grid {
-            display: grid;
-            gap: 1rem;
-        }
-        .spec-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.8rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-        }
-        .spec-label {
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 500;
-        }
-        .spec-value {
-            color: #a8c5e8;
-            font-weight: 600;
-        }
-        .achievements-highlight {
-            background: var(--bg-secondary);
-            padding: 4rem 0;
-            margin: 0;
-        }
-        .achievements-highlight .section-title {
-            color: var(--text-primary);
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-        .achievement-card {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        .achievement-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        .achievement-icon {
-            background: linear-gradient(135deg, var(--primary) 0%, #1e4d8b 100%);
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-        .achievement-icon i {
-            color: white;
-            font-size: 2rem;
-        }
-        .achievement-title {
-            color: var(--text-primary);
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .achievement-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
         }
     </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -281,49 +78,44 @@
                 <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
             <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main id="main-content" class="main-content">
-        <!-- Hero Section -->
         <section class="project-hero project-hero-compact">
             <div class="container">
                 <div class="project-breadcrumb">
                     <a href="index.html">Portfolio</a>
                     <span>/</span>
-                    <span>System for Washing Compost Buckets</span>
+                    <span>Bucket Washing System</span>
                 </div>
                 
-                <div class="hero-main-content hero-main-content-layout">
-                    <div class="hero-photo-large hero-photo-frame">
+                <div class="hero-main-content">
+                    <div class="hero-photo-large">
                         <img src="images/EGR101/GroupPhoto_EGR101.jpg" alt="EGR101 Project Team" class="hero-team-photo-large">
                     </div>
                     
-                    <div class="hero-content-right hero-content-right-offset">
-                        <h1 class="hero-name-side">System for Washing Compost Buckets</h1>
-                        <p class="hero-subtitle-side">EGR101 Freshman Design Project</p>
+                    <div class="hero-content-right">
+                        <h1 class="hero-name-side">Bucket Washing System</h1>
+                        <p class="hero-subtitle-side">EGR101 · CompostNow</p>
                         <p class="hero-description-side">
-                            Two-device washing system achieving 89% bucket cleanliness for CompostNow through 
-                            collaborative engineering design and innovative rinsing and brushing mechanisms.
+                            Two-device rinsing and brushing system for CompostNow. Team of four; 89% of tested buckets reached 95% cleanliness, and 95% passed a 3 ft odor check.
                         </p>
                         
                         <div class="hero-highlights-side">
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>89% Cleanliness Rate</span>
+                                <span>89% hit 95% clean</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-spray-can"></i>
+                                <span>95% odor pass</span>
                             </div>
                             <div class="highlight-item">
                                 <i class="fas fa-users"></i>
-                                <span>4-Person Team</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-cogs"></i>
-                                <span>Two-Device System</span>
+                                <span>4-person team</span>
                             </div>
                         </div>
                     </div>
@@ -331,21 +123,18 @@
             </div>
         </section>
 
-        <!-- Project Overview -->
         <section class="project-overview">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Project Overview</h2>
+                    <h2 class="section-title">Overview</h2>
                     <p class="section-subtitle">
-                        EGR101 freshman design project developing an efficient two-device washing system 
-                        for CompostNow's bucket cleaning operations.
+                        Freshman design project for CompostNow container cleaning
                     </p>
                 </div>
 
-                <!-- Project Poster -->
                 <div class="project-poster-wrap">
-                    <img src="images/EGR101/EGR101_Poster.png" alt="EGR101 Final Project Poster - System for Washing Compost Buckets" class="project-poster-image">
-                    <p class="project-poster-caption">Final project poster presented for EGR101 course</p>
+                    <img src="images/EGR101/EGR101_Poster.png" alt="EGR101 Final Project Poster" class="project-poster-image">
+                    <p class="project-poster-caption">Final project poster</p>
                 </div>
 
                 <div class="video-container">
@@ -353,127 +142,44 @@
                         <source src="images/EGR101/EGR101_DisplayVideo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p class="video-caption">
-                        Demonstration of the automated bucket washing system prototype in action
-                    </p>
+                    <p class="video-caption">Prototype demonstration</p>
                 </div>
             </div>
         </section>
 
-        <!-- Problem & Solution -->
         <section class="project-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Problem & Solution</h2>
-                    <p class="section-subtitle">Addressing CompostNow's container cleaning inefficiencies</p>
+                    <h2 class="section-title">Problem &amp; Design</h2>
+                    <p class="section-subtitle">Cut labor for cleaning buckets that sit 2-4 weeks with caked waste</p>
                 </div>
                 
                 <div class="project-overview-grid">
                     <div class="overview-content">
-                        <h3>Problem Statement</h3>
+                        <h3>Problem</h3>
                         <p>
-                            CompostNow needs to reduce the time and labor required to clean small compost buckets. 
-                            The U.S. produces 50 million tons of food waste every year, and team's solution will 
-                            create "a bright green future as customers help grow their business, ultimately helping their 
-                            mission to 'create a future without food waste.'"
+                            CompostNow returns cleaned buckets to customers. Current washing was slow, labor-heavy, and often needed a second pass after food waste baked onto surfaces.
                         </p>
                         
-                        <h3>Background & Motivation</h3>
+                        <h3>Design</h3>
                         <p>
-                            Compost buckets in homes can sit for 2-4 weeks, resulting in food waste being caked onto the 
-                            surface of the bucket. Before these buckets can be returned to customers, CompostNow has to 
-                            effectively clean them. Current issues include time-consuming, labor-intensive processes that 
-                            often require second cleaning cycles.
+                            <strong>Rinsing device</strong> - spray nozzles on a PVC frame with a foot-pedal water valve for hands-free first pass. <strong>Brushing device</strong> - motor-driven rotating brushes with bearings, gears, and mounting plates to scrub remaining residue.
                         </p>
                         
-                        <h3>Design Solution</h3>
+                        <h3>Criteria</h3>
                         <p>
-                            Our team developed a comprehensive two-device washing system consisting of a <strong>Rinsing Device</strong> 
-                            with spray nozzles, PVC frame, and foot-pedal water valve, and a <strong>Brushing Device</strong> 
-                            with rotating brushes, bearings, mounting plates, gears, PVC frame, and motor components.
+                            Targets: 95% clean buckets, no odor detectable from 3+ ft, durability for ~2,400 hours of use, and safe operation under intended use.
                         </p>
-                        
-                        <h3>Measured Results</h3>
-                        <p>
-                            <strong>Cleanliness:</strong> 1929 (89%) buckets were 95% clean<br>
-                            <strong>Smell Test:</strong> 1929 (95%) buckets don't smell from 3 ft away<br>
-                            Successfully achieved project objectives with quantifiable performance metrics.
-                        </p>
-                    </div>
-                    
-                    <div class="overview-specs">
-                        <div class="specs-card">
-                            <h4>Key Achievements</h4>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>89% Bucket Cleanliness</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-spray-can"></i>
-                                    <span>95% Odor Elimination</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-cogs"></i>
-                                    <span>Two-Device System</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>4-Person Team Project</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-trophy"></i>
-                                    <span>Successful Final Presentation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Technical Development -->
-        <section class="project-section bg-secondary">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Design & Implementation</h2>
-                    <p class="section-subtitle">Two-device washing system with rinsing and brushing components</p>
-                </div>
-                
-                <div class="project-overview-grid">
-                    <div class="overview-content">
-                        <h3>Rinsing Device Design</h3>
+                        <h3>Team</h3>
                         <p>
-                            The first component features an innovative spray nozzle system with PVC frame construction 
-                            and foot-pedal water valve for hands-free operation. This device provides initial cleaning 
-                            to remove loose debris and food waste from compost buckets before the brushing stage.
-                        </p>
-                        
-                        <h3>Brushing Device Innovation</h3>
-                        <p>
-                            The second device incorporates rotating brushes with precision bearings, mounting plates, 
-                            and gear systems powered by motor components. The brushing mechanism effectively scrubs 
-                            caked-on waste from bucket surfaces, achieving thorough cleaning through mechanical action.
-                        </p>
-                        
-                        <h3>Design Criteria & Testing</h3>
-                        <p>
-                            Our design focused on four key objectives: <strong>Cleanliness</strong> (achieving 95% clean buckets), 
-                            <strong>Smell reduction</strong> (eliminating odors detectable from 3+ ft away), <strong>Durability</strong> 
-                            (withstanding 2,400 hours of use), and <strong>Safety</strong> (proper usage conditions and prototyping validation).
-                        </p>
-                        
-                        <h3>Performance Results</h3>
-                        <p>
-                            Testing demonstrated exceptional performance with 1929 (89%) buckets achieving 95% cleanliness 
-                            and 1929 (95%) buckets passing the smell test from 3 ft away. The two-device system successfully 
-                            met project objectives through systematic design and testing methodology.
+                            Porter Collins, Arvin Deelchmuth, Oliver O'Donoghoe, and Westley Kleinman - with CompostNow as client and The Foundry as project partner.
                         </p>
                     </div>
                     
                     <div class="overview-specs">
                         <div class="specs-card">
-                            <h4>Project Specifications</h4>
+                            <h4>Specs</h4>
                             <div class="spec-grid">
                                 <div class="spec-item">
                                     <span class="spec-label">Client</span>
@@ -484,159 +190,29 @@
                                     <span class="spec-value">The Foundry</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">System Type</span>
-                                    <span class="spec-value">Two-Device Washing</span>
+                                    <span class="spec-label">System</span>
+                                    <span class="spec-value">Rinse + Brush</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Cleanliness Rate</span>
-                                    <span class="spec-value">89% (95% clean)</span>
+                                    <span class="spec-label">Cleanliness</span>
+                                    <span class="spec-value">89% †' 95% clean</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Odor Elimination</span>
-                                    <span class="spec-value">95% Success</span>
+                                    <span class="spec-label">Odor</span>
+                                    <span class="spec-value">95% pass @ 3 ft</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Team Members</span>
-                                    <span class="spec-value">4 Students</span>
+                                    <span class="spec-label">Team</span>
+                                    <span class="spec-value">4 students</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Collaboration & Results -->
-        <section class="project-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Team Collaboration & Results</h2>
-                    <p class="section-subtitle">Four-student team developing effective washing solution for CompostNow</p>
-                </div>
-                
-                <div class="project-overview-grid">
-                    <div class="overview-content">
-                        <h3>Team Members & Collaboration</h3>
-                        <p>
-                            Our four-person team consisted of <strong>Porter Collins</strong>, <strong>Arvin Deelchmuth</strong>, 
-                            <strong>Oliver O'Donoghoe</strong>, and <strong>Westley Kleinman</strong>. Working collaboratively 
-                            through the entire design process, we successfully developed a comprehensive two-device 
-                            washing system that met all project objectives and client requirements.
-                        </p>
-                        
-                        <h3>Design Process & Methodology</h3>
-                        <p>
-                            Applied systematic engineering design methodology including problem analysis, design criteria 
-                            establishment, concept development, prototyping, and rigorous testing. Our approach focused 
-                            on creating measurable solutions with quantifiable performance metrics for cleanliness and 
-                            odor elimination effectiveness.
-                        </p>
-                        
-                        <h3>Project Partnership & Support</h3>
-                        <p>
-                            Collaborated directly with <strong>CompostNow</strong> as our client and <strong>The Foundry</strong> 
-                            as our project partner, ensuring our design met real-world operational requirements. This 
-                            partnership provided valuable industry insight and practical constraints that guided our 
-                            engineering decisions throughout the project lifecycle.
-                        </p>
-                        
-                        <h3>Future Improvements & Recommendations</h3>
-                        <p>
-                            Identified potential enhancements including conducting durability and safety testing, 
-                            designing devices to automate 90% of the cleaning step, integrating different steps 
-                            into an "assembly-line" like process, and automating device activations with sensors, 
-                            switches, and timers for improved operational efficiency.
-                        </p>
-                    </div>
-                    
-                    <div class="overview-specs">
-                        <div class="specs-card">
-                            <h4>Project Results</h4>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>89% Cleanliness Success</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-nose"></i>
-                                    <span>95% Odor Elimination</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>4-Person Team Success</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-handshake"></i>
-                                    <span>Client-Partner Collaboration</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-trophy"></i>
-                                    <span>Project Objectives Met</span>
-                                </div>
-                                <div class="achievement-item">
-                                    <i class="fas fa-lightbulb"></i>
-                                    <span>Future Improvements Identified</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Key Achievements Highlight -->
-        <section class="project-section achievements-highlight">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Project Impact & Results</h2>
-                </div>
-                
-                <div class="achievements-grid">
-                    <div class="achievement-card">
-                        <div class="achievement-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h3 class="achievement-title">89% Cleanliness Success</h3>
-                        <p class="achievement-description">
-                            1929 buckets achieved 95% cleanliness through our innovative two-device washing system
-                        </p>
-                    </div>
-                    
-                    <div class="achievement-card">
-                        <div class="achievement-icon">
-                            <i class="fas fa-spray-can"></i>
-                        </div>
-                        <h3 class="achievement-title">95% Odor Elimination</h3>
-                        <p class="achievement-description">
-                            1929 buckets passed smell test from 3 ft away, effectively eliminating food waste odors
-                        </p>
-                    </div>
-                    
-                    <div class="achievement-card">
-                        <div class="achievement-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="achievement-title">Collaborative Team Success</h3>
-                        <p class="achievement-description">
-                            Four-person team delivered comprehensive solution through systematic engineering design process
-                        </p>
-                    </div>
-                    
-                    <div class="achievement-card">
-                        <div class="achievement-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3 class="achievement-title">Innovative Two-Device System</h3>
-                        <p class="achievement-description">
-                            Rinsing and brushing devices with PVC frames, rotating mechanisms, and automated components
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -660,7 +236,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
+                <p>&copy; 2026 Westley Kleinman. All rights reserved.</p>
             </div>
         </div>
     </footer>

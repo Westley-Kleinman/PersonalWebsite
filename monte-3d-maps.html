@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monte (monte3d.com) - 3D-printed topographic trail maps. Next.js / Three.js e-commerce with interactive elevation previews, custom GIS pipelines, and Blender print production by Westley Kleinman.">
+    <meta name="keywords" content="Monte, monte3d.com, 3D printing, topographic maps, trail maps, Next.js, TypeScript, Three.js, react-three-fiber, OpenTopography, GIS, Blender, entrepreneurship, digital manufacturing">
+    <meta name="author" content="Westley Kleinman">
+    <title>Monte | 3D-Printed Topographic Trail Maps | Westley Kleinman</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="images/Extras/headshot.png?v=20260323">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/Extras/headshot.png?v=20260323">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/headshot.png?v=20260323">
+    <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="styles.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9XCECK2SGS');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        .specs-card {
+            background: linear-gradient(135deg, #5a6570 0%, #3d4650 100%);
+            border: none;
+            box-shadow: 0 15px 35px rgba(61, 70, 80, 0.2);
+        }
+        .specs-card h4 { color: white; }
+        .spec-item {
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            border-bottom: none;
+        }
+        .spec-label { color: rgba(255, 255, 255, 0.85); }
+        .spec-value { color: #c5ced6; }
+        .achievements-band {
+            background: linear-gradient(135deg, #5a6570 0%, #3d4650 100%);
+            padding: var(--section-padding);
+        }
+        .achievements-band .section-title { color: white; }
+        .achievements-band .section-title::after { background: #c5ced6; }
+        .achievements-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: var(--space-lg);
+        }
+        .achievement-glass {
+            background: rgba(255, 255, 255, 0.08);
+            padding: var(--space-lg);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+        }
+        .achievement-glass h3 {
+            color: white;
+            font-size: 1.25rem;
+            margin: 1rem 0 0.75rem;
+        }
+        .achievement-glass p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin: 0;
+        }
+        .achievement-icon-wrap {
+            background: rgba(255, 255, 255, 0.9);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            color: #3d4650;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">WK</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+            <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="main-content">
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-hero-content">
+                    <div class="project-hero-text">
+                        <div class="project-breadcrumb">
+                            <a href="index.html">Portfolio</a>
+                            <span>/</span>
+                            <span>Monte</span>
+                        </div>
+                        <h1 class="hero-name">Monte</h1>
+                        <p class="hero-subtitle">3D-Printed Topographic Trail Maps</p>
+                        <p class="hero-description">
+                            Premium DTC brand for physical 3D trail maps - interactive Three.js previews, a proprietary GIS-to-STL pipeline, and a full Next.js storefront at monte3d.com.
+                        </p>
+                        <div class="link-row">
+                            <a href="https://monte3d.com" target="_blank" rel="noopener noreferrer" class="nav-cta inline-block">Visit monte3d.com</a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/Monte/monte-product-hero.jpg" alt="Monte 3D-printed topographic trail map">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Platform</h2>
+                    <p class="section-subtitle">From elevation data to interactive preview to shipped physical map</p>
+                </div>
+                
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>The Problem</h3>
+                        <p>
+                            2D maps can't show undistorted terrain. Selling physical 3D maps at scale meant automating geospatial processing, giving buyers a live preview, and removing manual QGIS work per order.
+                        </p>
+                        
+                        <h3>What I Built</h3>
+                        <p>
+                            Full e-commerce site on Next.js 14, TypeScript, Tailwind, and Three.js / react-three-fiber. Interactive terrain previews use real OpenTopography elevation data, with a pre-generation cache for U.S. resorts.
+                        </p>
+                        <p>
+                            Upstream GIS pipeline parses a 395MB OpenSkiMap GeoPackage (custom WKB geometry parser), automated with headless Python (geopandas/GDAL). Blender / TrailPrint3D then produces print-ready STL files. Branding targets a premium DTC look - cool fog-gray palette.
+                        </p>
+                        
+                        <div class="analysis-image analysis-image-spaced">
+                            <img src="images/Monte/vail-3d-preview.png" alt="Interactive 3D terrain preview of a ski resort" class="analysis-image-full">
+                            <div class="analysis-caption">Interactive 3D Terrain Preview</div>
+                            <p class="analysis-desc">Three.js resort preview from real elevation and trail data.</p>
+                        </div>
+
+                        <div class="analysis-image analysis-image-spaced">
+                            <img src="images/Monte/blender_model.png" alt="Blender model of topographic trail map" class="analysis-image-full">
+                            <div class="analysis-caption">Print Pipeline</div>
+                            <p class="analysis-desc">Proprietary Blender / TrailPrint3D workflow from GIS data to STL.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-specs">
+                        <div class="specs-card">
+                            <h4>Stack</h4>
+                            <div class="spec-grid">
+                                <div class="spec-item">
+                                    <span class="spec-label">Web</span>
+                                    <span class="spec-value">Next.js / TypeScript / Three.js</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">GIS</span>
+                                    <span class="spec-value">Python (geopandas/GDAL)</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Production</span>
+                                    <span class="spec-value">Blender / TrailPrint3D</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Elevation</span>
+                                    <span class="spec-value">OpenTopography</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Trails</span>
+                                    <span class="spec-value">OpenSkiMap GeoPackage</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Manufacturing</span>
+                                    <span class="spec-value">3D Printing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Foundation</h2>
+                    <p class="section-subtitle">Pre-Monte validation the platform is built on</p>
+                </div>
+                
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Origin Traction</h3>
+                        <p>
+                            Before the Monte rebrand and platform rebuild, the venture secured a provisional patent on the 3D topographic process, generated four-figure revenue, and partnered with Visit Hot Springs and Arkansas NICA - validating demand before the full e-commerce and data stack.
+                        </p>
+                        <p>
+                            Operating since 2021; now scaled through software-defined manufacturing at <a href="https://monte3d.com" target="_blank" rel="noopener noreferrer">monte3d.com</a>.
+                        </p>
+                    </div>
+                    
+                    <div class="overview-specs">
+                        <div class="specs-card">
+                            <h4>Highlights</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Provisional Patent</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Four-Figure Revenue</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <span>Visit Hot Springs</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-bicycle"></i>
+                                    <span>Arkansas NICA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section achievements-band">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Monte Is Now</h2>
+                </div>
+                <div class="achievements-cards">
+                    <div class="achievement-glass">
+                        <div class="achievement-icon-wrap"><i class="fas fa-layer-group"></i></div>
+                        <h3>Full-Stack Platform</h3>
+                        <p>Next.js storefront, live elevation previews, automated GIS-to-STL production</p>
+                    </div>
+                    <div class="achievement-glass">
+                        <div class="achievement-icon-wrap"><i class="fas fa-globe"></i></div>
+                        <h3>Live DTC Channel</h3>
+                        <p>Premium storefront shipping maps worldwide from monte3d.com</p>
+                    </div>
+                    <div class="achievement-glass">
+                        <div class="achievement-icon-wrap"><i class="fas fa-industry"></i></div>
+                        <h3>Print-Ready Pipeline</h3>
+                        <p>Headless GIS + Blender workflow replacing manual per-order modeling</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo-text">WK</a>
+                    </div>
+                    <p class="footer-text">
+                        Mechanical Engineering Student at Duke University.<br>
+                        Building solutions from ideas to impact.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#projects">Projects</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Westley Kleinman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

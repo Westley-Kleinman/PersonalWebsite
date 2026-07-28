@@ -1,42 +1,32 @@
-# Westley Kleinman - Professional Portfolio
+# Westley Kleinman - Portfolio
 
-A modern, responsive portfolio website showcasing mechanical engineering projects and professional experience.
+Static HTML/CSS/JS portfolio for mechanical engineering projects and professional experience.
 
 ## About
-Sophomore Mechanical Engineering student at Duke University with hands-on industry experience in product development and testing. Currently serving as Club Cycling President and gaining practical experience through internships.
+Rising Junior in Mechanical Engineering at Duke University (Innovation & Entrepreneurship certificate). Club Cycling President; founder of Monte; internship experience in carbon rim fabrication and impact testing.
 
 ## Experience
-- **Boyd Cycling** - Engineering Intern (Summer 2024)
-- **Elevon** - Co-Founder (2024)
+- **Boyd Cycling & Time Bicycles** - Engineering Intern (2025)
+- **Monte** (monte3d.com) - Founder (2021-present)
 - **Duke Club Cycling** - President (2024-present)
 
 ## Technical Skills
-- **CAD Software**: SolidWorks, 3D Printing, Product Design
-- **Testing**: Impact Testing Systems, Test Equipment Design
-- **Manufacturing**: Product Development, Quality Control
-- **Leadership**: Team Management, Project Coordination
+- **CAD / Manufacturing**: SolidWorks, Fusion360, 3D printing, RTM composites
+- **Software**: Next.js, TypeScript, Three.js, Python (GIS / automation)
+- **Testing**: Custom impact test equipment, process analysis
 
 ## Featured Projects
-1. **Bicycle Rim Impact Testing Machine** - Designed testing apparatus for Boyd Cycling internship
-2. **Elevon 3D Topographic Maps** - Co-founded company specializing in 3D printed topographic maps
-3. **Club Cycling Leadership** - Leading Duke University's competitive cycling team
-
-## Website Features
-- Modern glass-morphism design
-- Responsive sidebar navigation
-- Interactive project portfolio
-- Professional contact form
-- Smooth animations and transitions
+1. **Carbon Rim Impact Tester** - Guillotine impact rig built in a 72-hour sprint at Boyd Cycling
+2. **Carbon Fiber Rim Mold Optimization** - RTM process and defect fixes at Boyd / Time
+3. **Monte** - 3D-printed topographic trail maps; Next.js / Three.js e-commerce at monte3d.com
+4. **Bucket Washing Mechanism** - EGR101 CompostNow system (89% of buckets reached 95% cleanliness)
+5. **Duke Club Cycling** - Team leadership and DukeCycling.dev
 
 ## Contact
 - **Email**: westley.kleinman@duke.edu
-- **Phone**: (501) 701-7973
 - **LinkedIn**: [linkedin.com/in/westley-kleinman-154048332](https://linkedin.com/in/westley-kleinman-154048332)
 - **GitHub**: [github.com/Westley-Kleinman](https://github.com/Westley-Kleinman)
 - **Website**: [westleykleinman.com](https://westleykleinman.com)
 
 ## Deployment
-This portfolio is optimized for professional presentation and can be deployed to any static hosting service.
-
----
-*Available for Summer 2025 Internships*
+Static site - deploy to any static host.

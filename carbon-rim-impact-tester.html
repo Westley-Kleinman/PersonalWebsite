@@ -3,88 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Carbon Rim Impact Testing & Manufacturing Optimization - Engineering internship at Boyd Cycling & Time Bicycles by Westley Kleinman.">
+    <meta name="description" content="Carbon Rim Impact Testing - engineered a Guillotine impact rig in 72 hours at Boyd Cycling & Time Bicycles by Westley Kleinman.">
     <meta name="keywords" content="carbon fiber, impact testing, RTM process, Boyd Cycling, Time Bicycles, engineering, manufacturing, composite materials">
     <meta name="author" content="Westley Kleinman">
     <title>Carbon Rim Impact Testing | Westley Kleinman</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="512x512" href="images/Extras/headshot.png?v=20260323">
     <link rel="icon" type="image/png" sizes="192x192" href="images/Extras/headshot.png?v=20260323">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/headshot.png?v=20260323">
     <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=5">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-9XCECK2SGS');
     </script>
 
-    <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        .video-container {
-            text-align: center;
-            margin: 3rem 0;
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+        .specs-card {
+            background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
+            border: none;
+            color: white;
         }
-        .video-container video {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        .video-caption {
-            margin-top: 1rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        .project-image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .analysis-image {
-            background: var(--bg-card);
-            padding: 1rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-        .analysis-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .analysis-caption {
-            margin-top: 1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        .analysis-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-top: 0.5rem;
-        }
+        .specs-card h4 { color: white; }
     </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -98,16 +52,12 @@
                 <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
             <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main id="main-content" class="main-content">
-        <!-- Hero Section -->
         <section class="project-hero">
             <div class="container">
                 <div class="project-hero-content">
@@ -121,9 +71,9 @@
                             <h1 class="hero-name project-title-compact">Carbon Rim Impact Testing</h1>
                             <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="boyd-logo-badge">
                         </div>
-                        <p class="hero-subtitle">Engineering Internship at Boyd Cycling & Time Bicycles</p>
+                        <p class="hero-subtitle">Boyd Cycling &amp; Time Bicycles Internship</p>
                         <p class="hero-description">
-                            Engineered a custom "Guillotine" wheel-impact testing rig in a rapid 72-hour design-build sprint. Designed, fabricated, and iterated on the system within a 3-day window to meet UCI standards for carbon fiber rim durability testing.
+                            Designed, fabricated, and iterated a custom "Guillotine" wheel-impact rig in a 72-hour sprint for UCI-aligned carbon rim durability testing.
                         </p>
                     </div>
                     <div class="project-image">
@@ -133,33 +83,31 @@
             </div>
         </section>
 
-        <!-- Project Overview -->
         <section class="project-overview">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Project Overview</h2>
+                    <h2 class="section-title">Overview</h2>
                     <p class="section-subtitle">
-                        Design and fabrication of a custom impact testing apparatus to validate carbon rim durability and meet international safety standards.
+                        Custom impact apparatus for validating carbon rim durability under controlled drop energy.
                     </p>
                 </div>
                 
                 <div class="project-overview-grid">
                     <div class="overview-content">
-                        <h3>The Challenge</h3>
+                        <h3>Challenge</h3>
                         <p>
-                            Boyd Cycling required an immediate solution to test rim durability against impacts to meet UCI safety standards. With a tight deadline, the team needed a functional, standardized testing rig designed and built from scratch in just three days.
+                            Boyd needed a standardized impact tester immediately. No existing rig in the shop; three days to design and build something that could meet UCI-aligned drop testing.
                         </p>
                         
-                        <h3>Engineering Solution</h3>
+                        <h3>Solution</h3>
                         <p>
-                            I executed a high-intensity 72-hour sprint to design, build, and iterate a custom "Guillotine" impact tester. This rapid prototyping process required utilizing available resources—repurposing facility equipment and scrap materials—to construct a precision instrument. The resulting system allows for adjustable drop heights and anvil weights, providing versatile testing capabilities for various rim profiles.
+                            Built a Guillotine-style tester with adjustable drop height and anvil mass. Frame from repurposed inventory shelving; guide rails and anvil from salvaged scrap, machined and welded on site. Electric winch with garage-door remote for safe, wireless raises. Supports multiple rim profiles without waiting on outside suppliers.
                         </p>
                         
-                        <!-- Live Data Visualization -->
                         <div class="chart-container">
                             <canvas id="impactChart"></canvas>
                         </div>
-                        <p class="video-caption text-center">Simulated Impact Force vs. Time Data</p>
+                        <p class="video-caption text-center">Simulated impact force vs. time</p>
                     </div>
                     
                     <div class="overview-specs">
@@ -176,11 +124,11 @@
                                 </div>
                                 <div class="achievement-item">
                                     <i class="fas fa-tools"></i>
-                                    <span>Fabrication</span>
+                                    <span>Fabrication &amp; Welding</span>
                                 </div>
                                 <div class="achievement-item">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>UCI Standards</span>
+                                    <span>UCI-Aligned Testing</span>
                                 </div>
                             </div>
                         </div>
@@ -189,12 +137,11 @@
             </div>
         </section>
 
-        <!-- The Guillotine Impact Tester -->
         <section class="project-section bg-secondary">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">The "Guillotine" Impact Tester</h2>
-                    <p class="section-subtitle">Custom-built apparatus for standardized impact testing</p>
+                    <h2 class="section-title">The Guillotine Rig</h2>
+                    <p class="section-subtitle">Controlled energy transfer to the rim structure</p>
                 </div>
                 
                 <div class="two-col-wide-grid">
@@ -204,24 +151,19 @@
                             Your browser does not support the video tag.
                         </video>
                         <p class="video-caption">
-                            High-speed capture of the "Guillotine" impact tester in action, demonstrating the precise energy transfer to the carbon rim.
+                            Rig in action - weighted anvil drop onto a carbon rim.
                         </p>
                     </div>
 
                     <div class="project-text-content">
-                        <div class="overview-content overview-content-spaced">
-                            <h3>Rapid Design & Function</h3>
-                            <p>
-                                The "Guillotine" was engineered and assembled within a strict 72-hour window. 
-                                Despite the compressed timeline, the system features a weighted anvil that drops from adjustable heights, allowing for 
-                                controlled energy transfer to the rim structure. This setup enables testing to UCI 
-                                standards and beyond, simulating pothole strikes and other road hazards.
-                            </p>
-                        </div>
                         <div class="overview-content">
-                            <h3>Resourceful Fabrication</h3>
+                            <h3>Function</h3>
                             <p>
-                                Meeting the 72-hour deadline required creative resource utilization. I repurposed heavy-duty inventory shelving to construct the main structural frame and integrated an electric winch with a garage door remote for safe, wireless activation. Miscellaneous scrap metals were salvaged, machined, and welded to fabricate the guide rails and impact anvil. This approach transformed available materials into a precision testing rig without waiting for external suppliers.
+                                Weighted anvil drops from adjustable heights to deliver controlled energy, simulating pothole strikes and similar road hazards. Used for UCI-standard testing and beyond.
+                            </p>
+                            <h3>Build Approach</h3>
+                            <p>
+                                Compressed timeline forced scavenged materials and in-house fab: shelving for structure, scrap for rails and anvil, winch for repeatable lifts. Result was a shop-ready precision instrument without lead times.
                             </p>
                         </div>
                     </div>
@@ -230,7 +172,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -254,7 +195,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Westley Kleinman. All rights reserved.</p>
+                <p>&copy; 2026 Westley Kleinman. All rights reserved.</p>
             </div>
         </div>
     </footer>

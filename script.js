@@ -3,27 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
-    // --- 3. GSAP Animations ---
+    // GSAP - project card stagger on homepage
     if (!prefersReducedMotion && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
 
-        // Animate Sections - Disabled to prevent "foggy" moving effect
-        /*
-        gsap.utils.toArray('section').forEach(section => {
-            gsap.from(section, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%",
-                    toggleActions: "play none none reverse"
-                }
-            });
-        });
-        */
-
-        // Animate Project Cards Stagger
         const projectCards = document.querySelectorAll('.project-card');
         if (projectCards.length > 0) {
             gsap.from(projectCards, {
@@ -39,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- 4. Chart.js Initialization (Impact Tester Page) ---
+    // Chart.js - impact tester page only
     const ctx = document.getElementById('impactChart');
     if (ctx && typeof Chart !== 'undefined') {
         const gridColor = '#e2e8f0';
@@ -48,15 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
         window.impactChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: Array.from({length: 50}, (_, i) => i * 0.1), // 0 to 5s
+                labels: Array.from({length: 50}, (_, i) => i * 0.1),
                 datasets: [{
                     label: 'Impact Force (N)',
                     data: Array.from({length: 50}, (_, i) => {
-                        // Simulate an impact curve
                         const x = i * 0.1;
-                        if (x < 2) return 0;
-                        if (x > 3) return 0;
-                        return 1500 * Math.sin((x - 2) * Math.PI); 
+                        if (x < 2 || x > 3) return 0;
+                        return 1500 * Math.sin((x - 2) * Math.PI);
                     }),
                     borderColor: '#2563eb',
                     backgroundColor: 'rgba(37, 99, 235, 0.2)',
@@ -94,12 +75,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mobile Navigation Toggle
+    // Mobile nav
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Toggle mobile menu
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
@@ -108,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close mobile menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (hamburger && navMenu) {
@@ -119,13 +98,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scrolling for navigation links
+    // Smooth scroll for in-page anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const offsetTop = target.offsetTop - 70; // Account for fixed navbar
+                const offsetTop = target.offsetTop - 70;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -134,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Active navigation highlighting
+    // Active nav highlighting
     const sections = document.querySelectorAll('section[id]');
     
     function updateActiveNavigation() {
@@ -147,9 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const navLink = document.querySelector(`a[href="#${sectionId}"]`);
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                // Remove active class from all nav links
                 navLinks.forEach(link => link.classList.remove('active'));
-                // Add active class to current section link
                 if (navLink) {
                     navLink.classList.add('active');
                 }
@@ -157,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Throttled scroll event for performance
     let ticking = false;
     function handleScroll() {
         if (!ticking) {
@@ -171,13 +147,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     
     function handleNavbarScroll() {
-        if (!navbar) {
-            return;
-        }
+        if (!navbar) return;
 
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
@@ -193,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', handleNavbarScroll);
 
-    // Typing Effect
+    // Typing effect (homepage)
     const typingText = document.querySelector('.typing-text');
     if (typingText) {
         const phrases = [
@@ -222,23 +195,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isDeleting = true;
-                typeSpeed = 2000; // Pause at end
+                typeSpeed = 2000;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
-                typeSpeed = 500; // Pause before typing next
+                typeSpeed = 500;
             }
 
             setTimeout(type, typeSpeed);
         }
 
-        // Start typing loop
         if (!prefersReducedMotion) {
             setTimeout(type, 1000);
         }
     }
 
-    // 3D Tilt Effect for Project Cards
+    // Project card tilt
     const cards = document.querySelectorAll('.project-card');
 
     if (!prefersReducedMotion && !isCoarsePointer) {
@@ -263,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Magnetic Buttons
+    // Magnetic buttons
     const magneticBtns = document.querySelectorAll('.btn-magnetic');
 
     if (!prefersReducedMotion && !isCoarsePointer) {
@@ -298,33 +270,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Intersection Observer for Scroll Animations - REMOVED to prevent conflict and "foggy" effect
-    /*
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Animate sections on scroll
-    document.querySelectorAll('section').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'all 0.8s ease-out';
-        observer.observe(section);
-    });
-    */
-
-    // Initialize everything
     updateActiveNavigation();
     handleNavbarScroll();
 });
