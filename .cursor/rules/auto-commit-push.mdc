@@ -1,0 +1,42 @@
+---
+description: Auto commit and push after substantive portfolio changes
+alwaysApply: true
+---
+
+# Auto Commit and Push
+
+After finishing substantive code or content changes in this portfolio repo, **automatically create a git commit and push to the remote**, unless the user explicitly says not to commit or not to push.
+
+## When to commit
+
+- Do commit after meaningful HTML/CSS/JS/content/asset updates, refactors, or project-page changes.
+- Do not commit for read-only exploration, unanswered clarifying questions, or no file changes.
+- Skip if the user says not to commit, not to push, or to leave changes uncommitted.
+
+## Git Safety Protocol
+
+- NEVER update git config
+- NEVER force push (`--force`, `--force-with-lease`) unless the user explicitly requests it
+- NEVER skip hooks (`--no-verify`, `--no-gpg-sign`, etc.)
+- NEVER commit secrets (`.env`, credentials, API keys)
+- Do not amend commits unless the user explicitly asks and amend conditions from the commit protocol are met
+- Prefer `git push` or `git push -u origin HEAD`; never rewrite shared history
+
+## Commit steps
+
+1. In parallel: `git status`, `git diff` (staged + unstaged), `git log -5 --oneline`
+2. Stage relevant files only (exclude secrets)
+3. Draft a concise 1–2 sentence message focused on **why**
+4. Commit with a PowerShell-safe message, e.g.:
+
+```powershell
+git commit -m @"
+Your message here.
+
+"@
+```
+
+Or: `git commit -m "message"`
+
+5. Push to the tracked remote branch
+6. Run `git status` and report the commit hash, branch, and remote URL
