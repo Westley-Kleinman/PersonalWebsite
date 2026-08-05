@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Westley Kleinman - Mechanical Engineering student at Duke University. Founder of Monte (monte3d.com); Boyd Cycling & Time Bicycles intern focused on carbon rim fabrication and impact testing.">
-    <meta name="keywords" content="Westley Kleinman, mechanical engineer, Duke University, Innovation Entrepreneurship, Boyd Cycling, Time Bicycles, Monte, monte3d.com, topographic maps, Next.js, Three.js, carbon rim testing, SolidWorks, Fusion360, RTM process, product development">
+    <meta name="description" content="Westley Kleinman - Mechanical Engineering student at Duke University (B.S. expected May 2028). R&D engineering intern at Re:3D; founder of Monte (monte3d.com); process optimization and test engineering intern at Time Bicycles / Boyd Cycling.">
+    <meta name="keywords" content="Westley Kleinman, mechanical engineer, Duke University, Innovation Entrepreneurship, Re:3D, rPP, FGF pellet printing, Boyd Cycling, Time Bicycles, Monte, monte3d.com, topographic maps, Next.js, Three.js, carbon rim testing, SolidWorks, FEA, RTM process, product development">
     <meta name="author" content="Westley Kleinman">
     <title>Westley Kleinman | Mechanical Engineering | Duke University</title>
     <!-- Favicon -->
@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=11">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -52,7 +52,9 @@
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="https://linkedin.com/in/westley-kleinman-154048332" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/Westley-Kleinman" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
             </div>
             <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
@@ -72,19 +74,35 @@
                         <p class="hero-greeting">Hello, I'm</p>
                         <h1 class="hero-name">Westley Kleinman</h1>
                         <p class="hero-title">
-                            <span class="typing-text">Mechanical Engineering Student</span>
+                            <span class="typing-text">Mechanical Engineering · Duke</span>
                         </p>
                         <p class="hero-description">
-                            Rising Junior at Duke University studying Mechanical Engineering with an Innovation &amp; Entrepreneurship certificate. Building products across composites manufacturing, geospatial software, and collegiate cycling.
+                            Duke ME rising junior. R&amp;D engineering intern at Re:3D turning waste plastic into printable feedstock; founder of Monte (Next.js / Three.js / GIS-to-STL at monte3d.com). Mechanical hardware meets product software.
                         </p>
+                        <ul class="skill-signals" aria-label="Technical skills">
+                            <li>SolidWorks</li>
+                            <li>SolidWorks FEA</li>
+                            <li>Fusion 360</li>
+                            <li>RTM / Composites</li>
+                            <li>FGF Pellet Printing</li>
+                            <li>Fabrication</li>
+                            <li>Python</li>
+                            <li>GDAL / geopandas</li>
+                            <li>Blender</li>
+                            <li>Next.js</li>
+                            <li>Three.js</li>
+                            <li>TypeScript</li>
+                        </ul>
                         <div class="hero-actions">
                             <a href="#projects" class="btn-primary btn-magnetic">View Projects</a>
-                            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-magnetic">Download Resume</a>
+                            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-magnetic" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+                            <a href="https://linkedin.com/in/westley-kleinman-154048332" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-magnetic" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                            <a href="https://github.com/Westley-Kleinman" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-magnetic" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="hero-image">
                         <div class="image-container">
-                            <img src="images/Extras/headshot.png" alt="Westley Kleinman" class="profile-img">
+                            <img src="images/Extras/headshot.png" alt="Portrait of Westley Kleinman" class="profile-img" width="800" height="800" fetchpriority="high" decoding="async">
                             <div class="image-backdrop"></div>
                         </div>
                     </div>
@@ -106,54 +124,37 @@
                     <span class="section-tag">Portfolio</span>
                     <h2 class="section-title">Featured Projects</h2>
                     <p class="section-subtitle">
-                        From composite testing rigs to a live DTC manufacturing platform
+                        Recycled-material printing, composites process work, a live manufacturing platform, and design builds
                     </p>
                 </div>
                 
                 <div class="projects-grid">
-                    <a href="carbon-rim-impact-tester.html" class="project-card featured">
-                        <div class="project-image">
-                            <img src="images/Internship/Cover_photo.jpg" alt="Carbon Rim Impact Testing">
+                    <a href="re3d-internship.html" class="project-card">
+                        <div class="project-image project-image--re3d">
+                            <div class="re3d-card" aria-hidden="true">
+                                <i class="fas fa-recycle re3d-card-icon" aria-hidden="true"></i>
+                                <div class="re3d-card-mark">Re<span>:3</span>D</div>
+                                <span class="re3d-card-meta">Austin, TX</span>
+                            </div>
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
-                                <span class="project-type">Engineering Internship</span>
-                                <span class="project-year">2025</span>
+                                <span class="project-type">R&amp;D Internship</span>
+                                <span class="project-year">2026</span>
                             </div>
-                            <div class="project-title-row">
-                                <h3 class="project-title project-title-compact">Carbon Rim Impact Tester</h3>
-                                <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="boyd-logo-small">
-                            </div>
+                            <h3 class="project-title">rPP FGF Printing — Re:3D</h3>
                             <p class="project-description">
-                                Designed and fabricated a "Guillotine" wheel-impact rig in a 72-hour sprint to test carbon rim durability against UCI standards.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="carbon-rim-mold-optimization.html" class="project-card featured">
-                        <div class="project-image">
-                            <img src="images/Internship/Wheel_in_mold.jpg" alt="Carbon Fiber Rim Mold Optimization">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-type">Engineering Internship</span>
-                                <span class="project-year">2025</span>
-                            </div>
-                            <div class="project-title-row">
-                                <h3 class="project-title project-title-compact">Carbon Fiber Rim Mold Optimization</h3>
-                                <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling" class="boyd-logo-small">
-                            </div>
-                            <p class="project-description">
-                                Optimized RTM carbon-rim fabrication - mold geometry, injection parameters, and resin flow - to cut resin-rich and resin-poor defects.
+                                Built a reclamation process turning M61 filter canisters into printable rPP feedstock, then printed a 90 g drone frame validated to a 3.4x factor of safety at max throttle.
                             </p>
                         </div>
                     </a>
                     <a href="monte-3d-maps.html" class="project-card">
                         <div class="project-image">
-                            <img src="images/Monte/monte-product-hero.jpg" alt="Monte 3D-printed topographic trail maps">
+                            <img src="images/Monte/monte-product-hero.jpg" alt="Monte 3D-printed topographic trail map of a mountain" loading="lazy" decoding="async" width="1400" height="1200">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
-                                <span class="project-type">Entrepreneurial Venture</span>
+                                <span class="project-type">Venture</span>
                                 <span class="project-year">2021-Present</span>
                             </div>
                             <h3 class="project-title">Monte</h3>
@@ -162,36 +163,54 @@
                             </p>
                         </div>
                     </a>
-                    <a href="egr101-automated-bucket-washer.html" class="project-card">
+                    <a href="boyd-cycling-internship.html" class="project-card">
                         <div class="project-image">
-                            <img src="images/EGR101/GroupPhoto_EGR101.jpg" alt="EGR101 Bucket Washing System">
+                            <img src="images/Internship/Cover_photo.jpg" alt="Carbon rim mounted in the wheel-impact test rig built at Boyd Cycling" loading="lazy" decoding="async" width="1200" height="1600">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
-                                <span class="project-type">Freshman Design</span>
+                                <span class="project-type">Process Internship</span>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <div class="project-title-row">
+                                <h3 class="project-title project-title-compact">Boyd Cycling Internship</h3>
+                                <img src="images/Internship/boyd_logo.png" alt="" class="boyd-logo-small" aria-hidden="true" width="437" height="115">
+                            </div>
+                            <p class="project-description">
+                                Built a wheel-impact rig in 72 hours that validates rims to the 40 J UCI standard with headroom to 200 J, and overhauled RTM mold geometry to eliminate dry zones on production rims.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="egr101-automated-bucket-washer.html" class="project-card">
+                        <div class="project-image">
+                            <img src="images/EGR101/GroupPhoto_EGR101.jpg" alt="The four-person EGR 101 team with the finished bucket washing prototype" loading="lazy" decoding="async" width="1400" height="1050">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">EGR101 Design</span>
                                 <span class="project-year">2024</span>
                             </div>
                             <h3 class="project-title">Bucket Washing Mechanism</h3>
                             <p class="project-description">
-                                Two-device rinsing and brushing system for CompostNow. Team of four; 89% of buckets reached 95% cleanliness.
+                                Two-device rinse-and-brush system for CompostNow that cut cleaning time 43% and took the job from four operators down to one.
                             </p>
                         </div>
                     </a>
                     <a href="duke-cycling.html" class="project-card">
-                        <div class="project-image">
+                        <div class="project-image project-image--logo">
                             <div class="duke-card">
-                                <img src="images/Extras/duke_logo.png" alt="Duke Cycling" class="duke-card-logo">
+                                <img src="images/Extras/duke_logo.png" alt="" class="duke-card-logo" aria-hidden="true" loading="lazy" decoding="async">
                                 <span class="duke-card-text">DukeCycling.dev</span>
                             </div>
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
-                                <span class="project-type">Leadership &amp; Development</span>
-                                <span class="project-year">2024-Present</span>
+                                <span class="project-type">Leadership</span>
+                                <span class="project-year">2025-2026</span>
                             </div>
                             <h3 class="project-title">Duke Club Cycling</h3>
                             <p class="project-description">
-                                Club president and builder of DukeCycling.dev - ride calendar, race logistics, and resources for 50+ members.
+                                President and lead safety officer; built DukeCycling.dev for ride scheduling, team history, and ride proposals across 50+ members.
                             </p>
                         </div>
                     </a>
@@ -206,7 +225,7 @@
                     <span class="section-tag">About Me</span>
                     <h2 class="section-title">Background</h2>
                     <p class="section-subtitle">
-                        Mechanical engineering with a bias toward shipping real products
+                        Design, manufacturing, and shipping products
                     </p>
                 </div>
                 
@@ -215,21 +234,21 @@
                         <div class="text-block">
                             <h3>At Duke</h3>
                             <p>
-                                Studying Mechanical Engineering with an Innovation &amp; Entrepreneurship certificate. Coursework and projects sit at the intersection of design, manufacturing, and market fit - not just how things work, but whether they should exist and how to ship them.
+                                B.S. Mechanical Engineering with an Innovation &amp; Entrepreneurship certificate, expected May 2028 (3.88 GPA). Focus: CAD-to-shop execution, process data, and product software that supports physical goods.
                             </p>
                         </div>
                         
                         <div class="text-block">
                             <h3>How I Work</h3>
                             <p>
-                                Prefer problems with clear users and measurable outcomes. Whether that's a test rig in 72 hours, an RTM process tweak, or a full e-commerce stack, the goal is the same: understand the constraint, build the thing, and validate it in use.
+                                Start from the constraint - 72 hours for a test rig, resin flow defects in RTM, contaminated waste plastic that has to become printable feedstock - then build and validate against a measurable outcome.
                             </p>
                         </div>
                         
                         <div class="text-block">
                             <h3>Experience</h3>
                             <p>
-                                Composites work at Boyd Cycling &amp; Time Bicycles; founder of Monte (monte3d.com); president of Duke Club Cycling. Across those roles I've moved between shop floor, software, and team leadership.
+                                Re:3D (rPP reclamation and FGF process development); Time Bicycles &amp; Boyd Cycling (RTM + impact testing); Monte founder (monte3d.com); Duke Club Cycling president (DukeCycling.dev). Shop floor, full-stack product, and team ops.
                             </p>
                         </div>
                     </div>
@@ -238,67 +257,87 @@
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-icon">
-                                    <img src="images/Extras/duke_logo.png" alt="Duke University" class="timeline-logo">
+                                    <img src="images/Extras/duke_logo.png" alt="" class="timeline-logo" aria-hidden="true" loading="lazy" decoding="async">
                                 </div>
                                 <div class="timeline-date">2024-2028</div>
                                 <div class="timeline-content">
                                     <h4>Duke University</h4>
-                                    <p>B.S. Mechanical Engineering + Innovation &amp; Entrepreneurship Certificate</p>
+                                    <p>B.S. Mechanical Engineering + Innovation &amp; Entrepreneurship Certificate &middot; 3.88 GPA &middot; expected May 2028</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-icon">
-                                    <img src="images/Extras/duke_logo.png" alt="Duke Cycling" class="timeline-logo">
+                                    <span class="timeline-logo timeline-logo--text" aria-hidden="true">Re:3D</span>
                                 </div>
-                                <div class="timeline-date">2024-Present</div>
+                                <div class="timeline-date">May-Aug 2026</div>
                                 <div class="timeline-content">
-                                    <h4>Duke Cycling Team President</h4>
-                                    <p>Lead operations and racing for the club; built DukeCycling.dev for scheduling and logistics</p>
+                                    <h4>Re:3D - R&amp;D Engineering Intern</h4>
+                                    <p>rPP reclamation and FGF print process development on large-format printers · Austin, TX</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-icon">
-                                    <img src="images/Internship/time_logo.jpeg" alt="Boyd Cycling & Time Bicycles" class="timeline-logo">
+                                    <img src="images/Extras/duke_logo.png" alt="" class="timeline-logo" aria-hidden="true" loading="lazy" decoding="async">
                                 </div>
-                                <div class="timeline-date">2025</div>
+                                <div class="timeline-date">Aug 2025-Aug 2026</div>
                                 <div class="timeline-content">
-                                    <h4>Boyd Cycling &amp; Time Bicycles Intern</h4>
-                                    <p>RTM process optimization, custom impact test rig, European composite tech transfer to U.S. ops</p>
+                                    <h4>Duke Club Cycling - President / Lead Safety Officer</h4>
+                                    <p>Executive planning and safety operations with development pathways for entry-level riders; built DukeCycling.dev</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-icon">
-                                    <img src="images/Extras/duke_logo.png" alt="Duke EGR101" class="timeline-logo">
+                                    <img src="images/Internship/time_logo.jpeg" alt="" class="timeline-logo" aria-hidden="true" loading="lazy" decoding="async">
+                                </div>
+                                <div class="timeline-date">May-Aug 2025</div>
+                                <div class="timeline-content">
+                                    <h4>Time Bicycles / Boyd Cycling - Process Optimization &amp; Test Engineering Intern</h4>
+                                    <p>RTM mold overhaul and a custom wheel-impact rig validated to the 40 J UCI standard · Greenville, SC</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <img src="images/Extras/duke_logo.png" alt="" class="timeline-logo" aria-hidden="true" loading="lazy" decoding="async">
                                 </div>
                                 <div class="timeline-date">2024</div>
                                 <div class="timeline-content">
-                                    <h4>EGR 101 - Bucket Washing Mechanism</h4>
-                                    <p>CompostNow cleaning system with a four-person team; 89% of buckets reached 95% cleanliness</p>
+                                    <h4>EGR 101 - Bucket Washing System, Lead Test Engineer</h4>
+                                    <p>CompostNow cleaning system with a four-person team; cut cleaning time 43% and operators from four to one</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-icon">
-                                    <img src="images/Extras/maccabiusa.png" alt="Maccabi USA" class="timeline-logo">
+                                    <img src="images/Extras/maccabiusa.png" alt="" class="timeline-logo" aria-hidden="true" loading="lazy" decoding="async">
                                 </div>
-                                <div class="timeline-date">2023-2024</div>
+                                <div class="timeline-date">2024-2025</div>
                                 <div class="timeline-content">
                                     <h4>MaccabiUSA Pan-American Athlete</h4>
-                                    <p>Cycling for MaccabiUSA at the Pan-American Games in Buenos Aires</p>
+                                    <p>One of three athletes selected to represent MaccabiUSA in road cycling at the Pan-American Games in Buenos Aires</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-icon">
-                                    <img src="images/Monte/monte_logo.png" alt="Monte" class="timeline-logo">
+                                    <img src="images/Monte/monte_logo.png" alt="" class="timeline-logo" aria-hidden="true" loading="lazy" decoding="async">
                                 </div>
                                 <div class="timeline-date">2021-Present</div>
                                 <div class="timeline-content">
-                                    <h4>Monte Founder</h4>
+                                    <h4>Monte - Founder</h4>
                                     <p>monte3d.com - Next.js / Three.js e-commerce for 3D-printed trail maps; GIS-to-STL production pipeline</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-icon">
-                                    <img src="images/Extras/nica_logo.png" alt="NICA Arkansas" class="timeline-logo">
+                                    <span class="timeline-logo timeline-logo--icon" aria-hidden="true"><i class="fas fa-shield-halved" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="timeline-date">2021-2024</div>
+                                <div class="timeline-content">
+                                    <h4>CyberPatriot - Team Founder, 3x State Champion</h4>
+                                    <p>Founded a high school cybersecurity program and built training for 15+ members across three teams</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <img src="images/Extras/nica_logo.png" alt="" class="timeline-logo" aria-hidden="true" loading="lazy" decoding="async">
                                 </div>
                                 <div class="timeline-date">2020-2024</div>
                                 <div class="timeline-content">
@@ -319,7 +358,7 @@
                     <span class="section-tag">Contact</span>
                     <h2 class="section-title">Get In Touch</h2>
                     <p class="section-subtitle">
-                        Open to engineering roles, collaborations, and project discussions.
+                        Open to engineering internships and collaborations.
                     </p>
                 </div>
                 
@@ -327,43 +366,43 @@
                     <div class="contact-info">
                         <div class="contact-items-grid">
                             <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
+                                <div class="contact-icon" aria-hidden="true">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div class="contact-details">
-                                    <h4>Email</h4>
+                                    <h3>Email</h3>
                                     <a href="mailto:westley.kleinman@duke.edu">westley.kleinman@duke.edu</a>
                                 </div>
                             </div>
                             
                             <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-icon" aria-hidden="true">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 </div>
                                 <div class="contact-details">
-                                    <h4>Location</h4>
+                                    <h3>Location</h3>
                                     <span>Duke University, Durham, NC</span>
                                 </div>
                             </div>
                             
                             <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-file-alt"></i>
+                                <div class="contact-icon" aria-hidden="true">
+                                    <i class="fas fa-file-alt" aria-hidden="true"></i>
                                 </div>
                                 <div class="contact-details">
-                                    <h4>Resume</h4>
-                                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                                    <h3>Resume</h3>
+                                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Download PDF</a>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="social-links">
                             <a href="https://linkedin.com/in/westley-kleinman-154048332" target="_blank" rel="noopener noreferrer" class="social-link">
-                                <i class="fab fa-linkedin"></i>
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
                                 <span>LinkedIn</span>
                             </a>
                             <a href="https://github.com/Westley-Kleinman" target="_blank" rel="noopener noreferrer" class="social-link">
-                                <i class="fab fa-github"></i>
+                                <i class="fab fa-github" aria-hidden="true"></i>
                                 <span>GitHub</span>
                             </a>
                         </div>
@@ -383,7 +422,7 @@
                     </div>
                     <p class="footer-text">
                         Mechanical Engineering Student at Duke University.<br>
-                        Building solutions from ideas to impact.
+                        Building mechanical systems and product software.
                     </p>
                 </div>
                 <div class="footer-right">
@@ -392,7 +431,7 @@
                         <a href="#about">About</a>
                         <a href="#projects">Projects</a>
                         <a href="#contact">Contact</a>
-                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
                     </div>
                 </div>
             </div>

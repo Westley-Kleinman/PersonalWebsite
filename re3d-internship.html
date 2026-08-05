@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Re:3D R&D Engineering Internship (2026) - end-to-end reclamation of M61 filter canisters into printable rPP feedstock, a 90 g FGF-printed drone frame validated to a 3.4x factor of safety, and printer fleet recovery in Austin, TX by Westley Kleinman.">
+    <meta name="keywords" content="Re:3D, rPP, recycled polypropylene, FGF pellet printing, LFAM, material reclamation, M61 canister, drone frame, SolidWorks FEA, Klipper, SBIR, Austin, Westley Kleinman">
+    <meta name="author" content="Westley Kleinman">
+    <title>Re:3D Internship - rPP Reclamation &amp; FGF Printing | Westley Kleinman</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="images/Extras/headshot.png?v=20260323">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/Extras/headshot.png?v=20260323">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/headshot.png?v=20260323">
+    <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
+    <meta name="theme-color" content="#0f766e">
+    
+    <link rel="stylesheet" href="styles.css?v=11">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9XCECK2SGS');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        /* Re:3D teal accent. Card structure lives in styles.css. */
+        .specs-card--dark {
+            --specs-grad-a: #0f766e;
+            --specs-grad-b: #134e4a;
+            --specs-accent: #5eead4;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">WK</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#projects" class="nav-link active">Projects</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="https://linkedin.com/in/westley-kleinman-154048332" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/Westley-Kleinman" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+            </div>
+            <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="main-content">
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-hero-content">
+                    <div class="project-hero-text">
+                        <div class="project-breadcrumb">
+                            <a href="index.html">Portfolio</a>
+                            <span>/</span>
+                            <span>Re:3D Internship</span>
+                        </div>
+                        <h1 class="hero-name">Re:3D - Waste Plastic to Printed Parts</h1>
+                        <p class="hero-subtitle">Research &amp; Development Engineering Intern · Austin, TX · Summer 2026</p>
+                        <p class="hero-description">
+                            Built an end-to-end material reclamation process that turns military base waste into 3D-printable feedstock, then proved it out by printing a flight-ready drone frame on large-format FGF pellet printers.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <div class="re3d-hero-card" aria-hidden="true">
+                            <i class="fas fa-recycle re3d-card-icon" aria-hidden="true"></i>
+                            <div class="re3d-card-mark">Re<span>:3</span>D</div>
+                            <span class="re3d-card-meta">Austin, TX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section" id="reclamation">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Material Reclamation</h2>
+                    <p class="section-subtitle">
+                        Turning M61 gas filter canisters into printable recycled polypropylene
+                    </p>
+                </div>
+
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Challenge</h3>
+                        <p>
+                            Spent M61 gas filter canisters are a steady waste stream on military bases, and the polypropylene in them is good material bonded to adhesives and contaminants. Nothing about the part as-received is printable.
+                        </p>
+
+                        <h3>Process</h3>
+                        <p>
+                            Developed an end-to-end reclamation path: strip adhesives and contaminants from the canister bodies, then granulate the cleaned polypropylene into rPP pellet feedstock sized for fused granulate fabrication (FGF) printing. The output feeds the same pellet printers Re:3D builds, with no virgin material added.
+                        </p>
+
+                        <h3>Proof of Concept</h3>
+                        <p>
+                            Used the reclaimed feedstock to print drone frames and completed initial proof-of-concept testing, demonstrating a closed loop from base waste to a functional part for real-world military applications.
+                        </p>
+                    </div>
+
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Reclamation Loop</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-filter" aria-hidden="true"></i>
+                                    <span>M61 canister feedstock</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-soap" aria-hidden="true"></i>
+                                    <span>Adhesive &amp; contaminant removal</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-cubes" aria-hidden="true"></i>
+                                    <span>Granulation to rPP pellets</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-print" aria-hidden="true"></i>
+                                    <span>FGF pellet printing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-secondary" id="drone-frame">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Drone Frame - DFM and FEA</h2>
+                    <p class="section-subtitle">Designing around how reclaimed rPP actually prints</p>
+                </div>
+
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Design for Manufacturability</h3>
+                        <p>
+                            Reclaimed rPP does not behave like virgin filament. I observed how the material laid down on the FGF machines - warp, bead geometry, layer adhesion - and iterated the drone frame's geometry so the design worked with the process instead of fighting it.
+                        </p>
+
+                        <h3>Structural Validation</h3>
+                        <p>
+                            Validated the frame in SolidWorks FEA against loads at maximum throttle, landing on roughly a 3.4x factor of safety while driving mass down to 90 grams. Weight and margin were traded against each other explicitly rather than being an afterthought.
+                        </p>
+                    </div>
+
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Frame Results</h4>
+                            <div class="spec-grid">
+                                <div class="spec-item">
+                                    <span class="spec-label">Material</span>
+                                    <span class="spec-value">Reclaimed rPP</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Mass</span>
+                                    <span class="spec-value">90 g</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Factor of Safety</span>
+                                    <span class="spec-value">~3.4x at max throttle</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Analysis</span>
+                                    <span class="spec-value">SolidWorks FEA</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Process</span>
+                                    <span class="spec-value">FGF pellet printing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section" id="fleet-and-profiles">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Printer Fleet &amp; Print Profiles</h2>
+                    <p class="section-subtitle">Getting machines back into production and qualifying new materials</p>
+                </div>
+
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Machine Recovery</h3>
+                        <p>
+                            Diagnosed and repaired hardware faults across broken and idle printers - Klipper MCU errors, stepper driver failures - and returned them to production with upgraded components. Test parts designed in SolidWorks confirmed each machine was back within tolerance, and two of those parts were adopted into production.
+                        </p>
+
+                        <h3>Profile Development</h3>
+                        <p>
+                            Developed FGF print profiles for new materials, including a large-format additive manufacturing (LFAM) run producing military pallet replacements under an SBIR grant, and ran contract print jobs for customers on the qualified machines.
+                        </p>
+                    </div>
+
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Scope</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>
+                                    <span>Klipper MCU &amp; stepper repair</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-arrow-up-right-dots" aria-hidden="true"></i>
+                                    <span>Two test parts into production</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-pallet" aria-hidden="true"></i>
+                                    <span>LFAM military pallets (SBIR)</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-handshake" aria-hidden="true"></i>
+                                    <span>Customer contract print jobs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Outcomes</h2>
+                    <p class="section-subtitle">What the summer produced</p>
+                </div>
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>A Working Waste Stream</h3>
+                        <p>
+                            The reclamation process takes a waste item that bases already have in volume and returns printable feedstock, closing the loop on-site rather than shipping material in.
+                        </p>
+                        <h3>Parts That Hold Up</h3>
+                        <p>
+                            The 90 gram drone frame printed from that feedstock passed structural validation with roughly 3.4x margin at max throttle, which is the evidence that reclaimed material can carry real loads.
+                        </p>
+                    </div>
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Highlights</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-recycle" aria-hidden="true"></i>
+                                    <span>Waste to feedstock, end to end</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-helicopter" aria-hidden="true"></i>
+                                    <span>90 g drone frame, ~3.4x FOS</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-industry" aria-hidden="true"></i>
+                                    <span>Printers restored to production</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-sliders" aria-hidden="true"></i>
+                                    <span>New FGF material profiles</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center back-link-row">
+                    <a href="index.html#projects" class="back-link">&larr; Back to projects</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo-text">WK</a>
+                    </div>
+                    <p class="footer-text">
+                        Mechanical Engineering Student at Duke University.<br>
+                        Building mechanical systems and product software.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#projects">Projects</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Westley Kleinman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

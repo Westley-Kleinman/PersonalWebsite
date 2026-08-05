@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boyd Cycling Internship (2025) - Guillotine carbon rim impact tester built in 72 hours and validated to the 40 J UCI standard, plus RTM mold and NCF layup optimization at Time Bicycles / Boyd Cycling by Westley Kleinman.">
+    <meta name="keywords" content="carbon fiber, impact testing, RTM process, mold optimization, Boyd Cycling, Time Bicycles, Guillotine, UCI 40 J, engineering, manufacturing, composite materials, NCF">
+    <meta name="author" content="Westley Kleinman">
+    <title>Boyd Cycling Internship - Impact Testing &amp; Mold Optimization | Westley Kleinman</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="images/Extras/headshot.png?v=20260323">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/Extras/headshot.png?v=20260323">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/headshot.png?v=20260323">
+    <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="styles.css?v=11">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9XCECK2SGS');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Page accent only — card structure lives in styles.css */
+        .specs-card--dark {
+            --specs-grad-a: #003087;
+            --specs-grad-b: #1e4d8b;
+            --specs-accent: #a8c5e8;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">WK</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#projects" class="nav-link active">Projects</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="https://linkedin.com/in/westley-kleinman-154048332" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/Westley-Kleinman" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+            </div>
+            <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="main-content">
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-hero-content">
+                    <div class="project-hero-text">
+                        <div class="project-breadcrumb">
+                            <a href="index.html">Portfolio</a>
+                            <span>/</span>
+                            <span>Boyd Cycling Internship</span>
+                        </div>
+                        <div class="project-hero-title-row">
+                        <h1 class="hero-name project-title-compact">Boyd Cycling Internship - Impact Testing &amp; Mold Optimization</h1>
+                        <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling logo" class="boyd-logo-badge" width="437" height="115" decoding="async">
+                        </div>
+                        <p class="hero-subtitle">Time Bicycles / Boyd Cycling · Process Optimization &amp; Test Engineering Intern · Greenville, SC · 2025</p>
+                        <p class="hero-description">
+                            Over summer 2025 in Greenville, I conceived and built a custom wheel-impact rig in a 72-hour sprint, validating rim durability to the 40 J UCI standard with capability up to 200 J. I also overhauled RTM mold geometry and machine calibration to eliminate dry zones and standardize resin distribution while holding competitive rim weight.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/Internship/Cover_photo.jpg" alt="Carbon rim positioned under the anvil of the wheel-impact test rig" width="1200" height="1600" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Carbon Rim Impact Tester ========== -->
+        <section class="project-section" id="impact-tester">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Carbon Rim Impact Tester</h2>
+                    <p class="section-subtitle">
+                        Custom impact apparatus validating carbon rim durability from the 40 J UCI standard up to 200 J.
+                    </p>
+                </div>
+                
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Challenge</h3>
+                        <p>
+                            Boyd needed a standardized impact tester immediately. No existing rig in the shop; three days to design and build something that could meet UCI-aligned drop testing.
+                        </p>
+                        
+                        <h3>Solution</h3>
+                        <p>
+                            Built a Guillotine-style tester with adjustable drop height and anvil mass, raised by an electric winch and released by an electromagnetic stopper for safe, repeatable drops. Frame from repurposed inventory shelving; guide rails and anvil from salvaged scrap, machined and welded on site. Supports multiple rim profiles without waiting on outside suppliers.
+                        </p>
+                        
+                        <div class="chart-container">
+                            <canvas id="impactChart" aria-label="Chart of impact energy versus anvil drop height for the rig's three anvil masses" role="img"></canvas>
+                        </div>
+                        <p class="video-caption text-center">Impact energy vs. drop height (E = mgh) across the rig's anvil masses, showing the 40 J UCI point and the 200 J ceiling</p>
+                    </div>
+                    
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Key Technologies</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-cogs" aria-hidden="true"></i>
+                                    <span>Custom Machine Design</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-drafting-compass" aria-hidden="true"></i>
+                                    <span>CAD Modeling</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-tools" aria-hidden="true"></i>
+                                    <span>Fabrication &amp; Welding</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                    <span>40 J UCI Standard</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">The Guillotine Rig</h2>
+                    <p class="section-subtitle">Controlled energy transfer to the rim structure</p>
+                </div>
+                
+                <div class="two-col-wide-grid">
+                    <div class="video-container video-container-compact">
+                        <video controls autoplay loop muted playsinline class="video-with-shadow">
+                            <source src="images/Internship/guillotine_working.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="video-caption">
+                            Rig in action - weighted anvil drop onto a carbon rim.
+                        </p>
+                    </div>
+
+                    <div class="project-text-content">
+                        <div class="overview-content">
+                            <h3>Function</h3>
+                            <p>
+                                Weighted anvil drops from adjustable heights to deliver controlled energy, simulating pothole strikes and similar road hazards. Calibrated against the 40 J UCI standard, with headroom to 200 J for destructive margin testing.
+                            </p>
+                            <h3>Build Approach</h3>
+                            <p>
+                                Compressed timeline forced scavenged materials and in-house fab: shelving for structure, scrap for rails and anvil, a winch and electromagnetic stopper for repeatable lifts and releases. Result was a shop-ready precision instrument without lead times.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Impact Tester Outcomes</h2>
+                    <p class="section-subtitle">What the 72-hour build unlocked</p>
+                </div>
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>In-House Capability</h3>
+                        <p>
+                            Boyd can now run 40 J UCI rim impact tests in-house without waiting on outside labs or suppliers. Adjustable height and anvil mass cover multiple rim profiles on the same fixture and reach 200 J for margin testing.
+                        </p>
+                        <h3>Shop Constraints</h3>
+                        <p>
+                            Built entirely from on-hand materials and in-house fab (shelving, scrap, welding, winch) so the tester was usable in days, not procurement cycles.
+                        </p>
+                    </div>
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Outcomes</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <span>72-hour design-to-build</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-industry" aria-hidden="true"></i>
+                                    <span>Shop-floor ready</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-ruler-combined" aria-hidden="true"></i>
+                                    <span>40 J to 200 J range</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                    <span>Winch + electromagnetic release</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Carbon Rim Mold Optimization ========== -->
+        <section class="project-section bg-secondary" id="mold-optimization">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Carbon Rim Mold Optimization</h2>
+                    <p class="section-subtitle">
+                        Process analysis and fixes for Resin Transfer Molding of high-performance carbon rims.
+                    </p>
+                </div>
+                
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Challenge</h3>
+                        <p>
+                            Inconsistent resin distribution was creating dry zones alongside resin-rich pooling - structural and cosmetic risks in production rims.
+                        </p>
+                        
+                        <h3>Approach</h3>
+                        <p>
+                            Tracked resin flow and cure behavior, then overhauled mold geometry and machine calibration - temperature, injection pressure, and layup schedules - to standardize fill while maintaining competitive rim weight. Also hand-wrapped Non-Crimp Fabric on wax frame molds to prototype fiber orientations that automation couldn't yet reach.
+                        </p>
+                    </div>
+                    
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Key Technologies</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-layer-group" aria-hidden="true"></i>
+                                    <span>RTM Composites</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-microscope" aria-hidden="true"></i>
+                                    <span>Defect Analysis</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-industry" aria-hidden="true"></i>
+                                    <span>Process Optimization</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-hands" aria-hidden="true"></i>
+                                    <span>NCF Hand Layup</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Manufacturing Work</h2>
+                    <p class="section-subtitle">Mold setup, winding, defect mapping, and NCF prototyping</p>
+                </div>
+
+                <div class="project-image-grid">
+                    <div class="analysis-image">
+                        <img src="images/Internship/Wheel_in_mold.jpg" alt="Carbon fiber rim preform seated in an open RTM mold half" loading="lazy" decoding="async" width="1050" height="1400">
+                        <div class="analysis-caption">RTM Mold Setup</div>
+                        <p class="analysis-desc">Carbon preform in the mold before resin injection.</p>
+                    </div>
+                    <div class="analysis-image">
+                        <video controls class="video-full-rounded">
+                            <source src="images/Internship/BobinWinder.MOV" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="analysis-caption">Bobbin Winder</div>
+                        <p class="analysis-desc">Automated winding of carbon fiber filaments.</p>
+                    </div>
+                </div>
+
+                <div class="project-image-grid">
+                    <div class="analysis-image">
+                        <img src="images/Internship/resin_rich_zones.jpg" alt="Cured rim surface showing glossy resin-rich pooling along the brake track" loading="lazy" decoding="async" width="1400" height="1046">
+                        <div class="analysis-caption">Resin-Rich Zones</div>
+                        <p class="analysis-desc">Mapped excess resin accumulation.</p>
+                    </div>
+                    <div class="analysis-image">
+                        <img src="images/Internship/resin_poor.jpg" alt="Dry zone on a cured rim where resin failed to fully penetrate the fiber" loading="lazy" decoding="async" width="1400" height="785">
+                        <div class="analysis-caption">Resin-Poor Zones</div>
+                        <p class="analysis-desc">Mapped insufficient resin penetration.</p>
+                    </div>
+                </div>
+
+                <div class="project-overview-grid overview-grid-top-margin">
+                    <div class="overview-content">
+                        <h3>Hand-Wrapped NCF Prototypes</h3>
+                        <p>
+                            For complex frame geometries, applied Non-Crimp Fabric by hand on wax molds to control fiber orientation in high-stress zones before committing those schedules to production tooling.
+                        </p>
+                    </div>
+                    <div class="analysis-image">
+                        <img src="images/Internship/hand_wrapped_carbon.jpg" alt="Non-crimp carbon fabric hand-wrapped around a wax frame mold" loading="lazy" decoding="async" width="1600" height="1200">
+                        <div class="analysis-caption">Hand-Wrapped Wax Mold</div>
+                        <p class="analysis-desc">NCF applied for prototype structural testing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mold Optimization Outcomes</h2>
+                    <p class="section-subtitle">Process changes that stuck in production</p>
+                </div>
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Defect Reduction</h3>
+                        <p>
+                            Mapped resin-rich and resin-poor zones, then adjusted mold temperature, injection pressure, and layup schedules to even out fill on production rims.
+                        </p>
+                        <h3>Prototype Path</h3>
+                        <p>
+                            Hand-wrapped NCF on wax molds let the team trial fiber orientations in high-stress zones before locking schedules into production tooling.
+                        </p>
+                    </div>
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Focus Areas</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-tint" aria-hidden="true"></i>
+                                    <span>Resin flow balance</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-thermometer-half" aria-hidden="true"></i>
+                                    <span>Mold temp / pressure</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-th" aria-hidden="true"></i>
+                                    <span>NCF hand layup</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-industry" aria-hidden="true"></i>
+                                    <span>RTM production rims</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center back-link-row">
+                    <a href="index.html#projects" class="back-link">&larr; Back to projects</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo-text">WK</a>
+                    </div>
+                    <p class="footer-text">
+                        Mechanical Engineering Student at Duke University.<br>
+                        Building mechanical systems and product software.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#projects">Projects</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Westley Kleinman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

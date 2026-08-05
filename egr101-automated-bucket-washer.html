@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CompostNow bucket washing system - EGR101 design project by Porter Collins, Arvin Deelchmuth, Oliver O'Donoghoe, and Westley Kleinman. 89% of buckets reached 95% cleanliness.">
-    <meta name="keywords" content="compost bucket washing, CompostNow, freshman design, two-device system, rinsing device, brushing device, EGR101">
+    <meta name="description" content="CompostNow bucket washing system - EGR 101 design project by Porter Collins, Arvin Deelchmuth, Oliver O'Donoghoe, and Westley Kleinman. Cut cleaning time 43% and reduced operators from four to one.">
+    <meta name="keywords" content="compost bucket washing, CompostNow, freshman design, two-device system, rinsing device, brushing device, EGR101, helical gears, lead test engineer">
     <meta name="author" content="Westley Kleinman">
     <title>Bucket Washing System | Westley Kleinman</title>
     <link rel="icon" type="image/png" sizes="512x512" href="images/Extras/headshot.png?v=20260323">
@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=11">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -28,38 +28,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
-        .project-hero-compact {
-            min-height: auto;
-            padding: 5rem 0 3rem;
-        }
-        .specs-card {
-            background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
-            border: none;
-        }
-        .specs-card h4 { color: white; }
-        .spec-item {
-            padding: 0.75rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            border-bottom: none;
-        }
-        .spec-label { color: rgba(255, 255, 255, 0.85); }
-        .spec-value { color: #a8c5e8; }
-        .project-poster-wrap {
-            text-align: center;
-            margin-bottom: var(--space-xl);
-        }
-        .project-poster-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
-            border: 2px solid #f0f0f0;
-        }
-        .project-poster-caption {
-            margin-top: var(--space-sm);
-            color: var(--text-secondary);
-            font-style: italic;
+        /* Duke blue accent. Card and poster structure live in styles.css. */
+        .specs-card--dark {
+            --specs-grad-a: #003087;
+            --specs-grad-b: #1e4d8b;
+            --specs-accent: #a8c5e8;
         }
     </style>
 </head>
@@ -72,10 +45,12 @@
             </div>
             <div class="nav-menu">
                 <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#projects" class="nav-link active">Projects</a>
                 <a href="index.html#about" class="nav-link">About</a>
-                <a href="index.html#projects" class="nav-link">Projects</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="https://linkedin.com/in/westley-kleinman-154048332" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/Westley-Kleinman" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
             </div>
             <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -94,28 +69,32 @@
                 
                 <div class="hero-main-content">
                     <div class="hero-photo-large">
-                        <img src="images/EGR101/GroupPhoto_EGR101.jpg" alt="EGR101 Project Team" class="hero-team-photo-large">
+                        <img src="images/EGR101/GroupPhoto_EGR101.jpg" alt="The four-person EGR 101 team standing with the finished rinsing and brushing devices" class="hero-team-photo-large" width="1400" height="1050" decoding="async">
                     </div>
                     
                     <div class="hero-content-right">
                         <h1 class="hero-name-side">Bucket Washing System</h1>
-                        <p class="hero-subtitle-side">EGR101 · CompostNow</p>
+                        <p class="hero-subtitle-side">EGR 101 Freshman Design · Lead Test Engineer · CompostNow · Fall 2024</p>
                         <p class="hero-description-side">
-                            Two-device rinsing and brushing system for CompostNow. Team of four; 89% of tested buckets reached 95% cleanliness, and 95% passed a 3 ft odor check.
+                            Two-stage rinsing and brushing system for CompostNow, built by a four-person team. It cut cleaning time by 43% and took the job from four operators down to one, with 89% of tested buckets reaching 95% cleanliness.
                         </p>
                         
                         <div class="hero-highlights-side">
                             <div class="highlight-item">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-stopwatch" aria-hidden="true"></i>
+                                <span>43% faster cleaning</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-user-minus" aria-hidden="true"></i>
+                                <span>4 operators to 1</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
                                 <span>89% hit 95% clean</span>
                             </div>
                             <div class="highlight-item">
-                                <i class="fas fa-spray-can"></i>
+                                <i class="fas fa-spray-can" aria-hidden="true"></i>
                                 <span>95% odor pass</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-users"></i>
-                                <span>4-person team</span>
                             </div>
                         </div>
                     </div>
@@ -123,22 +102,22 @@
             </div>
         </section>
 
-        <section class="project-overview">
+        <section class="project-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Overview</h2>
                     <p class="section-subtitle">
-                        Freshman design project for CompostNow container cleaning
+                        EGR 101 freshman design project for CompostNow container cleaning, Fall 2024
                     </p>
                 </div>
 
                 <div class="project-poster-wrap">
-                    <img src="images/EGR101/EGR101_Poster.png" alt="EGR101 Final Project Poster" class="project-poster-image">
+                    <img src="images/EGR101/EGR101_Poster.jpg" alt="Final EGR 101 project poster covering the problem, design, testing, and results for the bucket washing system" class="project-poster-image" loading="lazy" decoding="async" width="1600" height="1600">
                     <p class="project-poster-caption">Final project poster</p>
                 </div>
 
                 <div class="video-container">
-                    <video controls>
+                    <video controls preload="metadata">
                         <source src="images/EGR101/EGR101_DisplayVideo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -147,7 +126,7 @@
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="project-section bg-secondary">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Problem &amp; Design</h2>
@@ -163,12 +142,17 @@
                         
                         <h3>Design</h3>
                         <p>
-                            <strong>Rinsing device</strong> - spray nozzles on a PVC frame with a foot-pedal water valve for hands-free first pass. <strong>Brushing device</strong> - motor-driven rotating brushes with bearings, gears, and mounting plates to scrub remaining residue.
+                            <strong>Rinsing device</strong> - spray nozzles on a PVC frame with a foot-pedal water valve for a hands-free first pass. <strong>Brushing device</strong> - a 24V motor driving rotating brushes through 3D-printed PLA helical gears, with bearings and mounting plates to scrub remaining residue. Components were modeled in SolidWorks and fabricated by laser cutting and 3D printing.
                         </p>
                         
                         <h3>Criteria</h3>
                         <p>
                             Targets: 95% clean buckets, no odor detectable from 3+ ft, durability for ~2,400 hours of use, and safe operation under intended use.
+                        </p>
+
+                        <h3>Testing</h3>
+                        <p>
+                            As lead test engineer, I ran structured cleanliness and odor testing across a 20-bucket sample to validate performance against each defined design criterion.
                         </p>
 
                         <h3>Team</h3>
@@ -178,7 +162,7 @@
                     </div>
                     
                     <div class="overview-specs">
-                        <div class="specs-card">
+                        <div class="specs-card specs-card--dark">
                             <h4>Specs</h4>
                             <div class="spec-grid">
                                 <div class="spec-item">
@@ -194,12 +178,12 @@
                                     <span class="spec-value">Rinse + Brush</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Cleanliness</span>
-                                    <span class="spec-value">89% †' 95% clean</span>
+                                    <span class="spec-label">Drive</span>
+                                    <span class="spec-value">24V motor, PLA helical gears</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Odor</span>
-                                    <span class="spec-value">95% pass @ 3 ft</span>
+                                    <span class="spec-label">Test Sample</span>
+                                    <span class="spec-value">20 buckets</span>
                                 </div>
                                 <div class="spec-item">
                                     <span class="spec-label">Team</span>
@@ -211,6 +195,54 @@
                 </div>
             </div>
         </section>
+
+        <section class="project-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Impact</h2>
+                    <p class="section-subtitle">Measured cleaning performance across a 20-bucket sample</p>
+                </div>
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Results</h3>
+                        <p>
+                            Across a 20-bucket sample, 89% of buckets reached 95% cleanliness and 95% passed a 3 ft odor check - meeting the primary client criteria for return-to-customer readiness. Overall the system cut cleaning time by 43% and reduced the operators required from four to one.
+                        </p>
+                        <h3>Design Takeaway</h3>
+                        <p>
+                            Splitting rinse and brush into two devices kept each station simple to build and operate while still hitting durability and safety targets for ~2,400 hours of intended use.
+                        </p>
+                    </div>
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Metrics</h4>
+                            <div class="spec-grid">
+                                <div class="spec-item">
+                                    <span class="spec-label">Cleaning Time</span>
+                                    <span class="spec-value">43% reduction</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Operators</span>
+                                    <span class="spec-value">4 to 1</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cleanliness</span>
+                                    <span class="spec-value">89% hit 95%</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Odor</span>
+                                    <span class="spec-value">95% pass @ 3 ft</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center back-link-row">
+                    <a href="index.html#projects" class="back-link">&larr; Back to projects</a>
+                </p>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -222,7 +254,7 @@
                     </div>
                     <p class="footer-text">
                         Mechanical Engineering Student at Duke University.<br>
-                        Building solutions from ideas to impact.
+                        Building mechanical systems and product software.
                     </p>
                 </div>
                 <div class="footer-right">
@@ -231,7 +263,7 @@
                         <a href="index.html#about">About</a>
                         <a href="index.html#projects">Projects</a>
                         <a href="index.html#contact">Contact</a>
-                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
                     </div>
                 </div>
             </div>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Duke Club Cycling & DukeCycling.dev - team president and developer of the club's ride and race platform by Westley Kleinman.">
-    <meta name="keywords" content="Duke Cycling, Web Development, Team Management, Ride Scheduling, Collegiate Cycling, Leadership">
+    <meta name="description" content="Duke Club Cycling & DukeCycling.dev - president, lead safety officer, and developer of the club's ride and race platform (2025-2026) by Westley Kleinman.">
+    <meta name="keywords" content="Duke Cycling, Web Development, Team Management, Ride Scheduling, Collegiate Cycling, Leadership, Safety Officer">
     <meta name="author" content="Westley Kleinman">
     <title>Duke Cycling &amp; Website | Westley Kleinman</title>
     <link rel="icon" type="image/png" sizes="512x512" href="images/Extras/headshot.png?v=20260323">
@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=11">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -28,19 +28,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
-        .specs-card {
-            background: linear-gradient(135deg, #003087 0%, #1e4d8b 100%);
-            border: none;
+        /* Duke blue accent. Card structure lives in styles.css. */
+        .specs-card--dark {
+            --specs-grad-a: #003087;
+            --specs-grad-b: #1e4d8b;
+            --specs-accent: #a8c5e8;
         }
-        .specs-card h4 { color: white; }
-        .spec-item {
-            padding: 0.75rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            border-bottom: none;
-        }
-        .spec-label { color: rgba(255, 255, 255, 0.85); }
-        .spec-value { color: #a8c5e8; }
     </style>
 </head>
 <body>
@@ -52,10 +45,12 @@
             </div>
             <div class="nav-menu">
                 <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#projects" class="nav-link active">Projects</a>
                 <a href="index.html#about" class="nav-link">About</a>
-                <a href="index.html#projects" class="nav-link">Projects</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="https://linkedin.com/in/westley-kleinman-154048332" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/Westley-Kleinman" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
             </div>
             <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -74,9 +69,9 @@
                             <span>Duke Cycling</span>
                         </div>
                         <h1 class="hero-name">Duke Club Cycling</h1>
-                        <p class="hero-subtitle">Team President &amp; Developer of DukeCycling.dev</p>
+                        <p class="hero-subtitle">President / Lead Safety Officer · Developer of DukeCycling.dev · 2025-2026</p>
                         <p class="hero-description">
-                            Lead Duke's cycling club and built the team's web hub for ride scheduling, race logistics, and local resources.
+                            Lead executive planning and safety operations for Duke's cycling club, prioritizing development pathways for entry-level riders, and built the team's web hub for ride scheduling, team history, and ride proposals.
                         </p>
                         <div class="link-row">
                             <a href="https://dukecycling.dev/" target="_blank" rel="noopener noreferrer" class="nav-cta inline-block">Visit Website</a>
@@ -84,7 +79,7 @@
                     </div>
                     <div class="project-image">
                         <div class="duke-hero-card">
-                            <img src="images/Extras/duke_logo.png" alt="Duke Cycling" class="duke-hero-logo">
+                            <img src="images/Extras/duke_logo.png" alt="" class="duke-hero-logo" aria-hidden="true" decoding="async">
                             <span class="duke-hero-text">DukeCycling.dev</span>
                         </div>
                     </div>
@@ -92,7 +87,7 @@
             </div>
         </section>
 
-        <section class="project-overview">
+        <section class="project-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Overview</h2>
@@ -108,22 +103,26 @@
                         
                         <h3>DukeCycling.dev</h3>
                         <p>
-                            Built a dedicated site with a dynamic ride calendar (view and submit), race schedule tracking, and a curated list of Triangle-area routes and resources. Centralizes day-to-day ops for 50+ members.
+                            Built a full-stack site with a dynamic ride calendar (view and submit), team history, race schedule tracking, and a curated list of Triangle-area routes and resources. Centralizes day-to-day ops for 50+ members.
                         </p>
                         
                         <h3>Leadership</h3>
                         <p>
-                            As president: budget, planning, and community. The site supports that - onboarding new riders, finding rides, and connecting people without chasing Slack threads.
+                            As president and lead safety officer: budget, planning, safety operations, and community, with a deliberate focus on development pathways for entry-level riders. The site supports that - onboarding new riders, finding rides, and connecting people without chasing Slack threads.
                         </p>
                     </div>
                     
                     <div class="overview-sidebar">
-                        <div class="specs-card">
+                        <div class="specs-card specs-card--dark">
                             <h4>Role</h4>
                             <div class="spec-grid">
                                 <div class="spec-item">
                                     <span class="spec-label">Title</span>
-                                    <span class="spec-value">President</span>
+                                    <span class="spec-value">President / Safety Officer</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Term</span>
+                                    <span class="spec-value">2025-2026</span>
                                 </div>
                                 <div class="spec-item">
                                     <span class="spec-label">Build</span>
@@ -140,29 +139,79 @@
                             </div>
                         </div>
                         
-                        <div class="specs-card specs-card-duke-alt">
+                        <div class="specs-card specs-card--dark specs-card-duke-alt">
                             <h4>Platform Features</h4>
-                            <div class="achievement-item">
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>Ride Calendar</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-flag-checkered"></i>
-                                <span>Race Logistics</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-map-marked-alt"></i>
-                                <span>Route Repository</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-users"></i>
-                                <span>Member Onboarding</span>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    <span>Ride Calendar</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-flag-checkered" aria-hidden="true"></i>
+                                    <span>Race Logistics</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                                    <span>Route Repository</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-users" aria-hidden="true"></i>
+                                    <span>Member Onboarding</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="project-section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Impact</h2>
+                    <p class="section-subtitle">Ops + software for a 50+ member club</p>
+                </div>
+                <div class="project-overview-grid">
+                    <div class="overview-content">
+                        <h3>Single Source of Truth</h3>
+                        <p>
+                            DukeCycling.dev replaced scattered tools with one hub for ride submissions, race schedules, and Triangle-area routes - cutting the Slack chase for new and returning riders.
+                        </p>
+                        <h3>Leadership</h3>
+                        <p>
+                            As president and lead safety officer: budget, race planning, safety operations, and community. The site supports onboarding and day-to-day logistics so leadership time goes to coaching and racing, not link hunting.
+                        </p>
+                    </div>
+                    <div class="overview-specs">
+                        <div class="specs-card specs-card--dark">
+                            <h4>Outcomes</h4>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <i class="fas fa-users" aria-hidden="true"></i>
+                                    <span>50+ active members</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    <span>Live ride calendar</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-flag-checkered" aria-hidden="true"></i>
+                                    <span>Race logistics hub</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-globe" aria-hidden="true"></i>
+                                    <span>dukecycling.dev live</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center back-link-row">
+                    <a href="index.html#projects" class="back-link">&larr; Back to projects</a>
+                </p>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -174,7 +223,7 @@
                     </div>
                     <p class="footer-text">
                         Mechanical Engineering Student at Duke University.<br>
-                        Building solutions from ideas to impact.
+                        Building mechanical systems and product software.
                     </p>
                 </div>
                 <div class="footer-right">
@@ -183,7 +232,7 @@
                         <a href="index.html#about">About</a>
                         <a href="index.html#projects">Projects</a>
                         <a href="index.html#contact">Contact</a>
-                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
                     </div>
                 </div>
             </div>

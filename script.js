@@ -22,46 +22,48 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Chart.js - impact tester page only
+    // Chart.js - impact tester page only.
+    // Impact energy is just E = mgh, so the curves are the rig's actual
+    // operating envelope rather than illustrative data.
     const ctx = document.getElementById('impactChart');
     if (ctx && typeof Chart !== 'undefined') {
         const gridColor = '#e2e8f0';
-        const textColor = '#64748b';
+        const textColor = '#475569';
+        const heights = Array.from({ length: 21 }, (_, i) => i * 0.1);
+        const anvilMasses = [
+            { mass: 10, color: '#93c5fd' },
+            { mass: 25, color: '#3b82f6' },
+            { mass: 50, color: '#1d4ed8' }
+        ];
 
         window.impactChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: Array.from({length: 50}, (_, i) => i * 0.1),
-                datasets: [{
-                    label: 'Impact Force (N)',
-                    data: Array.from({length: 50}, (_, i) => {
-                        const x = i * 0.1;
-                        if (x < 2 || x > 3) return 0;
-                        return 1500 * Math.sin((x - 2) * Math.PI);
-                    }),
-                    borderColor: '#2563eb',
-                    backgroundColor: 'rgba(37, 99, 235, 0.2)',
+                labels: heights.map(h => h.toFixed(1)),
+                datasets: anvilMasses.map(({ mass, color }) => ({
+                    label: `${mass} kg anvil`,
+                    data: heights.map(h => +(mass * 9.81 * h).toFixed(1)),
+                    borderColor: color,
+                    backgroundColor: color,
                     borderWidth: 2,
-                    tension: 0.4,
-                    fill: true
-                }]
+                    tension: 0,
+                    pointRadius: 0
+                }))
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                animation: {
-                    y: {
-                        duration: 2000,
-                        easing: 'easeOutBounce'
-                    }
-                },
+                interaction: { mode: 'index', intersect: false },
                 scales: {
                     y: {
                         beginAtZero: true,
+                        suggestedMax: 220,
+                        title: { display: true, text: 'Impact energy (J)', color: textColor },
                         grid: { color: gridColor },
                         ticks: { color: textColor }
                     },
                     x: {
+                        title: { display: true, text: 'Drop height (m)', color: textColor },
                         grid: { color: gridColor },
                         ticks: { color: textColor }
                     }
@@ -69,6 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 plugins: {
                     legend: {
                         labels: { color: textColor }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: item => `${item.dataset.label}: ${item.formattedValue} J`
+                        }
                     }
                 }
             }
@@ -101,22 +108,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll for in-page anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            const target = document.querySelector(href);
+            if (!target) return;
+
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offsetTop = target.offsetTop - 70;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
+            window.scrollTo({
+                top: target.offsetTop - 70,
+                behavior: prefersReducedMotion ? 'auto' : 'smooth'
+            });
         });
     });
 
-    // Active nav highlighting
+    // Active nav highlighting (homepage hash links only; project pages keep fixed Projects active)
     const sections = document.querySelectorAll('section[id]');
+    const hasInPageHashNav = Boolean(document.querySelector('.nav-menu a.nav-link[href^="#"]'));
     
     function updateActiveNavigation() {
+        if (!hasInPageHashNav) return;
+
         const scrollPosition = window.scrollY + 100;
 
         sections.forEach(section => {
@@ -170,10 +182,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingText = document.querySelector('.typing-text');
     if (typingText) {
         const phrases = [
-            "Mechanical Engineering Student",
-            "Entrepreneur",
-            "Innovator",
-            "Problem Solver"
+            "Mechanical Engineering · Duke",
+            "CAD · Composites · Fabrication",
+            "Next.js · Three.js · Python",
+            "Re:3D R&D Intern · Monte Founder"
         ];
         let phraseIndex = 0;
         let charIndex = 0;
