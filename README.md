@@ -29,7 +29,7 @@ Rising junior in Mechanical Engineering at Duke University (B.S. expected May 20
 - **LinkedIn**: [linkedin.com/in/westley-kleinman-154048332](https://linkedin.com/in/westley-kleinman-154048332)
 - **GitHub**: [github.com/Westley-Kleinman](https://github.com/Westley-Kleinman)
 - **Website**: [westleykleinman.com](https://westleykleinman.com)
-- **Resume**: [resume.pdf](resume.pdf)
+- **Resume**: [resume.pdf](resume.pdf?v=20260805)
 
 ## Deployment
 Static site - deploy to any static host. No build step.
