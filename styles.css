@@ -781,8 +781,7 @@ section.bg-secondary {
     }
 }
 
-/* Projects Section — equal-weight cards; 3+2 centered on desktop (not 5-col:
-   five narrow columns cramped titles/descriptions at ~1200px). */
+/* Project / experience card grids — equal cards within each section; no orphans */
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -798,37 +797,18 @@ section.bg-secondary {
     }
 }
 
-/* Tablet: 2-col; orphan 5th card centered at half-row width */
-@media (min-width: 640px) and (max-width: 899px) {
-    .projects-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .projects-grid .project-card {
-        grid-column: span 2;
-    }
-
-    .projects-grid .project-card:nth-child(5) {
-        grid-column: 2 / 4;
+/* Work Experience: 2 equal cards side-by-side from tablet up */
+@media (min-width: 640px) {
+    .projects-grid--two {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
     }
 }
 
-/* Desktop: 3 equal top, 2 equal bottom centered (6-col track, cards span 2) */
+/* Projects: 3 equal cards on desktop; stack below to avoid a 2+1 orphan row */
 @media (min-width: 900px) {
-    .projects-grid {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .projects-grid .project-card {
-        grid-column: span 2;
-    }
-
-    .projects-grid .project-card:nth-child(4) {
-        grid-column: 2 / 4;
-    }
-
-    .projects-grid .project-card:nth-child(5) {
-        grid-column: 4 / 6;
+    .projects-grid--three {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

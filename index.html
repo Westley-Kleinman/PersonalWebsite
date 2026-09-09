@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="styles.css?v=11">
+    <link rel="stylesheet" href="styles.css?v=12">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -49,6 +49,7 @@
             </div>
             <div class="nav-menu">
                 <a href="#home" class="nav-link active">Home</a>
+                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -118,18 +119,18 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
+        <!-- Work Experience -->
+        <section id="experience" class="experience bg-secondary">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Portfolio</span>
-                    <h2 class="section-title">Featured Projects</h2>
+                    <span class="section-tag">Experience</span>
+                    <h2 class="section-title">Work Experience</h2>
                     <p class="section-subtitle">
-                        Recycled-material printing, composites process work, a live manufacturing platform, and design builds
+                        Industry R&amp;D and process engineering roles in additive manufacturing and composites
                     </p>
                 </div>
-                
-                <div class="projects-grid">
+
+                <div class="projects-grid projects-grid--two">
                     <a href="re3d-internship.html" class="project-card">
                         <div class="project-image">
                             <img src="images/Re3D/feedstock-to-drone-frame.jpg" alt="Recycled plastic canister and FGF-printed drone frame from the Re:3D internship" loading="lazy" decoding="async" width="768" height="1024">
@@ -142,21 +143,6 @@
                             <h3 class="project-title">rPP FGF Printing — Re:3D</h3>
                             <p class="project-description">
                                 Built a reclamation process turning filter canisters into printable rPP feedstock, printed an FGF drone frame (~140 g final), restored BlackBot, and designed a beacon mount now entering production.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="monte-3d-maps.html" class="project-card">
-                        <div class="project-image">
-                            <img src="images/Monte/monte-product-hero.jpg" alt="Monte 3D-printed topographic trail map of a mountain" loading="lazy" decoding="async" width="1400" height="1200">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-type">Venture</span>
-                                <span class="project-year">2021-Present</span>
-                            </div>
-                            <h3 class="project-title">Monte</h3>
-                            <p class="project-description">
-                                3D-printed topographic trail maps with a Next.js / Three.js storefront and proprietary GIS-to-STL pipeline. Live at monte3d.com.
                             </p>
                         </div>
                     </a>
@@ -175,6 +161,37 @@
                             </div>
                             <p class="project-description">
                                 Built a wheel-impact rig in 72 hours that validates rims to the 40 J UCI standard with headroom to 200 J, and overhauled RTM mold geometry to eliminate dry zones on production rims.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">
+                        Venture builds, design coursework, and leadership software outside formal internships
+                    </p>
+                </div>
+
+                <div class="projects-grid projects-grid--three">
+                    <a href="monte-3d-maps.html" class="project-card">
+                        <div class="project-image">
+                            <img src="images/Monte/monte-product-hero.jpg" alt="Monte 3D-printed topographic trail map of a mountain" loading="lazy" decoding="async" width="1400" height="1200">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Venture</span>
+                                <span class="project-year">2021-Present</span>
+                            </div>
+                            <h3 class="project-title">Monte</h3>
+                            <p class="project-description">
+                                3D-printed topographic trail maps with a Next.js / Three.js storefront and proprietary GIS-to-STL pipeline. Live at monte3d.com.
                             </p>
                         </div>
                     </a>
@@ -425,8 +442,9 @@
                 <div class="footer-right">
                     <div class="footer-links">
                         <a href="#home">Home</a>
-                        <a href="#about">About</a>
+                        <a href="#experience">Experience</a>
                         <a href="#projects">Projects</a>
+                        <a href="#about">About</a>
                         <a href="#contact">Contact</a>
                         <a href="resume.pdf?v=20260805" target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
                     </div>

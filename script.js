@@ -3,23 +3,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
-    // GSAP - project card stagger on homepage
+    // GSAP - project card stagger on homepage (per section grid)
     if (!prefersReducedMotion && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
 
-        const projectCards = document.querySelectorAll('.project-card');
-        if (projectCards.length > 0) {
-            gsap.from(projectCards, {
+        document.querySelectorAll('.projects-grid').forEach(grid => {
+            const cards = grid.querySelectorAll('.project-card');
+            if (cards.length === 0) return;
+
+            gsap.from(cards, {
                 opacity: 0,
                 y: 50,
                 duration: 0.8,
                 stagger: 0.2,
                 scrollTrigger: {
-                    trigger: ".projects-grid",
+                    trigger: grid,
                     start: "top 80%"
                 }
             });
-        }
+        });
     }
 
     // Chart.js - impact tester page only.
@@ -122,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Active nav highlighting (homepage hash links only; project pages keep fixed Projects active)
+    // Active nav highlighting (homepage hash links only; detail pages keep fixed Experience/Projects active)
     const sections = document.querySelectorAll('section[id]');
     const hasInPageHashNav = Boolean(document.querySelector('.nav-menu a.nav-link[href^="#"]'));
     
@@ -275,9 +277,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollIndicator = document.querySelector('.scroll-indicator');
     if (scrollIndicator) {
         scrollIndicator.addEventListener('click', () => {
-            const projectsSection = document.getElementById('projects');
-            if (projectsSection) {
-                projectsSection.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+            const firstPortfolio = document.getElementById('experience') || document.getElementById('projects');
+            if (firstPortfolio) {
+                firstPortfolio.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
             }
         });
     }

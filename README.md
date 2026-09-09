@@ -17,12 +17,14 @@ Rising junior in Mechanical Engineering at Duke University (B.S. expected May 20
 - **Software**: Python (GDAL / geopandas), Blender, Next.js, Three.js, TypeScript
 - **Testing**: Custom impact test equipment, structured design validation
 
-## Featured Projects
+## Work Experience
 1. **Re:3D Internship** - M61 canister reclamation into printable rPP; 90 g FGF drone frame (~3.4x FOS); printer fleet recovery and FGF profiles (SBIR)
-2. **Monte** - 3D-printed topographic trail maps; Next.js / Three.js e-commerce and GIS-to-STL pipeline at monte3d.com
-3. **Boyd Cycling Internship** - Wheel-impact rig (40 J UCI, up to 200 J) and RTM mold optimization at Time Bicycles / Boyd Cycling
-4. **Bucket Washing System** - EGR101 CompostNow system; 43% faster cleaning, operators from 4 to 1
-5. **Duke Club Cycling** - Leadership and DukeCycling.dev for ride scheduling, history, and proposals
+2. **Boyd Cycling Internship** - Wheel-impact rig (40 J UCI, up to 200 J) and RTM mold optimization at Time Bicycles / Boyd Cycling
+
+## Projects
+1. **Monte** - 3D-printed topographic trail maps; Next.js / Three.js e-commerce and GIS-to-STL pipeline at monte3d.com
+2. **Bucket Washing System** - EGR101 CompostNow system; 43% faster cleaning, operators from 4 to 1
+3. **Duke Club Cycling** - Leadership and DukeCycling.dev for ride scheduling, history, and proposals
 
 ## Contact
 - **Email**: westley.kleinman@duke.edu
