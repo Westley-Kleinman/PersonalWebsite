@@ -25,6 +25,7 @@ Rising junior in Mechanical Engineering at Duke University (B.S. expected May 20
 1. **Monte** - 3D-printed topographic trail maps; Next.js / Three.js e-commerce and GIS-to-STL pipeline at monte3d.com
 2. **Bucket Washing System** - EGR101 CompostNow system; 43% faster cleaning, operators from 4 to 1
 3. **Duke Club Cycling** - Leadership and DukeCycling.dev for ride scheduling, history, and proposals
+4. **AI Side Quests** - Blackjack basic-strategy and card-counting game, plus the local multiplayer Lantern Kart Rally build
 
 ## Contact
 - **Email**: westley.kleinman@duke.edu

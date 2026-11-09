@@ -799,13 +799,14 @@ section.bg-secondary {
 
 /* Work Experience: 2 equal cards side-by-side from tablet up */
 @media (min-width: 640px) {
-    .projects-grid--two {
+    .projects-grid--two,
+    .projects-grid--four {
         grid-template-columns: repeat(2, 1fr);
         max-width: 900px;
     }
 }
 
-/* Projects: 3 equal cards on desktop; stack below to avoid a 2+1 orphan row */
+/* Three-card layouts use one row on desktop. */
 @media (min-width: 900px) {
     .projects-grid--three {
         grid-template-columns: repeat(3, 1fr);
@@ -1272,6 +1273,111 @@ section.bg-secondary {
     font-weight: 600;
     font-size: 1rem;
     letter-spacing: 0.02em;
+}
+
+/* Playful cover art for the two game experiments. */
+.project-image--games,
+.project-card .project-image--games {
+    background: #142235;
+}
+
+.games-card-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 25% 30%, #294766, transparent 55%),
+        radial-gradient(circle at 80% 75%, #236c68, transparent 50%), #142235;
+}
+
+.games-card-playing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: clamp(3.5rem, 8vw, 5.5rem);
+    aspect-ratio: 0.7;
+    padding: 0.45rem 0.6rem;
+    border-radius: 0.55rem;
+    background: #fffaf0;
+    color: #1b2b3b;
+    font-family: var(--font-mono);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 700;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+    transform: rotate(-10deg);
+}
+
+.games-card-playing-card span {
+    align-self: flex-end;
+    font-size: 1.35em;
+    line-height: 1;
+}
+
+.games-card-plus {
+    color: #98e5ce;
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.games-card-kart {
+    display: grid;
+    place-items: center;
+    width: clamp(4.2rem, 10vw, 6rem);
+    aspect-ratio: 1;
+    border: 3px solid #ffd783;
+    border-radius: 1rem;
+    color: #ffd783;
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    background: #213b4b;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    transform: rotate(8deg);
+}
+
+.game-experiments {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.game-experiment {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-xl);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-lg);
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.game-experiment .project-type {
+    align-self: flex-start;
+}
+
+.game-experiment h2 {
+    margin: var(--space-sm) 0;
+    color: var(--text-primary);
+    font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+}
+
+.game-experiment p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.game-experiment .link-row {
+    margin-top: auto;
+    padding-top: var(--space-md);
+}
+
+@media (max-width: 768px) {
+    .game-experiments {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Re:3D project card — intentional logo/gradient placeholder */
