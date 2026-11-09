@@ -11,10 +11,11 @@
     <link rel="icon" type="image/png" sizes="192x192" href="images/Extras/headshot.png?v=20260323">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/headshot.png?v=20260323">
     <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#101820">
     
     <link rel="stylesheet" href="styles.css?v=12">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
@@ -24,9 +25,6 @@
       gtag('js', new Date());
       gtag('config', 'G-9XCECK2SGS');
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
         /* Duke blue accent. Card structure lives in styles.css. */
         .specs-card--dark {
@@ -45,7 +43,7 @@
             </div>
             <div class="nav-menu">
                 <a href="index.html#home" class="nav-link">Home</a>
-                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#experience" class="nav-link">Work</a>
                 <a href="index.html#projects" class="nav-link active">Projects</a>
                 <a href="index.html#about" class="nav-link">About</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
@@ -75,7 +73,7 @@
                             Lead executive planning and safety operations for Duke's cycling club, prioritizing development pathways for entry-level riders, and built the team's web hub for ride scheduling, team history, and ride proposals.
                         </p>
                         <div class="link-row">
-                            <a href="https://dukecycling.dev/" target="_blank" rel="noopener noreferrer" class="nav-cta inline-block">Visit Website</a>
+                            <a href="https://github.com/Westley-Kleinman/Duke-Cycling" target="_blank" rel="noopener noreferrer" class="nav-cta inline-block">View Project Source</a>
                         </div>
                     </div>
                     <div class="project-image">
@@ -88,7 +86,11 @@
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="case-brief" aria-label="Project at a glance"><div class="container"><p class="case-kicker">At a glance / duke cycling</p><dl><div><dt>Context</dt><dd>Club rides, race information, and member resources were scattered.</dd></div><div><dt>Role</dt><dd>President, Lead Safety Officer, and developer of DukeCycling.dev.</dd></div><div><dt>Process</dt><dd>Create a web hub for rides, team history, and route resources.</dd></div><div><dt>Technical decision</dt><dd>Put recurring club logistics in one place for members.</dd></div><div><dt>Result</dt><dd>A shared platform supporting a club of 50+ members.</dd></div></dl></div></section>
+        <nav class="case-index" aria-label="On this page"><div class="container case-index-inner"><span class="case-index-title">In this case study</span><div class="case-index-links"><a href="#overview">Overview</a><a href="#impact">Impact</a></div></div></nav>
+
+
+        <section class="project-section" id="overview">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Overview</h2>
@@ -166,7 +168,7 @@
             </div>
         </section>
 
-        <section class="project-section bg-secondary">
+        <section class="project-section bg-secondary" id="impact">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Impact</h2>
@@ -201,7 +203,7 @@
                                 </div>
                                 <div class="achievement-item">
                                     <i class="fas fa-globe" aria-hidden="true"></i>
-                                    <span>dukecycling.dev live</span>
+                                    <span>DukeCycling.dev platform</span>
                                 </div>
                             </div>
                         </div>
@@ -213,6 +215,8 @@
             </div>
         </section>
 
+
+        <aside class="case-next"><div class="container case-next-inner"><div><small>Continue exploring</small><a href="ai-side-quests.html">AI Side Quests ↗</a></div><a class="back-link" href="index.html#projects">← All projects</a></div></aside>
     </main>
 
     <footer class="footer">
@@ -230,7 +234,7 @@
                 <div class="footer-right">
                     <div class="footer-links">
                         <a href="index.html">Home</a>
-                        <a href="index.html#experience">Experience</a>
+                        <a href="index.html#experience">Work</a>
                         <a href="index.html#projects">Projects</a>
                         <a href="index.html#about">About</a>
                         <a href="index.html#contact">Contact</a>

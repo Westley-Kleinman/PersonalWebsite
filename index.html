@@ -12,10 +12,11 @@
     <link rel="icon" type="image/png" sizes="192x192" href="images/Extras/headshot.png?v=20260323">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/headshot.png?v=20260323">
     <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#101820">
     
     <link rel="stylesheet" href="styles.css?v=13">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google tag (gtag.js) -->
@@ -28,9 +29,6 @@
       gtag('config', 'G-9XCECK2SGS');
     </script>
 
-    <!-- GSAP & ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
@@ -49,7 +47,7 @@
             </div>
             <div class="nav-menu">
                 <a href="#home" class="nav-link active">Home</a>
-                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#experience" class="nav-link">Work</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -68,53 +66,43 @@
 
     <!-- Main Content -->
     <main id="main-content" class="main-content">
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <p class="hero-greeting">Hello, I'm</p>
-                        <h1 class="hero-name">Westley Kleinman</h1>
-                        <p class="hero-title">
-                            <span class="typing-text">Mechanical Engineering · Duke</span>
-                        </p>
-                        <p class="hero-description">
-                            Duke ME rising junior. R&amp;D engineering intern at Re:3D turning waste plastic into printable feedstock; founder of Monte (Next.js / Three.js / GIS-to-STL at monte3d.com). Mechanical hardware meets product software.
-                        </p>
-                        <ul class="skill-signals" aria-label="Technical skills">
-                            <li>SolidWorks</li>
-                            <li>SolidWorks FEA</li>
-                            <li>Fusion 360</li>
-                            <li>RTM / Composites</li>
-                            <li>FGF Pellet Printing</li>
-                            <li>Fabrication</li>
-                            <li>Python</li>
-                            <li>GDAL / geopandas</li>
-                            <li>Blender</li>
-                            <li>Next.js</li>
-                            <li>Three.js</li>
-                            <li>TypeScript</li>
-                        </ul>
-                        <div class="hero-actions">
-                            <a href="#projects" class="btn-primary btn-magnetic">View Projects</a>
-                            <a href="resume.pdf?v=20260805" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-magnetic" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
-                            <a href="https://linkedin.com/in/westley-kleinman-154048332" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-magnetic" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-                            <a href="https://github.com/Westley-Kleinman" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-magnetic" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-                        </div>
+        <!-- The orrery is a second way to navigate; all sections remain in the page below. -->
+        <section id="home" class="hero orrery-hero">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <p class="eyebrow">Mechanical engineering / Duke University</p>
+                    <h1 class="hero-name">Westley<br>Kleinman<span class="hero-period">.</span></h1>
+                    <p class="hero-title">Mechanical systems. Product software.</p>
+                    <p class="hero-description">I build across the shop floor and the screen — from composite tooling and recycled-polymer printing to products people can use.</p>
+                    <div class="hero-actions">
+                        <a href="#experience" class="btn-primary">Explore work <span aria-hidden="true">↗</span></a>
+                        <a href="resume.pdf?v=20260805" target="_blank" rel="noopener noreferrer" class="btn-secondary">Resume <span aria-hidden="true">↗</span></a>
                     </div>
-                    <div class="hero-image">
-                        <div class="image-container">
-                            <img src="images/Extras/headshot.png" alt="Portrait of Westley Kleinman" class="profile-img" width="800" height="800" fetchpriority="high" decoding="async">
-                            <div class="image-backdrop"></div>
-                        </div>
-                    </div>
+                    <p class="hero-proof">Re:3D <span aria-hidden="true">/</span> Time Bicycles + Boyd Cycling <span aria-hidden="true">/</span> Monte</p>
                 </div>
-                
-                <div class="scroll-indicator" aria-hidden="true">
-                    <div class="mouse">
-                        <div class="wheel"></div>
+                <div class="orrery" aria-label="Explore the portfolio by destination">
+                    <div class="orrery-instrument">
+                        <svg class="orrery-engraving" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+                            <circle cx="300" cy="300" r="252" class="orbit orbit-outer"/>
+                            <circle cx="300" cy="300" r="183" class="orbit"/>
+                            <circle cx="300" cy="300" r="114" class="orbit"/>
+                            <line x1="300" y1="20" x2="300" y2="580" class="axis"/>
+                            <line x1="20" y1="300" x2="580" y2="300" class="axis"/>
+                            <path d="M300 36v15 M300 549v15 M36 300h15 M549 300h15 M101 101l11 11 M488 488l11 11 M101 499l11-11 M488 112l11-11" class="ticks"/>
+                            <circle cx="300" cy="300" r="7" class="hub"/>
+                        </svg>
+                        <div class="orrery-center" aria-hidden="true"><span>WK</span><small>01 / 04</small></div>
+                        <a class="orbit-node orbit-node--work is-selected" href="#experience" data-orbit="work" aria-current="true"><span class="node-index">01</span><span class="node-label">Work</span></a>
+                        <a class="orbit-node orbit-node--projects" href="#projects" data-orbit="projects"><span class="node-index">02</span><span class="node-label">Projects</span></a>
+                        <a class="orbit-node orbit-node--about" href="#about" data-orbit="about"><span class="node-index">03</span><span class="node-label">About</span></a>
+                        <a class="orbit-node orbit-node--contact" href="#contact" data-orbit="contact"><span class="node-index">04</span><span class="node-label">Contact</span></a>
                     </div>
-                    <div class="arrow-down"></div>
+                    <p class="orrery-hint">Select a destination to preview it · scroll for the full portfolio</p>
+                    <div class="orbit-preview" aria-live="polite">
+                        <span class="orbit-preview-index">01 / Work</span>
+                        <p class="orbit-preview-copy">Hands-on R&amp;D, testing, and manufacturing at Re:3D and Time Bicycles / Boyd Cycling.</p>
+                        <a class="orbit-preview-link" href="#experience">Explore work ↗</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -460,7 +448,7 @@
                 <div class="footer-right">
                     <div class="footer-links">
                         <a href="#home">Home</a>
-                        <a href="#experience">Experience</a>
+                        <a href="#experience">Work</a>
                         <a href="#projects">Projects</a>
                         <a href="#about">About</a>
                         <a href="#contact">Contact</a>

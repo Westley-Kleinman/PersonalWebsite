@@ -11,10 +11,11 @@
     <link rel="icon" type="image/png" sizes="192x192" href="images/Extras/headshot.png?v=20260323">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Extras/headshot.png?v=20260323">
     <link rel="apple-touch-icon" href="images/Extras/headshot.png?v=20260323">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#101820">
     
     <link rel="stylesheet" href="styles.css?v=12">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XCECK2SGS"></script>
@@ -24,12 +25,9 @@
       gtag('js', new Date());
       gtag('config', 'G-9XCECK2SGS');
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* Page accent only ó card structure lives in styles.css */
+        /* Page accent only ‚Äî card structure lives in styles.css */
         .specs-card--dark {
             --specs-grad-a: #003087;
             --specs-grad-b: #1e4d8b;
@@ -46,7 +44,7 @@
             </div>
             <div class="nav-menu">
                 <a href="index.html#home" class="nav-link">Home</a>
-                <a href="index.html#experience" class="nav-link active">Experience</a>
+                <a href="index.html#experience" class="nav-link active">Work</a>
                 <a href="index.html#projects" class="nav-link">Projects</a>
                 <a href="index.html#about" class="nav-link">About</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
@@ -74,7 +72,7 @@
                         <h1 class="hero-name project-title-compact">Boyd Cycling Internship - Impact Testing &amp; Mold Optimization</h1>
                         <img src="images/Internship/boyd_logo.png" alt="Boyd Cycling logo" class="boyd-logo-badge" width="437" height="115" decoding="async">
                         </div>
-                        <p class="hero-subtitle">Time Bicycles / Boyd Cycling ∑ Process Optimization &amp; Test Engineering Intern ∑ Greenville, SC ∑ 2025</p>
+                        <p class="hero-subtitle">Time Bicycles / Boyd Cycling ¬∑ Process Optimization &amp; Test Engineering Intern ¬∑ Greenville, SC ¬∑ 2025</p>
                         <p class="hero-description">
                             Over summer 2025 in Greenville, I conceived and built a custom wheel-impact rig in a 72-hour sprint, validating rim durability to the 40 J UCI standard with capability up to 200 J. I also overhauled RTM mold geometry and machine calibration to eliminate dry zones and standardize resin distribution while holding competitive rim weight.
                         </p>
@@ -85,6 +83,10 @@
                 </div>
             </div>
         </section>
+
+        <section class="case-brief" aria-label="Project at a glance"><div class="container"><p class="case-kicker">At a glance / boyd cycling internship</p><dl><div><dt>Context</dt><dd>Wheel-impact validation and RTM carbon-rim defects.</dd></div><div><dt>Role</dt><dd>Process Optimization &amp; Test Engineering Intern, Time Bicycles / Boyd Cycling.</dd></div><div><dt>Process</dt><dd>Build an in-house impact rig and revise mold geometry and layup work.</dd></div><div><dt>Technical decision</dt><dd>Design around the 40 J UCI test with headroom to 200 J.</dd></div><div><dt>Result</dt><dd>A working rig built in 72 hours and a path to more consistent rim production.</dd></div></dl></div></section>
+        <nav class="case-index" aria-label="On this page"><div class="container case-index-inner"><span class="case-index-title">In this case study</span><div class="case-index-links"><a href="#impact-tester">Carbon Rim Impact Tester</a><a href="#the-guillotine-rig">The Guillotine Rig</a><a href="#impact-tester-outcomes">Impact Tester Outcomes</a><a href="#mold-optimization">Carbon Rim Mold Optimization</a><a href="#manufacturing-work">Manufacturing Work</a><a href="#mold-optimization-outcomes">Mold Optimization Outcomes</a></div></div></nav>
+
 
         <!-- ========== Carbon Rim Impact Tester ========== -->
         <section class="project-section" id="impact-tester">
@@ -141,7 +143,7 @@
             </div>
         </section>
 
-        <section class="project-section bg-secondary">
+        <section class="project-section bg-secondary" id="the-guillotine-rig">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">The Guillotine Rig</h2>
@@ -175,7 +177,7 @@
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="project-section" id="impact-tester-outcomes">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Impact Tester Outcomes</h2>
@@ -269,7 +271,7 @@
             </div>
         </section>
 
-        <section class="project-section">
+        <section class="project-section" id="manufacturing-work">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Manufacturing Work</h2>
@@ -321,7 +323,7 @@
             </div>
         </section>
 
-        <section class="project-section bg-secondary">
+        <section class="project-section bg-secondary" id="mold-optimization-outcomes">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Mold Optimization Outcomes</h2>
@@ -368,6 +370,8 @@
             </div>
         </section>
 
+
+        <aside class="case-next"><div class="container case-next-inner"><div><small>Continue exploring</small><a href="monte-3d-maps.html">Monte ‚Üó</a></div><a class="back-link" href="index.html#projects">‚Üê All projects</a></div></aside>
     </main>
 
     <footer class="footer">
@@ -385,7 +389,7 @@
                 <div class="footer-right">
                     <div class="footer-links">
                         <a href="index.html">Home</a>
-                        <a href="index.html#experience">Experience</a>
+                        <a href="index.html#experience">Work</a>
                         <a href="index.html#projects">Projects</a>
                         <a href="index.html#about">About</a>
                         <a href="index.html#contact">Contact</a>
