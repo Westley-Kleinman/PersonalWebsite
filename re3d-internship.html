@@ -14,7 +14,7 @@
     <meta name="theme-color" content="#101820">
     
     <link rel="stylesheet" href="styles.css?v=12">
-    <link rel="stylesheet" href="theme.css?v=1">
+    <link rel="stylesheet" href="theme.css?v=2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -73,8 +73,16 @@
                             rPP FGF work from recycled feedstock to printed drone frames, BlackBot printer restoration and calibration, and a Beacon Mount for Linear Rail (BMLR) designed for production.
                         </p>
                     </div>
-                    <div class="project-image">
-                        <img src="images/Re3D/feedstock-to-drone-frame.jpg" alt="Recycled plastic canister beside the FGF-printed black drone frame made from reclaimed material" width="768" height="1024" decoding="async">
+                    <div class="project-image project-image--annotated">
+                        <div class="annotated-project-image">
+                            <img src="images/Re3D/feedstock-to-drone-frame.jpg" alt="Recycled plastic canister beside the FGF-printed black drone frame made from reclaimed material" width="768" height="1024" decoding="async">
+                            <button type="button" class="annotation-pin annotation-pin--feedstock" data-annotation="feedstock" aria-label="Inspect reclaimed feedstock" aria-pressed="true">1</button>
+                            <button type="button" class="annotation-pin annotation-pin--frame" data-annotation="frame" aria-label="Inspect printed drone frame" aria-pressed="false">2</button>
+                        </div>
+                        <div class="annotation-notes" aria-label="Design notes for the photograph">
+                            <button type="button" class="annotation-note" data-annotation="feedstock" aria-pressed="true"><strong>01 / Reclaimed feedstock</strong>Used filter canisters were processed into printable recycled polypropylene.</button>
+                            <button type="button" class="annotation-note" data-annotation="frame" aria-pressed="false"><strong>02 / Printed frame</strong>Geometry was iterated for FGF bead shape, warp, and layer adhesion; the final frame weighed 139.7 g.</button>
+                        </div>
                     </div>
                 </div>
             </div>

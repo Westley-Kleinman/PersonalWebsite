@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#101820">
     
     <link rel="stylesheet" href="styles.css?v=13">
-    <link rel="stylesheet" href="theme.css?v=1">
+    <link rel="stylesheet" href="theme.css?v=2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -78,26 +78,45 @@
                         <a href="#experience" class="btn-primary">Explore work <span aria-hidden="true">↗</span></a>
                         <a href="resume.pdf?v=20260805" target="_blank" rel="noopener noreferrer" class="btn-secondary">Resume <span aria-hidden="true">↗</span></a>
                     </div>
-                    <p class="hero-proof">Re:3D <span aria-hidden="true">/</span> Time Bicycles + Boyd Cycling <span aria-hidden="true">/</span> Monte</p>
+                    <a class="hero-feature" href="re3d-internship.html">
+                        <img src="images/Re3D/feedstock-to-drone-frame.jpg" alt="Recycled canister beside the printed drone frame" width="768" height="1024" fetchpriority="high" decoding="async">
+                        <span><small>Featured work / Re:3D</small><strong>Waste feedstock → flight-ready geometry</strong><em>Explore the case study ↗</em></span>
+                    </a>
+                    <a class="hero-orbit-cue" href="#orbital-navigation">Explore the orbital navigation ↓</a>
                 </div>
-                <div class="orrery" aria-label="Explore the portfolio by destination">
-                    <div class="orrery-instrument">
-                        <svg class="orrery-engraving" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
-                            <circle cx="300" cy="300" r="252" class="orbit orbit-outer"/>
-                            <circle cx="300" cy="300" r="183" class="orbit"/>
-                            <circle cx="300" cy="300" r="114" class="orbit"/>
-                            <line x1="300" y1="20" x2="300" y2="580" class="axis"/>
-                            <line x1="20" y1="300" x2="580" y2="300" class="axis"/>
-                            <path d="M300 36v15 M300 549v15 M36 300h15 M549 300h15 M101 101l11 11 M488 488l11 11 M101 499l11-11 M488 112l11-11" class="ticks"/>
-                            <circle cx="300" cy="300" r="7" class="hub"/>
+                <div class="orrery" id="orbital-navigation" aria-label="Explore the portfolio by destination">
+                    <div class="orrery-instrument" data-focus="work">
+                        <svg class="orrery-engraving" viewBox="0 0 600 520" aria-hidden="true" focusable="false">
+                            <defs>
+                                <linearGradient id="ring-metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#849895"/><stop offset=".52" stop-color="#354b50"/><stop offset="1" stop-color="#8b9d96"/></linearGradient>
+                                <radialGradient id="hub-metal"><stop offset="0" stop-color="#34454a"/><stop offset=".7" stop-color="#1b282f"/><stop offset="1" stop-color="#637679"/></radialGradient>
+                            </defs>
+                            <g class="instrument-tilt">
+                                <g transform="rotate(-16 300 260)">
+                                    <path class="engraved-axis" d="M28 260H572 M300 48V472"/>
+                                    <path class="engraved-ticks" d="M300 50v13 M300 457v13 M33 260h14 M553 260h14 M95 160l8 5 M497 355l8 5 M105 370l8-5 M487 165l8-5"/>
+                                    <path class="orbital-path orbital-path--work rear" d="M114 260 A186 106 0 0 1 486 260"/>
+                                    <path class="orbital-path orbital-path--projects rear" d="M58 260 A242 156 0 0 1 542 260"/>
+                                    <path class="orbital-path orbital-path--about rear" d="M175 260 A125 71 0 0 1 425 260"/>
+                                    <path class="orbital-path orbital-path--contact rear" d="M88 260 A212 133 0 0 1 512 260"/>
+                                    <ellipse cx="300" cy="260" rx="242" ry="156" class="orbit-shadow"/>
+                                    <circle cx="300" cy="260" r="52" class="hub-rim"/>
+                                    <circle cx="300" cy="260" r="41" class="hub-face"/>
+                                    <circle cx="300" cy="260" r="35" class="hub-inner"/>
+                                    <path class="orbital-path orbital-path--about front" d="M425 260 A125 71 0 0 1 175 260"/>
+                                    <path class="orbital-path orbital-path--work front" d="M486 260 A186 106 0 0 1 114 260"/>
+                                    <path class="orbital-path orbital-path--contact front" d="M512 260 A212 133 0 0 1 88 260"/>
+                                    <path class="orbital-path orbital-path--projects front" d="M542 260 A242 156 0 0 1 58 260"/>
+                                </g>
+                            </g>
                         </svg>
-                        <div class="orrery-center" aria-hidden="true"><span>WK</span><small>01 / 04</small></div>
-                        <a class="orbit-node orbit-node--work is-selected" href="#experience" data-orbit="work" aria-current="true"><span class="node-index">01</span><span class="node-label">Work</span></a>
+                        <div class="orrery-center" aria-hidden="true"><span>WK</span><small>ENGINEERING</small></div>
+                        <a class="orbit-node orbit-node--work is-selected" href="#experience" data-orbit="work" aria-current="location"><span class="node-index">01</span><span class="node-label">Work</span></a>
                         <a class="orbit-node orbit-node--projects" href="#projects" data-orbit="projects"><span class="node-index">02</span><span class="node-label">Projects</span></a>
                         <a class="orbit-node orbit-node--about" href="#about" data-orbit="about"><span class="node-index">03</span><span class="node-label">About</span></a>
                         <a class="orbit-node orbit-node--contact" href="#contact" data-orbit="contact"><span class="node-index">04</span><span class="node-label">Contact</span></a>
                     </div>
-                    <p class="orrery-hint">Select a destination to preview it · scroll for the full portfolio</p>
+                    <p class="orrery-hint">Hover, focus, or tap a destination · scroll for the full portfolio</p>
                     <div class="orbit-preview" aria-live="polite">
                         <span class="orbit-preview-index">01 / Work</span>
                         <p class="orbit-preview-copy">Hands-on R&amp;D, testing, and manufacturing at Re:3D and Time Bicycles / Boyd Cycling.</p>
@@ -129,9 +148,8 @@
                                 <span class="project-year">2026</span>
                             </div>
                             <h3 class="project-title">rPP FGF Printing — Re:3D</h3>
-                            <p class="project-description">
-                                Built a reclamation process turning filter canisters into printable rPP feedstock, printed a 139.7 g final FGF drone frame, restored BlackBot, and designed a beacon mount now entering production.
-                            </p>
+                            <dl class="project-evidence"><div><dt>Challenge</dt><dd>Turn used filter canisters into printable rPP.</dd></div><div><dt>Contribution</dt><dd>Developed the reclamation process, printed and validated a drone frame, restored BlackBot, and designed a beacon mount.</dd></div><div><dt>Result</dt><dd>139.7 g final frame; beacon mount designed into production.</dd></div></dl>
+                            <span class="project-read-more">Read case study ↗</span>
                         </div>
                     </a>
                     <a href="boyd-cycling-internship.html" class="project-card">
@@ -147,9 +165,8 @@
                                 <h3 class="project-title project-title-compact">Boyd Cycling Internship</h3>
                                 <img src="images/Internship/boyd_logo.png" alt="" class="boyd-logo-small" aria-hidden="true" width="437" height="115">
                             </div>
-                            <p class="project-description">
-                                Built a wheel-impact rig in 72 hours that validates rims to the 40 J UCI standard with headroom to 200 J, and overhauled RTM mold geometry to eliminate dry zones on production rims.
-                            </p>
+                            <dl class="project-evidence"><div><dt>Challenge</dt><dd>Validate carbon rims and address RTM resin-flow defects.</dd></div><div><dt>Contribution</dt><dd>Built an impact rig in 72 hours and revised mold geometry.</dd></div><div><dt>Result</dt><dd>40 J UCI validation with headroom to 200 J; a path toward more consistent rims.</dd></div></dl>
+                            <span class="project-read-more">Read case study ↗</span>
                         </div>
                     </a>
                 </div>
@@ -178,9 +195,8 @@
                                 <span class="project-year">2021-Present</span>
                             </div>
                             <h3 class="project-title">Monte</h3>
-                            <p class="project-description">
-                                3D-printed topographic trail maps with a Next.js / Three.js storefront and proprietary GIS-to-STL pipeline. Live at monte3d.com.
-                            </p>
+                            <dl class="project-evidence"><div><dt>Challenge</dt><dd>Turn terrain and trail data into physical maps people can buy.</dd></div><div><dt>Contribution</dt><dd>Built the storefront, live 3D preview, and GIS-to-STL production pipeline.</dd></div><div><dt>Result</dt><dd>Monte is a live direct-to-consumer brand at monte3d.com.</dd></div></dl>
+                            <span class="project-read-more">Read case study ↗</span>
                         </div>
                     </a>
                     <a href="egr101-automated-bucket-washer.html" class="project-card">
@@ -193,9 +209,8 @@
                                 <span class="project-year">2024</span>
                             </div>
                             <h3 class="project-title">Bucket Washing Mechanism</h3>
-                            <p class="project-description">
-                                Two-device rinse-and-brush system for CompostNow that cut cleaning time 43% and took the job from four operators down to one.
-                            </p>
+                            <dl class="project-evidence"><div><dt>Challenge</dt><dd>CompostNow needed a faster way to clean buckets.</dd></div><div><dt>Contribution</dt><dd>Led testing for a two-device rinse-and-brush system.</dd></div><div><dt>Result</dt><dd>43% less cleaning time; operators reduced from four to one.</dd></div></dl>
+                            <span class="project-read-more">Read case study ↗</span>
                         </div>
                     </a>
                     <a href="duke-cycling.html" class="project-card">
@@ -211,9 +226,8 @@
                                 <span class="project-year">2025-2026</span>
                             </div>
                             <h3 class="project-title">Duke Club Cycling</h3>
-                            <p class="project-description">
-                                President and lead safety officer; built DukeCycling.dev, which the club used for ride scheduling, team history, and ride proposals across 50+ members.
-                            </p>
+                            <dl class="project-evidence"><div><dt>Challenge</dt><dd>Club rides and race information were scattered.</dd></div><div><dt>Contribution</dt><dd>Led the club and built DukeCycling.dev as a shared hub.</dd></div><div><dt>Result</dt><dd>Supported ride planning and member resources during my term.</dd></div></dl>
+                            <span class="project-read-more">Read case study ↗</span>
                         </div>
                     </a>
                     <a href="ai-side-quests.html" class="project-card">
@@ -229,9 +243,8 @@
                                 <span class="project-type">Game Experiments</span>
                             </div>
                             <h3 class="project-title">AI Side Quests</h3>
-                            <p class="project-description">
-                                An online blackjack strategy and card-counting game, plus Lantern Kart Rally: my one-day Mario Kart-style build.
-                            </p>
+                            <dl class="project-evidence"><div><dt>Challenge</dt><dd>Explore game mechanics in small, playful builds.</dd></div><div><dt>Contribution</dt><dd>Made a blackjack trainer and Lantern Kart Rally.</dd></div><div><dt>Result</dt><dd>Blackjack plays online; the kart racer runs locally.</dd></div></dl>
+                            <span class="project-read-more">Read case study ↗</span>
                         </div>
                     </a>
                 </div>

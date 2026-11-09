@@ -243,3 +243,136 @@ section.bg-secondary, .about, .contact, .projects, .experience { background: tra
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+/* A machined orbital instrument: the drawing tilts, while its labels never move. */
+.orrery-hero { min-height: 0; padding: clamp(2.8rem, 4vw, 4rem) 0; }
+.orrery-instrument { aspect-ratio: 600 / 520; max-width: 590px; }
+.orrery-engraving { overflow: visible; transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); transition: transform .42s cubic-bezier(.2,.7,.2,1); }
+.engraved-axis { stroke: #547174; stroke-width: .7; opacity: .5; fill: none; vector-effect: non-scaling-stroke; }
+.engraved-ticks { stroke: #b99b75; stroke-width: 1.1; fill: none; vector-effect: non-scaling-stroke; }
+.orbit-shadow { fill: none; stroke: #081218; stroke-width: 10; opacity: .55; }
+.orbital-path { fill: none; stroke: url(#ring-metal); stroke-width: 2.2; vector-effect: non-scaling-stroke; transition: stroke .22s, stroke-width .22s, opacity .22s; }
+.orbital-path.rear { opacity: .34; stroke-width: 1.4; }
+.orbital-path.front { opacity: .78; }
+.orrery-instrument[data-focus="work"] .orbital-path--work,
+.orrery-instrument[data-focus="projects"] .orbital-path--projects,
+.orrery-instrument[data-focus="about"] .orbital-path--about,
+.orrery-instrument[data-focus="contact"] .orbital-path--contact { stroke: var(--accent); stroke-width: 2.7; opacity: 1; }
+.hub-rim { fill: url(#hub-metal); stroke: #acb8ac; stroke-width: 1; }
+.hub-face { fill: #111e24; stroke: #b39169; stroke-width: .9; }
+.hub-inner { fill: none; stroke: #557176; stroke-width: .7; stroke-dasharray: 2 5; }
+.orrery-center { width: 12%; border: 0; background: transparent; }
+.orrery-center span { font-size: clamp(1.05rem, 2vw, 1.7rem); }
+.orrery-center small { font-size: .42rem; letter-spacing: .06em; }
+.orbit-node { min-width: 106px; min-height: 58px; padding: .45rem .55rem .45rem 1.45rem; border: 0; background: transparent; }
+.orbit-node::before { content: ''; position: absolute; left: 0; top: 50%; width: 13px; height: 13px; border: 1px solid #aec7c3; border-radius: 50%; background: #1d3035; transform: translateY(-50%); box-shadow: inset -3px -3px 4px #0b171d; transition: border-color .2s, background .2s, box-shadow .2s; }
+.orbit-node::after { content: ''; position: absolute; left: 5px; bottom: -5px; width: 1px; height: 8px; background: var(--border-medium); }
+.orbit-node:hover, .orbit-node:focus-visible, .orbit-node.is-selected { border: 0; background: transparent; transform: none; }
+.orbit-node:hover::before, .orbit-node:focus-visible::before, .orbit-node.is-selected::before { border-color: var(--accent); background: #bb976b; box-shadow: inset -2px -2px 3px #674d35; }
+.orbit-node.is-selected::before { right: auto; top: 50%; width: 13px; height: 13px; }
+.orbit-node:hover .node-label, .orbit-node:focus-visible .node-label, .orbit-node.is-selected .node-label { color: var(--text-primary); }
+.node-label { font-size: 1.02rem; color: var(--text-secondary); }
+.orbit-node--work { left: 5%; top: 18%; }
+.orbit-node--projects { right: -1%; top: 20%; }
+.orbit-node--about { left: 7%; bottom: 17%; }
+.orbit-node--contact { right: 5%; bottom: 14%; }
+.orrery-hint { margin-top: -.1rem; }
+.orbit-preview { margin-top: .8rem; }
+.hero-feature { display: grid; grid-template-columns: 86px 1fr; gap: 1rem; align-items: center; max-width: 440px; margin-top: 1.8rem; padding: .75rem 0; border-top: 1px solid var(--border-medium); text-decoration: none; }
+.hero-feature img { width: 86px; height: 75px; object-fit: cover; object-position: center 75%; filter: saturate(.65); }
+.hero-feature span { display: grid; gap: .15rem; }
+.hero-feature small, .hero-feature em { color: var(--accent); font: .68rem var(--font-mono); letter-spacing: .03em; }
+.hero-feature strong { color: var(--text-primary); font: 600 .95rem var(--font-display); }
+.hero-feature em { color: var(--primary); font-style: normal; }
+.hero-feature:hover strong, .hero-feature:focus-visible strong { color: var(--primary); }
+.hero-orbit-cue { display: none; }
+
+/* Work is a pair of image-led case-study spreads, not matching tiles. */
+#experience .projects-grid { display: block; }
+#experience .project-card { display: grid; grid-template-columns: 1.05fr .95fr; margin: 0; border: 0; border-top: 1px solid var(--border-medium); border-radius: 0; background: transparent; }
+#experience .project-card:last-child { grid-template-columns: .95fr 1.05fr; border-bottom: 1px solid var(--border-medium); }
+#experience .project-card:last-child .project-image { grid-column: 2; grid-row: 1; }
+#experience .project-card:last-child .project-content { grid-column: 1; grid-row: 1; }
+#experience .project-card .project-image { height: clamp(350px, 39vw, 580px); aspect-ratio: auto; }
+#experience .project-card .project-image img { object-position: center 53%; }
+#experience .project-card .project-content { justify-content: center; padding: clamp(2rem, 5vw, 5rem); }
+#experience .project-card .project-title { font-size: clamp(1.9rem, 3.4vw, 3.5rem); line-height: 1.05; }
+#experience .project-card:hover { transform: none; }
+.project-evidence { margin: 1rem 0 0; }
+.project-evidence > div { display: grid; grid-template-columns: 100px 1fr; gap: 1rem; padding: .56rem 0; border-top: 1px solid var(--border-light); }
+.project-evidence dt { color: var(--accent); font: .67rem var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.project-evidence dd { color: var(--text-secondary); font-size: .87rem; line-height: 1.48; }
+.project-read-more { display: inline-block; margin-top: 1.4rem; color: var(--primary); font: .75rem var(--font-mono); }
+
+/* Monte remains the independent feature; supporting work varies in scale. */
+#projects .projects-grid { gap: 0; }
+#projects .project-card { border: 0; border-top: 1px solid var(--border-medium); border-radius: 0; background: transparent; }
+#projects .project-card:hover { transform: none; }
+#projects .project-card .project-image { aspect-ratio: 1.25; }
+#projects .project-card .project-content { padding: 2rem 1rem 2.5rem 0; }
+#projects .project-card:first-child .project-content { padding: clamp(2rem, 4vw, 4rem); }
+#projects .project-card:first-child .project-image { min-height: 430px; }
+#projects .project-card:not(:first-child) { padding: 1.3rem 1.2rem 0 0; }
+#projects .project-card:not(:first-child) .project-evidence > div { display: block; }
+#projects .project-card:not(:first-child) .project-evidence dt { margin-bottom: .22rem; }
+#projects .project-card:not(:first-child) .project-evidence dd { font-size: .83rem; }
+#projects .project-card:nth-child(3) .project-image { aspect-ratio: 1.65; }
+#projects .project-card:nth-child(4) .project-image { aspect-ratio: 1.65; }
+
+/* Optional inspection controls keep the underlying images and captions intact. */
+.inspectable-image { position: relative; }
+.image-enlarge { position: absolute; right: .7rem; bottom: .7rem; z-index: 3; min-height: 42px; padding: .55rem .8rem; border: 1px solid var(--text-secondary); background: #101820ee; color: var(--text-primary); cursor: pointer; font: .75rem var(--font-mono); }
+.image-enlarge:hover, .image-enlarge:focus-visible { border-color: var(--accent); color: var(--accent); }
+.image-dialog { position: fixed; inset: 0; width: min(96vw, 1440px); max-width: none; height: min(96vh, 1000px); max-height: none; margin: auto; padding: clamp(1rem, 2vw, 1.5rem); border: 1px solid var(--border-medium); background: #0b141a; color: var(--text-primary); }
+.image-dialog::backdrop { background: rgba(2, 7, 10, .9); }
+.image-dialog-inner { display: flex; flex-direction: column; height: 100%; gap: .7rem; }
+.image-dialog-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.image-dialog-bar span { color: var(--accent); font: .7rem var(--font-mono); text-transform: uppercase; }
+.image-dialog button { min-height: 42px; padding: .55rem .85rem; border: 1px solid var(--border-medium); background: transparent; color: var(--text-primary); cursor: pointer; }
+.image-dialog button:hover, .image-dialog button:focus-visible { border-color: var(--accent); color: var(--accent); }
+.image-dialog-figure { display: flex; flex-direction: column; flex: 1; min-height: 0; margin: 0; }
+.image-dialog img { width: 100%; min-height: 0; flex: 1; object-fit: contain; }
+.image-dialog figcaption { max-width: 80ch; color: var(--text-secondary); font-size: .9rem; }
+.image-dialog-nav { display: flex; gap: .65rem; }
+
+/* The canister and printed frame are called out on the actual Re:3D photograph. */
+.annotated-project-image { position: relative; }
+.project-hero .project-image--annotated { max-height: none; min-height: 0; overflow: visible; border: 0; background: transparent; }
+.project-hero .annotated-project-image img { width: 100%; height: 470px; object-fit: cover; object-position: center 55%; border: 1px solid var(--border-light); }
+.annotation-pin { position: absolute; z-index: 2; width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid #111820; border-radius: 50%; background: var(--accent); color: #111820; cursor: pointer; font: 700 .75rem var(--font-mono); box-shadow: 0 0 0 3px #101820aa; }
+.annotation-pin:hover, .annotation-pin:focus-visible, .annotation-pin[aria-pressed="true"] { background: var(--primary); outline-color: var(--accent); }
+.annotation-pin--feedstock { left: 59%; top: 23%; }
+.annotation-pin--frame { left: 48%; top: 70%; }
+.annotation-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: .7rem; background: var(--border-light); }
+.annotation-note { padding: .85rem 1rem; background: var(--bg-primary); border: 0; color: var(--text-secondary); font: .8rem/1.5 var(--font-primary); text-align: left; cursor: pointer; }
+.annotation-note strong { display: block; margin-bottom: .25rem; color: var(--accent); font: .7rem var(--font-mono); }
+.annotation-note[aria-pressed="true"], .annotation-note:hover, .annotation-note:focus-visible { background: var(--bg-tertiary); color: var(--text-primary); }
+
+@media (max-width: 900px) {
+    .hero-orbit-cue { display: inline-block; margin-top: .6rem; color: var(--primary); text-decoration: none; font: .72rem var(--font-mono); }
+    .hero-orbit-cue:hover, .hero-orbit-cue:focus-visible { color: var(--accent); text-decoration: underline; }
+    .orrery { scroll-margin-top: 90px; }
+    #experience .project-card, #experience .project-card:last-child { grid-template-columns: 1fr; }
+    #experience .project-card:last-child .project-image, #experience .project-card:last-child .project-content { grid-column: 1; grid-row: auto; }
+    #experience .project-card .project-image { height: clamp(300px, 55vw, 480px); }
+    #experience .project-card .project-content { padding: 2rem 0 3rem; }
+    #projects .project-card:not(:first-child) { padding-right: 0; }
+}
+@media (max-width: 639px) {
+    .orrery-hero { padding-top: 2.5rem; }
+    .orrery-instrument { aspect-ratio: auto; }
+    .orbit-node, .orbit-node--work, .orbit-node--projects, .orbit-node--about, .orbit-node--contact { position: relative; inset: auto; width: 100%; border: 1px solid var(--border-medium); padding: .65rem 1rem .65rem 2.35rem; }
+    .orbit-node::before { left: .9rem; }
+    .orbit-node::after { display: none; }
+    .hero-feature { margin-top: 1.5rem; }
+    #experience .project-card .project-image { height: 340px; }
+    #projects .project-card:first-child .project-image { min-height: 0; }
+    #projects .project-card .project-content, #projects .project-card:first-child .project-content { padding: 1.5rem 0 2.5rem; }
+    .project-evidence > div { grid-template-columns: 82px 1fr; gap: .5rem; }
+    .annotation-pin { display: none; }
+    .annotation-notes { grid-template-columns: 1fr; }
+    .project-hero .annotated-project-image img { height: auto; max-height: 520px; object-fit: contain; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .orrery-engraving { transition: none; transform: none !important; }
+}
